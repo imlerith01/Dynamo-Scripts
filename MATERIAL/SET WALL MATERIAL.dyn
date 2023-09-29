@@ -1,0 +1,2592 @@
+{
+  "Uuid": "e1002871-b188-4e9b-aed7-002b27bae1a9",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "SET WALL MATERIAL",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "archilab.Revit.Elements.Materials.SetCutPattern@Revit.Elements.Material,Revit.Elements.Element,Revit.Elements.Element,DSCore.Color,DSCore.Color",
+      "Id": "aba08bb3e0094addb7ebcb2e80256d73",
+      "Inputs": [
+        {
+          "Id": "09fc6eddc1664f1891f1c079da2ee122",
+          "Name": "material",
+          "Description": "Material to set Surface Pattern for.\n\nMaterial",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fcbe33f0020a4fffa189c477d6d8fe80",
+          "Name": "foregroundPattern",
+          "Description": "Fill Pattern to be used as Foreground Pattern.\n\nElement\nVýchozí hodnota : archilab.Revit.Selection.Select.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ee1eef00d70480282c892d92dd79c09",
+          "Name": "backgroundPattern",
+          "Description": "Fill Pattern to be used as Background Pattern.\n\nElement\nVýchozí hodnota : archilab.Revit.Selection.Select.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d963e735ecac47379963a5684ee0fda6",
+          "Name": "foregroundPatternColor",
+          "Description": "Color of the Foreground Pattern.\n\nColor\nVýchozí hodnota : archilab.Utilities.ColorUtilities.GetBlack()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d4fbc5342c3b4642804db2b374975689",
+          "Name": "backgroundPatternColor",
+          "Description": "Color of the Background Pattern.\n\nColor\nVýchozí hodnota : archilab.Utilities.ColorUtilities.GetBlack()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "faafcad25b934b678e857d8f1f9642ce",
+          "Name": "Material",
+          "Description": "Material",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sets Cut Pattern properties for a Material.\n\nMaterials.SetCutPattern (material: Material, foregroundPattern: Element = archilab.Revit.Selection.Select.GetNull(), backgroundPattern: Element = archilab.Revit.Selection.Select.GetNull(), foregroundPatternColor: Color = archilab.Utilities.ColorUtilities.GetBlack(), backgroundPatternColor: Color = archilab.Utilities.ColorUtilities.GetBlack()): Material"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "9fbd05c0-ec1f-4bd3-bf37-969a1552eab8",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "363d0adc95a54ea79f3903be3acde9d1",
+      "Inputs": [
+        {
+          "Id": "9675e62468354e2f91aa3458ee9b9887",
+          "Name": "Description_optional",
+          "Description": "string\nVýchozí hodnota : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9298b616428f40518edafb09fff49f69",
+          "Name": "Logo_optional",
+          "Description": "var\nVýchozí hodnota : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ae6c9796367e413e99198e73890b5c82",
+          "Name": "ButtonText_optional",
+          "Description": "string\nVýchozí hodnota : \"Set Values\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b1e2852f31b43968b26e66fcb056890",
+          "Name": "Inputs",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a3fb46dfe6b34420af2ab39fe2d7b156",
+          "Name": "Toggle",
+          "Description": "bool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bcf68d7114a242c9a827216a0f9c946d",
+          "Name": "LinkToHelp_optional",
+          "Description": "string\nVýchozí hodnota : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "911900382135423292d7e9fba4d5b229",
+          "Name": "CancelButtonText_optional",
+          "Description": " Cancel button will only be displayed if a label text is entered here\n\nstring\nVýchozí hodnota : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5d4cf582a9f44f8a8c27735267b0d6aa",
+          "Name": "MaxHeight_optional",
+          "Description": "int\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fff97b11612c4dce93cd8d720205b453",
+          "Name": "Width_optional",
+          "Description": "int\nVýchozí hodnota : 400",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3db2acdf16db4e3bbf8bc74cd099c808",
+          "Name": "LabelWidth_optional",
+          "Description": "int\nVýchozí hodnota : 140",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5935baae2ab64f44b742dad035de3ff6",
+          "Name": "User Inputs",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb7d2b19ca9a48b1a4955fb2cfbcdc77",
+          "Name": "Was Run ",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "29134c8da541496b9a2881ad2ee8046a",
+          "Name": "Was Cancelled",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a form with multiple inputs. \r\nsee www.data-shapes.net for tutorials and infos!"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction, DynamoCore",
+      "FunctionSignature": "DSCore.List.Join@var[]..[]",
+      "FunctionType": "VariableArgument",
+      "NodeType": "FunctionNode",
+      "Id": "65cf1923de504bde944748b9a68e2d5a",
+      "Inputs": [
+        {
+          "Id": "e1ebe525233647eea3e4c9336f46b6a3",
+          "Name": "list0",
+          "Description": "Seznamy, které chcete spojit do jednoho\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aa19638a79a04c7ba64bad2ceb01a3c1",
+          "Name": "list1",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e0e5ec82a68745aa8e1a3bedb0d56b72",
+          "Name": "list2",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d06fd389ad364ff29ff2d94d2bde34b0",
+          "Name": "list",
+          "Description": "Spojený seznam",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Zřetězí všechny dané seznamy do jednoho.\n\nList.Join (lists: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "a22523c8c10947df86564a4eae46f4eb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3e8d0deb5ecd473da247d6993d2f0335",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Výběr mezi hodnotami true a false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "85d047a5-c05a-4aa2-954a-b84d04aa3859",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e2cb368e0daa4a5db70e1f27f788f261",
+      "Inputs": [
+        {
+          "Id": "bc9b6ac30be1496697b0ed5d8c27d229",
+          "Name": "InputName",
+          "Description": "string\nVýchozí hodnota : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "83885e5f3d6942029bff08c20245907f",
+          "Name": "ButtonText",
+          "Description": "string\nVýchozí hodnota : \"Select Color\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ecd9e1ebbb1e4653807d64caef21cc9e",
+          "Name": "ColorSelection Input",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a color selection input for UI.MultiInputForm++ . Check out www.data-shapes.net for more infos! Warning : Only works with Revit 2017"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Barva pozadí\";\n\"Vybrat barvu\";",
+      "Id": "0451371fea254bb6b87ee351b7a02d7b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "80e1d3412de24134a73f1567803365be",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d153cf5e07f04754b6d2ed8501d96661",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Barva šrafy v popředí\";\n\"Vybrat barvu\";",
+      "Id": "fcd2b451aa22454ba8c70b24f73f3c8d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c1df22858a2042a9a206def1fd32b694",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "82d0eed3790d4429b37e475880713862",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Zrušit\";",
+      "Id": "eb7d6c652ad046209a8e8e581a8a1367",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2d33f10b20a44fa99d42178cbfd171e4",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Nastavení barev materiálu\";",
+      "Id": "8e495734e9d0443c9c17970e29457ef0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb1332eed27841189e0e895c8d3dd0ab",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "85d047a5-c05a-4aa2-954a-b84d04aa3859",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "585700d3b3a0430d86ab1c79d323e67b",
+      "Inputs": [
+        {
+          "Id": "ad7f482b1c634a4789f3391973be4626",
+          "Name": "InputName",
+          "Description": "string\nVýchozí hodnota : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c446de87351e413db31e513cce92a4c3",
+          "Name": "ButtonText",
+          "Description": "string\nVýchozí hodnota : \"Select Color\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f6d7d2c6048f449f8fc0fbfd01fc65cf",
+          "Name": "ColorSelection Input",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a color selection input for UI.MultiInputForm++ . Check out www.data-shapes.net for more infos! Warning : Only works with Revit 2017"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Spustit\";",
+      "Id": "3c2deb1879694bc69edfd3f4fea220d1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c5788521f6e649a8b47221cdc0e02f2d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "7804e3b4-a95a-4ca5-a391-fd9d10566b40",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b9a826f31a66427c9c4da1c4c05952a4",
+      "Inputs": [
+        {
+          "Id": "b256d387c99c42c8a1fe4ab3cd9ec3d7",
+          "Name": "InputName_",
+          "Description": "string\nVýchozí hodnota : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8714d78755314dfba086b1d5854e5158",
+          "Name": "ButtonText_",
+          "Description": "string\nVýchozí hodnota : \"Select Model Element(s)\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0ef988e972c74f8495671ba6702ba143",
+          "Name": "CategoryFilter_",
+          "Description": "var[]\nVýchozí hodnota : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "736a8c0dcfc34005915532a54055965b",
+          "Name": "SelectSingleElement_",
+          "Description": "bool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "18a8d7d46d9e47508bba45c644a6f82d",
+          "Name": "SelectModelElements input",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a Revit element selection input for UI.MultipleInputForm++ . Check out www.data-shapes.net for more infos!"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Vybrat stěnu\";",
+      "Id": "5419c6183a9a4adba236640a578e8659",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7857fbb4dd014277a3f45f1f138f0f97",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "a8b9c988b099494c816ddfa53f6c180e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed0841d04cf441b38597486ded438223",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Výběr mezi hodnotami true a false."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 567,
+      "SelectedString": "OST_Walls",
+      "NodeType": "ExtensionNode",
+      "Id": "0f14be49b9b845059804b8ffe3be9557",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9c6129f22e3746af924c9a09e39c394b",
+          "Name": "Category",
+          "Description": "Vybraná kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny předdefinované kategorie"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a6fcf764-fa91-4cc9-bb7a-b77e2edd8a7f",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "2cbe3f36e7894ce08778966afbfec21d",
+      "Inputs": [
+        {
+          "Id": "cedd61b07ff042e5b248b3068e4a9e55",
+          "Name": "material",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d70992a034ec4f1e97485f2708001e23",
+          "Name": "Material Name",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4b69272aefcd40089b0c9ba1593baa94",
+          "Name": "Material Color",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6aba2f151c3f46c188fba53ae9c311b7",
+          "Name": "SurfaceForegroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a6d58c50516941d0917e48bc549c9992",
+          "Name": "SurfaceForegroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2d2d05a576df4a07846738dad383b946",
+          "Name": "SurfaceBackgroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef30179042ab4f3b92af2e6b05882acd",
+          "Name": "SurfaceBackgroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b56ba16d181b4b79a60cbe9547ccdbdc",
+          "Name": "CutForegroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c67e09a4515a4a6aaae4474be19ecb61",
+          "Name": "CutForegroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5c88c6a2c6a14127a13f9f0dce321311",
+          "Name": "CutBackgroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be4e784c82f74829a452590c09f26006",
+          "Name": "CutBackgroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5ec3bf1bb064098be2ee22350299bb2",
+          "Name": "Material Transparency",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get name, color, transparency, SurfaceForeground, SurfaceBackground, CutForeground and CutBackground patterns from the given material.\r\nNote : Prior to Revit 2019, the materials have only one surface pattern and one cut pattern."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "60e485c9e4d045a08f4c355118e07a8a",
+      "Inputs": [
+        {
+          "Id": "30e9580516ff49a989d4f04a4df01ece",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96cd6d60ce7f4a9185bed1ba3d9d5c7a",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "992b572d1012446fb6b303361102d53a",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "346f369700594bae8b488e84a59819da",
+      "Inputs": [
+        {
+          "Id": "d981fd2ab88b41e2a798575991e9e2b9",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d4ebbfe3dc6540b1841d2fceb18116ba",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "edb5d0cdde724446b85c6e65e63d2c08",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Written outside Dynamo, so needs testing\r\nimport clr\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk \r\nfrom Autodesk.Revit.DB import *\r\ndef tolist(obj1):\r\n\tif hasattr(obj1,'__iter__') : return obj1\r\n\telse : return [obj1]\r\n# Get your list of DB colours\r\ncolorList = tolist(IN[0])\r\n\r\n# Make lists to add to\r\nr,g,b = [],[],[]\r\n\r\n# Get their RGB values\r\nfor c in colorList:\r\n\tr.append(int(c.Red))\r\n\tg.append(int(c.Green))\r\n\tb.append(int(c.Blue))\r\n\r\n# Send the output as three lists\r\nOUT = r,g,b",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "b015f4e8b0e44b73b4fc6b27755a2cf5",
+      "Inputs": [
+        {
+          "Id": "824425447c4544d1bd762e8e96fbbfd0",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "034547941f244a3bba7d3078a43de668",
+          "Name": "OUT",
+          "Description": "Výsledek skriptu jazyka Python",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Spustí vložený skript jazyka Python."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "247c790adbcf47bcb1817da7537f76e3",
+      "Inputs": [
+        {
+          "Id": "f0b5507f07dd420aacebed9858bad4d8",
+          "Name": "item0",
+          "Description": "Index položky č. 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "17106c2fc1d5473089a97a5eccf16909",
+          "Name": "list",
+          "Description": "Seznam (typ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Vytvoří nový seznam z daných vstupů"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "0fbc16cae6764791a4d6e6c3806d3074",
+      "Inputs": [
+        {
+          "Id": "4499db465f6c4254a2186bedaa64d63e",
+          "Name": "item0",
+          "Description": "Index položky č. 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ed62a8d86c84ccf85ef1119f40d462f",
+          "Name": "list",
+          "Description": "Seznam (typ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Vytvoří nový seznam z daných vstupů"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Written outside Dynamo, so needs testing\r\nimport clr\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk \r\nfrom Autodesk.Revit.DB import *\r\ndef tolist(obj1):\r\n\tif hasattr(obj1,'__iter__') : return obj1\r\n\telse : return [obj1]\r\n# Get your list of DB colours\r\ncolorList = tolist(IN[0])\r\n\r\n# Make lists to add to\r\nr,g,b = [],[],[]\r\n\r\n# Get their RGB values\r\nfor c in colorList:\r\n\tr.append(int(c.Red))\r\n\tg.append(int(c.Green))\r\n\tb.append(int(c.Blue))\r\n\r\n# Send the output as three lists\r\nOUT = r,g,b",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "b5769ea7f2b9452b8869a155ecb99301",
+      "Inputs": [
+        {
+          "Id": "4767b27c7e0242e1a377ac93ad0e1702",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "666fd8b7b7ca4650afb5c9a887217400",
+          "Name": "OUT",
+          "Description": "Výsledek skriptu jazyka Python",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Spustí vložený skript jazyka Python."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "67dcb0afa77644578981e0b7b83e46af",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0c7f4ad15b6444a7b45886a58b13989d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "48fc54809f3e4b889ff8a021e50e21de",
+      "Inputs": [
+        {
+          "Id": "434e800b38b54579b693eee8d0720028",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9e24ffac87444059d687839bbb4c4c2",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "63ea13dbef2d4309b81fec9a9a534cb5",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetMaterials@bool",
+      "Id": "4365b65a929b434ea55c305ceb890142",
+      "Inputs": [
+        {
+          "Id": "f1f86d0334f74f6fb0be3d2da4425c4c",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7dcbefa7d89d43c1bf470c989e91066e",
+          "Name": "paintMaterials",
+          "Description": "Materiály s nátěrem\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4824d0fe65724b468eacfaaf8c268215",
+          "Name": "Material[]",
+          "Description": "Seznam názvů",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Načíst názvy materiálů z prvku aplikace Revit\n\nElement.GetMaterials (paintMaterials: bool = false): Material[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "f8fda0f87d594db3a7552ced2a081d89",
+      "Inputs": [
+        {
+          "Id": "a9523012cda049a3b75278ea9d70c31c",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea2165b06a60434597a27a0f1b025efd",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "18db8d0f51394403a812e2c7db095130",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "62676f65aebe4dbb9d5cd45dda652bf3",
+      "Inputs": [
+        {
+          "Id": "55d1c08f4da941629f5586053fac347a",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef29b5ed780e4a498be33997c2c55db9",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5521c4972e694ec0b4dbfb200a42509d",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;\n1;\n2;",
+      "Id": "92e856ba39fd431cad6d3ee5fb2eb053",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3120675a5ea1498f8ff2d221fd59ae1b",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cb754b4000b94cd896204b15908e2840",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8a4526bdd6e8426796a41709db9ed8a3",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "63a667be87994f6c96529bc35b6a31e8",
+      "Inputs": [
+        {
+          "Id": "6a955cc9bf6b484b87362b6bc804fbd7",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b89994bcf24543b08bfce866ca606d34",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a35ae6014e7c4f8fb1f272ad5cf38e80",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FillPatterns, DSRevitNodesUI",
+      "SelectedIndex": 0,
+      "SelectedString": "<Plná výplň>",
+      "NodeType": "ExtensionNode",
+      "Id": "d9ab9d38adc748e59744a9a7f0f2e743",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6212a86bdda2437cba7cf4d6ce22cf5f",
+          "Name": "FillPattern",
+          "Description": "Vybrané FillPattern",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny dostupné vzory výplní"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Color.ByARGB@int,int,int,int",
+      "Id": "5b97d71509b74f3b85d11039becef3bc",
+      "Inputs": [
+        {
+          "Id": "1836233f2afc4d42af356d08f5c1ea5c",
+          "Name": "alpha",
+          "Description": "Hodnota alfa (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 255",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "03f513295d7c4544aa8d663c04fa6673",
+          "Name": "red",
+          "Description": "Červená hodnota pro barevný model RGB (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "919beb853a7e4679b3552eb13eec8eae",
+          "Name": "green",
+          "Description": "Zelená hodnota pro barevný model RGB (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ae4fcebee63c4034a391885c8946e321",
+          "Name": "blue",
+          "Description": "Modrá hodnota pro barevný model RGB (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "27404df457014800b1986ba3900bddee",
+          "Name": "color",
+          "Description": "Barva vytvořená z modelu ARGB",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Umožňuje vytvořit barvu pomocí alfa, červené, zelené a modré složky.\n\nColor.ByARGB (alpha: int = 255, red: int = 0, green: int = 0, blue: int = 0): Color"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "dffcd0ed2d5149508376456df2118c22",
+      "Inputs": [
+        {
+          "Id": "cc7c377fe06846299608b78d4d0bb6d3",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2a64cb45ada54eafbac02f6c5b80729c",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "06b06f94c0724ddfbfe3ed0a19d3f6b5",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;\n1;\n2;",
+      "Id": "803e5e9c779d425f9acb05027e075dcb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f06545d25c4345e6a39e8b663933c0aa",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c3612153c4b14cbbbac73b023d7a55e7",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bfef734a1aa4435b9f98ac918915ccef",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "69bfa8c84dea4cf9bdf50fca6a5bfc91",
+      "Inputs": [
+        {
+          "Id": "d682ad4c5dae4d768a2fb4601b4520a7",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8caebbf261ae46a7acaab0cac1be33ff",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b07263f817b48ce876e359c6e7f327c",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "cc9ca9a38b6c447aa302ecb242f11bf3",
+      "Inputs": [
+        {
+          "Id": "0fe6926c8c3c4e1f8da83bd5b63c67f5",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "19d2f8ba62b9423584bc82e47920bb82",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "29d33c1b56b24b06b9a9b6b42ec273fe",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "038d4ab2ed0645a680a4250b124c5712",
+      "Inputs": [
+        {
+          "Id": "650865602b164b3cbdba063277bb5dc4",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "670eab6a82f44aa7849ff414cb5fcbb6",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "faece1e605c9490f940a6f22bc8fa110",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;\n1;\n2;",
+      "Id": "50dccc7984c1455a975831dae44cf5fe",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3702bffe7af045a19da017e613c7a245",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af3cc4c7f295460aafc448fe1b13195b",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3bfc4fc6dcf54008826d962d0b01cf0d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "a08a864e81164319b4991c01941b5e7b",
+      "Inputs": [
+        {
+          "Id": "496eba2377c443f48fe7fa1901812ff2",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "20b9b32773f14ebdb084427a8ff1c8b7",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "90dfdf0f62e24618ba77d000c2d58218",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "b25e26a4a97649c793f1556447e88026",
+      "Inputs": [
+        {
+          "Id": "0849a8ade5a341bb9814e820aec8d021",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "386572305d6a4f5380688768c2261c18",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "daffbe0b69b742e0800b25606a17d8ca",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "d490926cccf044ee95d27cfeb7f5cbba",
+      "Inputs": [
+        {
+          "Id": "cae14c794ca94ac08df072b73ac2c6d8",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "55b125b668844f07818c873c0ac4e833",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "77dafbdd41fa4095a30fc3c14d0e719b",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Color.ByARGB@int,int,int,int",
+      "Id": "2b50dffaddba48baa8ebd42eaf78d011",
+      "Inputs": [
+        {
+          "Id": "8fbbdb75730e427aa9c2ecf16069e1a2",
+          "Name": "alpha",
+          "Description": "Hodnota alfa (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 255",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "853c47defe024328bfb50ed624d668a7",
+          "Name": "red",
+          "Description": "Červená hodnota pro barevný model RGB (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "840fd92cbfca41d0be6d87b98b759ab9",
+          "Name": "green",
+          "Description": "Zelená hodnota pro barevný model RGB (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "11f90bc6f78944048b45b1302ca2a3d7",
+          "Name": "blue",
+          "Description": "Modrá hodnota pro barevný model RGB (mezi 0 a 255, včetně)\n\nint\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "45872e3797534a71b7cd58c6fba5ec23",
+          "Name": "color",
+          "Description": "Barva vytvořená z modelu ARGB",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Umožňuje vytvořit barvu pomocí alfa, červené, zelené a modré složky.\n\nColor.ByARGB (alpha: int = 255, red: int = 0, green: int = 0, blue: int = 0): Color"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5935baae2ab64f44b742dad035de3ff6",
+      "End": "a9523012cda049a3b75278ea9d70c31c",
+      "Id": "bfc9184507e5448888455f3b294ab438",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5935baae2ab64f44b742dad035de3ff6",
+      "End": "55d1c08f4da941629f5586053fac347a",
+      "Id": "6ef7dbb6e5514251b740dc29adfb3c5a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5935baae2ab64f44b742dad035de3ff6",
+      "End": "6a955cc9bf6b484b87362b6bc804fbd7",
+      "Id": "8f95c93fa7ff4cdbaa66236c83cef2c4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d06fd389ad364ff29ff2d94d2bde34b0",
+      "End": "3b1e2852f31b43968b26e66fcb056890",
+      "Id": "a8f638c80d614f5097f931a6c8fe0714",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3e8d0deb5ecd473da247d6993d2f0335",
+      "End": "a3fb46dfe6b34420af2ab39fe2d7b156",
+      "Id": "fca4f784a1a4449da943dcab0ec5fe1c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ecd9e1ebbb1e4653807d64caef21cc9e",
+      "End": "e1ebe525233647eea3e4c9336f46b6a3",
+      "Id": "90153d32ca1f4a2e8690671dfdc4eedc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "80e1d3412de24134a73f1567803365be",
+      "End": "bc9b6ac30be1496697b0ed5d8c27d229",
+      "Id": "30a54da6ce084a00b7922483b7d2152b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d153cf5e07f04754b6d2ed8501d96661",
+      "End": "83885e5f3d6942029bff08c20245907f",
+      "Id": "0e9edb516f3d463eaafd993a5f419047",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c1df22858a2042a9a206def1fd32b694",
+      "End": "ad7f482b1c634a4789f3391973be4626",
+      "Id": "dfbab21163c948128191becaa5f092c0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "82d0eed3790d4429b37e475880713862",
+      "End": "c446de87351e413db31e513cce92a4c3",
+      "Id": "2494745583454b92bb73b72f90b08d53",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2d33f10b20a44fa99d42178cbfd171e4",
+      "End": "911900382135423292d7e9fba4d5b229",
+      "Id": "d1d0cea27ed94ab39d753c32411985cb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb1332eed27841189e0e895c8d3dd0ab",
+      "End": "9675e62468354e2f91aa3458ee9b9887",
+      "Id": "8a534ae9cff04bb293dcb2b7009f4c08",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f6d7d2c6048f449f8fc0fbfd01fc65cf",
+      "End": "aa19638a79a04c7ba64bad2ceb01a3c1",
+      "Id": "8f97d23c387e40bfa129b687b6843aa7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c5788521f6e649a8b47221cdc0e02f2d",
+      "End": "ae6c9796367e413e99198e73890b5c82",
+      "Id": "7cdf66bee3fd4277915d89dac9c87ce3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "18a8d7d46d9e47508bba45c644a6f82d",
+      "End": "e0e5ec82a68745aa8e1a3bedb0d56b72",
+      "Id": "56fb668004f24ed4bd5e7a6166f5da1c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7857fbb4dd014277a3f45f1f138f0f97",
+      "End": "8714d78755314dfba086b1d5854e5158",
+      "Id": "663df3588c3c4afb808cb320867ddc00",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ed0841d04cf441b38597486ded438223",
+      "End": "736a8c0dcfc34005915532a54055965b",
+      "Id": "75d8df9981ec4dc3b943d5200e7a7f14",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9c6129f22e3746af924c9a09e39c394b",
+      "End": "0ef988e972c74f8495671ba6702ba143",
+      "Id": "b7ca3a96738d46d1991d30ddf413936c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6aba2f151c3f46c188fba53ae9c311b7",
+      "End": "30e9580516ff49a989d4f04a4df01ece",
+      "Id": "d6ebdd51d34447c0a30ef9a198805a46",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "992b572d1012446fb6b303361102d53a",
+      "End": "fcbe33f0020a4fffa189c477d6d8fe80",
+      "Id": "5b5c1f5a7c90477bb2c3c5b2c998cb46",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "edb5d0cdde724446b85c6e65e63d2c08",
+      "End": "cc7c377fe06846299608b78d4d0bb6d3",
+      "Id": "fd3600e1073b48bfbbbf7604cf2e9a02",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "edb5d0cdde724446b85c6e65e63d2c08",
+      "End": "d682ad4c5dae4d768a2fb4601b4520a7",
+      "Id": "174469c2d51e4794a37ff304382befa6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "edb5d0cdde724446b85c6e65e63d2c08",
+      "End": "0fe6926c8c3c4e1f8da83bd5b63c67f5",
+      "Id": "e2317843fab04ce9a9aecca751faeca4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "034547941f244a3bba7d3078a43de668",
+      "End": "650865602b164b3cbdba063277bb5dc4",
+      "Id": "7c120c05d03d43b1ab7c5e2ea90875bb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "17106c2fc1d5473089a97a5eccf16909",
+      "End": "824425447c4544d1bd762e8e96fbbfd0",
+      "Id": "fd8e42b312204a008dc8545f844c655f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2ed62a8d86c84ccf85ef1119f40d462f",
+      "End": "4767b27c7e0242e1a377ac93ad0e1702",
+      "Id": "4d68fcf4902f413c936d118d54b34efe",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "666fd8b7b7ca4650afb5c9a887217400",
+      "End": "d981fd2ab88b41e2a798575991e9e2b9",
+      "Id": "ae9131077e8e4d1ebaa76401f8a9a8d6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0c7f4ad15b6444a7b45886a58b13989d",
+      "End": "96cd6d60ce7f4a9185bed1ba3d9d5c7a",
+      "Id": "828be901bf714df48bb37b2b463cd64e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0c7f4ad15b6444a7b45886a58b13989d",
+      "End": "b9e24ffac87444059d687839bbb4c4c2",
+      "Id": "b79ac80a93d34b06a54f93ca471c64d6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "63ea13dbef2d4309b81fec9a9a534cb5",
+      "End": "09fc6eddc1664f1891f1c079da2ee122",
+      "Id": "866ebf672aff45e4adb784a811f93bb5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "63ea13dbef2d4309b81fec9a9a534cb5",
+      "End": "cedd61b07ff042e5b248b3068e4a9e55",
+      "Id": "0dace3e9ad3e4d789c3b15e24bb48700",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4824d0fe65724b468eacfaaf8c268215",
+      "End": "434e800b38b54579b693eee8d0720028",
+      "Id": "4071e3707a694d06a61964de424f38ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "18db8d0f51394403a812e2c7db095130",
+      "End": "f1f86d0334f74f6fb0be3d2da4425c4c",
+      "Id": "6b0f23c06ad8481f8b33432e383e67af",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5521c4972e694ec0b4dbfb200a42509d",
+      "End": "f0b5507f07dd420aacebed9858bad4d8",
+      "Id": "8cbf1ce887554274a900212876d296f4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3120675a5ea1498f8ff2d221fd59ae1b",
+      "End": "b89994bcf24543b08bfce866ca606d34",
+      "Id": "16ea26cad22f45b18e077c22934e976e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb754b4000b94cd896204b15908e2840",
+      "End": "ef29b5ed780e4a498be33997c2c55db9",
+      "Id": "53c5ecf1895945fcb518f2376f2d6100",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8a4526bdd6e8426796a41709db9ed8a3",
+      "End": "ea2165b06a60434597a27a0f1b025efd",
+      "Id": "a18b73937a6340aba5e4d2e38f2ca5f8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a35ae6014e7c4f8fb1f272ad5cf38e80",
+      "End": "4499db465f6c4254a2186bedaa64d63e",
+      "Id": "e6494397a2aa424c97c091886c9d03c8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6212a86bdda2437cba7cf4d6ce22cf5f",
+      "End": "9ee1eef00d70480282c892d92dd79c09",
+      "Id": "f4a024ebaad244c2b3e3b8839c552db8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "27404df457014800b1986ba3900bddee",
+      "End": "d4fbc5342c3b4642804db2b374975689",
+      "Id": "562cb7c97acb44c495d9b42b22f8c259",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "06b06f94c0724ddfbfe3ed0a19d3f6b5",
+      "End": "03f513295d7c4544aa8d663c04fa6673",
+      "Id": "40c5ce59a2344dd8a67d68dffb4c1fc8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f06545d25c4345e6a39e8b663933c0aa",
+      "End": "2a64cb45ada54eafbac02f6c5b80729c",
+      "Id": "26f7147b16e6482ab7193ec1455a0649",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c3612153c4b14cbbbac73b023d7a55e7",
+      "End": "8caebbf261ae46a7acaab0cac1be33ff",
+      "Id": "3a20596b6ddc4626a9bf1ba37290a4fc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bfef734a1aa4435b9f98ac918915ccef",
+      "End": "19d2f8ba62b9423584bc82e47920bb82",
+      "Id": "ea017466f58c47b6900ba51ce7aef93a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3b07263f817b48ce876e359c6e7f327c",
+      "End": "919beb853a7e4679b3552eb13eec8eae",
+      "Id": "ebd18d939aa643f1b620b992f9d0a4f9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "29d33c1b56b24b06b9a9b6b42ec273fe",
+      "End": "ae4fcebee63c4034a391885c8946e321",
+      "Id": "87c1059e81f74844b1c665bcdc0eb0a6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "faece1e605c9490f940a6f22bc8fa110",
+      "End": "496eba2377c443f48fe7fa1901812ff2",
+      "Id": "db288ae58ead427094b7fc8781c6a13b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "faece1e605c9490f940a6f22bc8fa110",
+      "End": "cae14c794ca94ac08df072b73ac2c6d8",
+      "Id": "37d0a8f8221e4dc3b28ea1395d18f609",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "faece1e605c9490f940a6f22bc8fa110",
+      "End": "0849a8ade5a341bb9814e820aec8d021",
+      "Id": "7801391c8fcd4beb986c68e642632f0a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3702bffe7af045a19da017e613c7a245",
+      "End": "20b9b32773f14ebdb084427a8ff1c8b7",
+      "Id": "131aa112df224c358e3f9f2c641c1f6b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "af3cc4c7f295460aafc448fe1b13195b",
+      "End": "386572305d6a4f5380688768c2261c18",
+      "Id": "9158eb8188304485bd50df961c100764",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3bfc4fc6dcf54008826d962d0b01cf0d",
+      "End": "55b125b668844f07818c873c0ac4e833",
+      "Id": "ee09df78aa6d40cda939361c18a9d310",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "90dfdf0f62e24618ba77d000c2d58218",
+      "End": "853c47defe024328bfb50ed624d668a7",
+      "Id": "d3475983ec8e4bc8b6cb46ca7044a6a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "daffbe0b69b742e0800b25606a17d8ca",
+      "End": "840fd92cbfca41d0be6d87b98b759ab9",
+      "Id": "8486c06e4910470885f4747baf46daf9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "77dafbdd41fa4095a30fc3c14d0e719b",
+      "End": "11f90bc6f78944048b45b1302ca2a3d7",
+      "Id": "4653bebd57e246a3935de5b4483707f9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "45872e3797534a71b7cd58c6fba5ec23",
+      "End": "d963e735ecac47379963a5684ee0fda6",
+      "Id": "2f3b3455f68443dbb6becc0fc371cbc7",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "9fbd05c0-ec1f-4bd3-bf37-969a1552eab8",
+    "85d047a5-c05a-4aa2-954a-b84d04aa3859",
+    "7804e3b4-a95a-4ca5-a391-fd9d10566b40",
+    "a6fcf764-fa91-4cc9-bb7a-b77e2edd8a7f"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "archi-lab.net",
+      "Version": "2023.213.1722",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "aba08bb3e0094addb7ebcb2e80256d73"
+      ]
+    },
+    {
+      "Name": "Data-Shapes",
+      "Version": "2022.2.106",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "363d0adc95a54ea79f3903be3acde9d1",
+        "e2cb368e0daa4a5db70e1f27f788f261",
+        "585700d3b3a0430d86ab1c79d323e67b",
+        "b9a826f31a66427c9c4da1c4c05952a4"
+      ]
+    },
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "2cbe3f36e7894ce08778966afbfec21d"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.1.2727",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Materials.SetCutPattern",
+        "ShowGeometry": true,
+        "Id": "aba08bb3e0094addb7ebcb2e80256d73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6074.9831178182812,
+        "Y": 667.81773895256151
+      },
+      {
+        "Name": "MultipleInputForm ++",
+        "ShowGeometry": true,
+        "Id": "363d0adc95a54ea79f3903be3acde9d1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1825.1158922203904,
+        "Y": 713.58693124321087
+      },
+      {
+        "Name": "List.Join",
+        "ShowGeometry": true,
+        "Id": "65cf1923de504bde944748b9a68e2d5a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1026.8432785037025,
+        "Y": 737.25704825414471
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "a22523c8c10947df86564a4eae46f4eb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1511.7087260083772,
+        "Y": 935.784967905247
+      },
+      {
+        "Name": "ColorInput Data",
+        "ShowGeometry": true,
+        "Id": "e2cb368e0daa4a5db70e1f27f788f261",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 572.67899632150511,
+        "Y": 640.88460085986628
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "0451371fea254bb6b87ee351b7a02d7b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 233.52718360785184,
+        "Y": 645.66522023708092
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "fcd2b451aa22454ba8c70b24f73f3c8d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 163.52718360785184,
+        "Y": 863.67537260866879
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "eb7d6c652ad046209a8e8e581a8a1367",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1550.7087260083772,
+        "Y": 1089.0536142857782
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "8e495734e9d0443c9c17970e29457ef0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1402.7087260083772,
+        "Y": 537.27005635296655
+      },
+      {
+        "Name": "ColorInput Data",
+        "ShowGeometry": true,
+        "Id": "585700d3b3a0430d86ab1c79d323e67b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 567.46244224212512,
+        "Y": 855.08802166779208
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "3c2deb1879694bc69edfd3f4fea220d1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1542.7087260083772,
+        "Y": 703.35320822854089
+      },
+      {
+        "Name": "SelectModelElements Data",
+        "ShowGeometry": true,
+        "Id": "b9a826f31a66427c9c4da1c4c05952a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 556.19162849348709,
+        "Y": 1130.9914523917005
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "5419c6183a9a4adba236640a578e8659",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 233.52718360785184,
+        "Y": 1068.8017412447243
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "a8b9c988b099494c816ddfa53f6c180e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 241.52718360785184,
+        "Y": 1347.9365509460781
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "0f14be49b9b845059804b8ffe3be9557",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 199.52718360785184,
+        "Y": 1204.9367241522523
+      },
+      {
+        "Name": "Material Get Properties",
+        "ShowGeometry": true,
+        "Id": "2cbe3f36e7894ce08778966afbfec21d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5144.8437489352318,
+        "Y": -50.459183560217383
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "60e485c9e4d045a08f4c355118e07a8a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5662.7326359185836,
+        "Y": 534.54438107221176
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "346f369700594bae8b488e84a59819da",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3650.3480166699032,
+        "Y": 585.74050307146513
+      },
+      {
+        "Name": "Autodesk.Revit.DB.Color to DS.core color",
+        "ShowGeometry": true,
+        "Id": "b015f4e8b0e44b73b4fc6b27755a2cf5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3300.1253103800173,
+        "Y": 1223.3996404786803
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "247c790adbcf47bcb1817da7537f76e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3088.26193670176,
+        "Y": 1224.4821579358443
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "0fbc16cae6764791a4d6e6c3806d3074",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2932.2676611277534,
+        "Y": 657.59743494385509
+      },
+      {
+        "Name": "Autodesk.Revit.DB.Color to DS.core color",
+        "ShowGeometry": true,
+        "Id": "b5769ea7f2b9452b8869a155ecb99301",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3174.0923587235175,
+        "Y": 639.78800135217762
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "67dcb0afa77644578981e0b7b83e46af",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3766.2749700053041,
+        "Y": 1547.4160666374457
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "48fc54809f3e4b889ff8a021e50e21de",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4113.4114968155654,
+        "Y": 1581.792901445391
+      },
+      {
+        "Name": "Element.GetMaterials",
+        "ShowGeometry": true,
+        "Id": "4365b65a929b434ea55c305ceb890142",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3206.9642974413846,
+        "Y": 1640.1530888875689
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "f8fda0f87d594db3a7552ced2a081d89",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2880.4171290122058,
+        "Y": 1626.0371573688992
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "62676f65aebe4dbb9d5cd45dda652bf3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2805.097718544303,
+        "Y": 1210.9702188125689
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "92e856ba39fd431cad6d3ee5fb2eb053",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2535.3683276340289,
+        "Y": 1162.5561711471091
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "63a667be87994f6c96529bc35b6a31e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2659.9973598531597,
+        "Y": 643.72256842729928
+      },
+      {
+        "Name": "Fill Patterns",
+        "ShowGeometry": true,
+        "Id": "d9ab9d38adc748e59744a9a7f0f2e743",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4830.6525369939236,
+        "Y": 1625.9633932049517
+      },
+      {
+        "Name": "Color.ByARGB",
+        "ShowGeometry": true,
+        "Id": "5b97d71509b74f3b85d11039becef3bc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4413.82716838864,
+        "Y": 593.85240495953076
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "dffcd0ed2d5149508376456df2118c22",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4028.6966533126229,
+        "Y": 588.64896084771954
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "803e5e9c779d425f9acb05027e075dcb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3654.0054993857357,
+        "Y": 785.2789572581604
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "69bfa8c84dea4cf9bdf50fca6a5bfc91",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4026.704797816717,
+        "Y": 744.6699171834905
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "cc9ca9a38b6c447aa302ecb242f11bf3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4020.1390233892525,
+        "Y": 896.0311922978517
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "038d4ab2ed0645a680a4250b124c5712",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3765.915775199112,
+        "Y": 1074.1878885758638
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "50dccc7984c1455a975831dae44cf5fe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3754.2597909116926,
+        "Y": 1232.8904307538796
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "a08a864e81164319b4991c01941b5e7b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4144.264411841832,
+        "Y": 1077.0963463521189
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "b25e26a4a97649c793f1556447e88026",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4142.2725563459317,
+        "Y": 1233.1173026878887
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "d490926cccf044ee95d27cfeb7f5cbba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4135.7067819184613,
+        "Y": 1384.4785778022508
+      },
+      {
+        "Name": "Color.ByARGB",
+        "ShowGeometry": true,
+        "Id": "2b50dffaddba48baa8ebd42eaf78d011",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4765.7326127262431,
+        "Y": 1172.7149263449346
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "b0082563ce1f4d4c8d57f9c0409aeecc",
+        "Title": "<Dvojitým kliknutím sem upravte název skupiny>",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "65cf1923de504bde944748b9a68e2d5a",
+          "e2cb368e0daa4a5db70e1f27f788f261",
+          "0451371fea254bb6b87ee351b7a02d7b",
+          "fcd2b451aa22454ba8c70b24f73f3c8d",
+          "585700d3b3a0430d86ab1c79d323e67b",
+          "b9a826f31a66427c9c4da1c4c05952a4",
+          "5419c6183a9a4adba236640a578e8659",
+          "a8b9c988b099494c816ddfa53f6c180e",
+          "0f14be49b9b845059804b8ffe3be9557"
+        ],
+        "HasNestedGroups": false,
+        "Left": 153.52718360785184,
+        "Top": 567.88460085986628,
+        "Width": 1035.3160948958507,
+        "Height": 912.05195008621183,
+        "FontSize": 36.0,
+        "InitialTop": 640.88460085986628,
+        "InitialHeight": 852.05195008621183,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "31202d2e1bce4dbb8b7be32aed5122d2",
+        "Title": "<Dvojitým kliknutím sem upravte název skupiny>",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "363d0adc95a54ea79f3903be3acde9d1",
+          "a22523c8c10947df86564a4eae46f4eb",
+          "eb7d6c652ad046209a8e8e581a8a1367",
+          "8e495734e9d0443c9c17970e29457ef0",
+          "3c2deb1879694bc69edfd3f4fea220d1"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1392.7087260083772,
+        "Top": 464.27005635296655,
+        "Width": 809.40716621201318,
+        "Height": 756.78355793281162,
+        "FontSize": 36.0,
+        "InitialTop": 537.27005635296655,
+        "InitialHeight": 696.78355793281162,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "5cbe201dfb684a2f97239e92302f4dc2",
+        "Title": "<Dvojitým kliknutím sem upravte název skupiny>",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "d9ab9d38adc748e59744a9a7f0f2e743",
+          "63a667be87994f6c96529bc35b6a31e8",
+          "92e856ba39fd431cad6d3ee5fb2eb053",
+          "62676f65aebe4dbb9d5cd45dda652bf3",
+          "f8fda0f87d594db3a7552ced2a081d89",
+          "4365b65a929b434ea55c305ceb890142",
+          "48fc54809f3e4b889ff8a021e50e21de",
+          "67dcb0afa77644578981e0b7b83e46af",
+          "b5769ea7f2b9452b8869a155ecb99301",
+          "0fbc16cae6764791a4d6e6c3806d3074",
+          "247c790adbcf47bcb1817da7537f76e3",
+          "b015f4e8b0e44b73b4fc6b27755a2cf5",
+          "346f369700594bae8b488e84a59819da",
+          "5b97d71509b74f3b85d11039becef3bc",
+          "dffcd0ed2d5149508376456df2118c22",
+          "803e5e9c779d425f9acb05027e075dcb",
+          "69bfa8c84dea4cf9bdf50fca6a5bfc91",
+          "cc9ca9a38b6c447aa302ecb242f11bf3",
+          "038d4ab2ed0645a680a4250b124c5712",
+          "50dccc7984c1455a975831dae44cf5fe",
+          "a08a864e81164319b4991c01941b5e7b",
+          "b25e26a4a97649c793f1556447e88026",
+          "d490926cccf044ee95d27cfeb7f5cbba",
+          "2b50dffaddba48baa8ebd42eaf78d011"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2525.3683276340289,
+        "Top": 512.74050307146513,
+        "Width": 2559.2842093598947,
+        "Height": 1289.4125858161037,
+        "FontSize": 36.0,
+        "InitialTop": 585.74050307146513,
+        "InitialHeight": 1199.4125858161037,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -1461.0636207695134,
+    "Y": -272.59271191065932,
+    "Zoom": 0.64536473813092488
+  }
+}

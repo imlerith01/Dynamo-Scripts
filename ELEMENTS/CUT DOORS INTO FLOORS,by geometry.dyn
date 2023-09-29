@@ -1,0 +1,1563 @@
+{
+  "Uuid": "cbe1b583-268e-45ca-aa8d-c6a201715b55",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "CUT DOORS INTO FLOORS,by geometry",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Solids",
+      "Id": "d7e0aaa94aef483b8c9ca347624c5f5a",
+      "Inputs": [
+        {
+          "Id": "395e60eade4748a9a0fc03b1b9ec5c39",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "74689736ba024e97a8c851c0b77433bc",
+          "Name": "Solid[]",
+          "Description": "Solid[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Objemová tělesa v tomto prvku\n\nElement.Solids: Solid[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "200e6558-d741-418e-bb9a-d736c5df3601",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "ab4d2ced23d740b692dfb92b098592f7",
+      "Inputs": [
+        {
+          "Id": "8d14923baf8c4e3a9e62b573f4d30f7a",
+          "Name": "_walls",
+          "Description": "Walls to check\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8f2f8af7b1ab4392940699721ccd9fcb",
+          "Name": "_inserts",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9bfe78994d9544bea996e8491083b18a",
+          "Name": "_walls",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node gets all the inserts in a wall."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "c194e1cd46ea429e8112dd1b1e351fa9",
+      "Inputs": [
+        {
+          "Id": "3411dc90fc4046e691a07eec9f65c3c8",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77f7e61bcf5341d79bb542091edcc120",
+          "Name": "parameterName",
+          "Description": "Název parametru, jehož hodnotu chcete získat\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cf45f868e3fd4078be6493b4eb08b9f1",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte hodnotu z jednoho z parametrů prvku.\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Dolní vazba\";",
+      "Id": "4c6abdb1d42f4288809c651d5ba4638b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a1fe6df40c114e538d6a199103614010",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a2cfe55e-a1a1-46b8-8060-6eabdd8eb6a9",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b791ab3ed5bd4df4b2ec2ca2b6c817d6",
+      "Inputs": [
+        {
+          "Id": "fe56366e0be94c3a855bc487ef31b10d",
+          "Name": "level",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1edb0e8a55bf44f18433c04e699153eb",
+          "Name": "Plane",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Constructs a Plane from a level."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Intersect@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "a81590de8bd04f7a874555676b884f9f",
+      "Inputs": [
+        {
+          "Id": "821e8d694d6f41209cc19e2928f525b0",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5003108aa42e48f8b39f46650f442b5f",
+          "Name": "other",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c5783e7a680043a1995884c69d84007d",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat geometrii průsečíku pro tento objekt a jiný\n\nGeometry.Intersect (other: Geometry): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "0b4ae36c02604c3b82f74ddfdd565bf7",
+      "Inputs": [
+        {
+          "Id": "c61fa09c21d74bcb857af386aba8a855",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e30073b1c38f4372a890e5fb38311de9",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e772548471ba4069b4ce6df61c896ba0",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementsSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "24e0ac86-7979-4516-a7c5-3834d955a5b1-0000ea59",
+        "24e0ac86-7979-4516-a7c5-3834d955a5b1-0000ea5a",
+        "24e0ac86-7979-4516-a7c5-3834d955a5b1-0000ea5b",
+        "24e0ac86-7979-4516-a7c5-3834d955a5b1-0000ea5c"
+      ],
+      "Id": "e7b8c64955044a0292c152f9990a8b14",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "86d0153037e3405d8cf3bdb8a8624844",
+          "Name": "Elements",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.BoundingBox.ByGeometry@Autodesk.DesignScript.Geometry.Geometry[]",
+      "Id": "133a9ca1a7cb44a9a1f90dd5c3099e3c",
+      "Inputs": [
+        {
+          "Id": "05e3a3decd344c9a87ca49b07aaa1360",
+          "Name": "geom",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6de5e34bd4b7434eb82f7b39d33c62d8",
+          "Name": "BoundingBox",
+          "Description": "BoundingBox",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte osově souměrný objekt BoundingBox kolem vstupní geometrie.\n\nBoundingBox.ByGeometry (geom: Geometry[]): BoundingBox"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[]",
+      "Id": "6c945cde89ae4cadb2817cad9bd8decb",
+      "Inputs": [
+        {
+          "Id": "ba042a2f695a41f8bd28a6aa1cf6b820",
+          "Name": "solids",
+          "Description": "Kolekce těles\n\nSolid[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d1f4f80ea40d4881ad079850aaa38eea",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sjednocení kolekce těles do jednoho tělesa\n\nSolid.ByUnion (solids: Solid[]): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.FinishBoundary",
+      "Id": "f4f9347e95214c828c8c4223671cf531",
+      "Inputs": [
+        {
+          "Id": "53a74a5e2da445dea5e7ad254afee2de",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "182d0ba4689f40b9a2c6b065e7bc9366",
+          "Name": "Curve[][]",
+          "Description": "Curve[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Hranice povrchu\n\nRoom.FinishBoundary: Curve[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "24e0ac86-7979-4516-a7c5-3834d955a5b1-0000eb35"
+      ],
+      "Id": "f31663de09d34bafafd6b42d77e0a763",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0c9780d36b604c5a848876909843872d",
+          "Name": "Element",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByCorners@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "9f6ff32077d84f1a84f1f9a304b8f214",
+      "Inputs": [
+        {
+          "Id": "d1204a8a5af04530b6c4bad082261f6e",
+          "Name": "lowPoint",
+          "Description": "Nejnižší bod rohu kvádru\n\nPoint\nVýchozí hodnota : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5bfb5c202f9d48e58e3ba1ffe2007aea",
+          "Name": "highPoint",
+          "Description": "Nejvyšší bod rohu kvádru\n\nPoint\nVýchozí hodnota : Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 1, 1)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5f14f80d12b14b92b74cd8d4647e4133",
+          "Name": "Cuboid",
+          "Description": "Kvádr vytvořený pomocí rohů",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte kvádr s rozsahem od dolního bodu po horní bod.\n\nCuboid.ByCorners (lowPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), highPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 1, 1)): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.BoundingBox.MaxPoint",
+      "Id": "9f3d2533f82741afa882d8798f0e4622",
+      "Inputs": [
+        {
+          "Id": "2fab64b83cf2416882f77dfc6ca33c03",
+          "Name": "boundingBox",
+          "Description": "Autodesk.DesignScript.Geometry.BoundingBox",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0a9dc157283c482ba252a6b26f35fd5d",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Maximální bod\n\nBoundingBox.MaxPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.BoundingBox.MinPoint",
+      "Id": "8ad4ed88a02b48898625d6d3b5effa42",
+      "Inputs": [
+        {
+          "Id": "488fe584796040efa80d5492c2243e56",
+          "Name": "boundingBox",
+          "Description": "Autodesk.DesignScript.Geometry.BoundingBox",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "18c45e671f804b838ede1a1a66e9c762",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Minimální bod\n\nBoundingBox.MinPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Intersect@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "3b2f079c50f54ccca475dd53c11284fc",
+      "Inputs": [
+        {
+          "Id": "69b35fab0fd141f0b0ca13cfd8c20b6c",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bdf4fcabfc0d4f8babb36dad1009659b",
+          "Name": "other",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b953fb1d88e74b70ada7ba62b8cf2abc",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat geometrii průsečíku pro tento objekt a jiný\n\nGeometry.Intersect (other: Geometry): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "31dee1284a184f94a063a65497bf1885",
+      "Inputs": [
+        {
+          "Id": "c2024d0ddf484d8aa2fd30bd0f3216b5",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec252dea604244d195c96ea294a37215",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e45ee6d797a48caa86cbfcc3dbdb70b",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByUnion@Autodesk.DesignScript.Geometry.Surface[]",
+      "Id": "99d65f8b09844281b294fa9bc60c4354",
+      "Inputs": [
+        {
+          "Id": "ef5e0e4fd0e840dcb77fc290068b96b2",
+          "Name": "surfaces",
+          "Description": "Kolekce povrchů.\n\nSurface[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2bff0577a97f43ecad85dc1b3b831e43",
+          "Name": "Surface",
+          "Description": "Sjednocení povrchů",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sjednocení kolekce povrchů do jednoho povrchu. Tato metoda může vrátit objekt PolySurface v případě, že výsledné sjednocení je nerozložené nebo se skládá z více ploch.\n\nSurface.ByUnion (surfaces: Surface[]): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "1cebb933-452f-46a4-94f1-9413c7b149bd",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "4fbc0976327242988f31e3fe80ef346a",
+      "Inputs": [
+        {
+          "Id": "2adbb87b1cbd49809b66a56f9a30be26",
+          "Name": "_rooms",
+          "Description": "Room(s) to move location.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "70b80cc4adf64a9c871fb215d94809ae",
+          "Name": "_centeredRooms",
+          "Description": "Moved to geometrical center.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a6e5c06db7c402aaad16734237d75a1",
+          "Name": "_movedRooms",
+          "Description": "Moved to closest possible point to geometrical center.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b2872cea2fc44da399f52c43deb667ab",
+          "Name": "_errorRooms",
+          "Description": "Could not be moved",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node moves the room location of the selected rooms to the closest possible point to geometrical center."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "500;",
+      "Id": "68b2648f53f24413b5223a6a68c10638",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "01d72933efd543a7bdc33bcfda7bbec1",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[]",
+      "Id": "501fd13a1c39426089ef7ec856b9d54d",
+      "Inputs": [
+        {
+          "Id": "af1486a302d54262afb2e1e7bb3dce13",
+          "Name": "solids",
+          "Description": "Kolekce těles\n\nSolid[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4cd7a9fe25a245a9b87e440bfc55142a",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sjednocení kolekce těles do jednoho tělesa\n\nSolid.ByUnion (solids: Solid[]): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Difference@Autodesk.DesignScript.Geometry.Solid",
+      "Id": "4ead3ac1d7c546bd8ebae82def6fb53e",
+      "Inputs": [
+        {
+          "Id": "93125db10a4f449e81c4d7008cbebbf4",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7d14e83be0242e491f069286967676d",
+          "Name": "other",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "da3f748ebc5341e2889bcc3ee5055a9f",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Logický rozdíl tohoto tělesa a jiného\n\nSolid.Difference (other: Solid): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Intersect@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "41cffb77c810461bb495ca564c9243ae",
+      "Inputs": [
+        {
+          "Id": "a6b0a045719f4cf5b33e92eae57821ad",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2cb44c2b829e4107abab890e0d41d11c",
+          "Name": "other",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9ee4f28550b74f11bbef76905f00c221",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat geometrii průsečíku pro tento objekt a jiný\n\nGeometry.Intersect (other: Geometry): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.Thicken@double,bool",
+      "Id": "ff9cf82abb8e46d69867241f8072309d",
+      "Inputs": [
+        {
+          "Id": "8551ec6331da43739e1f8e28c03f1a36",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea5daecbec9043a6a29c84c849c67ec7",
+          "Name": "thickness",
+          "Description": "Množství k zesílení\n\ndouble\nVýchozí hodnota : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "195c9757cda94bd8ab9f624c1b8275c5",
+          "Name": "both_sides",
+          "Description": "Vrací hodnotu true pro zesílení na obou stranách, false pro zesílení na jedné straně\n\nbool\nVýchozí hodnota : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d97fd5c055e845d7842285f9c9ebd59b",
+          "Name": "Solid",
+          "Description": "Zesílený povrch jako těleso",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Zesilte plochu na těleso tím, že ji vysunete ve směru normál povrchu. Pokud má parametr both_sides hodnotu true, povrch se zesílí na obou stranách.\n\nSurface.Thicken (thickness: double = 1, both_sides: bool = true): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.Thicken@double,bool",
+      "Id": "c348a045879d4609889c69a9c45e71a8",
+      "Inputs": [
+        {
+          "Id": "77de23c9dd994fadbb560a25e08a875a",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2ce4d7e066924d4795047dee1dde97a8",
+          "Name": "thickness",
+          "Description": "Množství k zesílení\n\ndouble\nVýchozí hodnota : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "42c643e3115a492d88986027ed3b60b0",
+          "Name": "both_sides",
+          "Description": "Vrací hodnotu true pro zesílení na obou stranách, false pro zesílení na jedné straně\n\nbool\nVýchozí hodnota : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3724d884ca144fe387dc88e4687c1891",
+          "Name": "Solid",
+          "Description": "Zesílený povrch jako těleso",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Zesilte plochu na těleso tím, že ji vysunete ve směru normál povrchu. Pokud má parametr both_sides hodnotu true, povrch se zesílí na obou stranách.\n\nSurface.Thicken (thickness: double = 1, both_sides: bool = true): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "8645deedc8fa4f07bdb4cc9849b81867",
+      "Inputs": [
+        {
+          "Id": "e4d0fb50475a4418ac969996e2c4be54",
+          "Name": "list",
+          "Description": "Seznam, ze kterého se má načíst položka\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b528b4bfaa134f7db9995f37c50a4f1c",
+          "Name": "index",
+          "Description": "Index položky, která se má načíst\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5a77aca64c714c55b87d78f06dac4093",
+          "Name": "item",
+          "Description": "Položka v seznamu v daném indexu",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí položku z daného seznamu, který se nachází v určeném indexu.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "f759a578473249fbb08acd6ccb920c7c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dc10aa11b2a34ae79f106a03e1375a1f",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a2cfe55e-a1a1-46b8-8060-6eabdd8eb6a9",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "ab67bb4554494abba36ad0e249855fb2",
+      "Inputs": [
+        {
+          "Id": "7e0d6a0c6ae541d1b288c7148561b128",
+          "Name": "level",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3e1a1662cdc440168f6efa5561f6ca36",
+          "Name": "Plane",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Constructs a Plane from a level."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.Thicken@double",
+      "Id": "c4302688cb634be096b85aa4c1f7dc5b",
+      "Inputs": [
+        {
+          "Id": "c36ae17cd2a34cb081bd7b91194590f1",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7e24498433c94394b7e5a0d6394758c4",
+          "Name": "thickness",
+          "Description": "Množství k zesílení\n\ndouble\nVýchozí hodnota : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e27d07e2cf4c4d48abb61394844001ed",
+          "Name": "Solid",
+          "Description": "Zesílený povrch jako těleso",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Zesilte plochu na těleso tím, že ji vysunete ve směru normály povrchu na obou stranách povrchu.\n\nSurface.Thicken (thickness: double = 1): Solid"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "74689736ba024e97a8c851c0b77433bc",
+      "End": "821e8d694d6f41209cc19e2928f525b0",
+      "Id": "f18f4cdb1b3644e4b7c8ab69d52c22d4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "74689736ba024e97a8c851c0b77433bc",
+      "End": "ba042a2f695a41f8bd28a6aa1cf6b820",
+      "Id": "a8a7ff1f3cf44933ba5e4ae51795b8aa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9bfe78994d9544bea996e8491083b18a",
+      "End": "395e60eade4748a9a0fc03b1b9ec5c39",
+      "Id": "ac31685145424b8f96c8d14a0a80002c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cf45f868e3fd4078be6493b4eb08b9f1",
+      "End": "fe56366e0be94c3a855bc487ef31b10d",
+      "Id": "ea2a78ef4a9b461faf4209ec930ae98f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cf45f868e3fd4078be6493b4eb08b9f1",
+      "End": "e4d0fb50475a4418ac969996e2c4be54",
+      "Id": "6786639d2c8d46afaf9718b57be27220",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a1fe6df40c114e538d6a199103614010",
+      "End": "77f7e61bcf5341d79bb542091edcc120",
+      "Id": "cf0b979c1135455092c71c5b45aba653",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1edb0e8a55bf44f18433c04e699153eb",
+      "End": "5003108aa42e48f8b39f46650f442b5f",
+      "Id": "1ce1f7ddaebe4035af9a1f2b4c708cb8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1edb0e8a55bf44f18433c04e699153eb",
+      "End": "bdf4fcabfc0d4f8babb36dad1009659b",
+      "Id": "960d16adbfd64439b4c1d2c704e7afdf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c5783e7a680043a1995884c69d84007d",
+      "End": "c61fa09c21d74bcb857af386aba8a855",
+      "Id": "37b0cc23fa5340e193bb1ebeb15d5b9f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e772548471ba4069b4ce6df61c896ba0",
+      "End": "77de23c9dd994fadbb560a25e08a875a",
+      "Id": "df5cb72d6e92483594773a3ad1e133cd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "86d0153037e3405d8cf3bdb8a8624844",
+      "End": "8d14923baf8c4e3a9e62b573f4d30f7a",
+      "Id": "e71da022963e42ce9c0af4b6f8e3d515",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "86d0153037e3405d8cf3bdb8a8624844",
+      "End": "3411dc90fc4046e691a07eec9f65c3c8",
+      "Id": "761cbcd10cbe4cf5922f1d958aaf3057",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6de5e34bd4b7434eb82f7b39d33c62d8",
+      "End": "488fe584796040efa80d5492c2243e56",
+      "Id": "120d2e71a2fe4948a566306c5627ffa4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6de5e34bd4b7434eb82f7b39d33c62d8",
+      "End": "2fab64b83cf2416882f77dfc6ca33c03",
+      "Id": "00c7a89174294e0f9055523160bedfde",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d1f4f80ea40d4881ad079850aaa38eea",
+      "End": "05e3a3decd344c9a87ca49b07aaa1360",
+      "Id": "74161d59c5ab48ecb14b7f5dbf364881",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0c9780d36b604c5a848876909843872d",
+      "End": "53a74a5e2da445dea5e7ad254afee2de",
+      "Id": "ab54e7c8a486406888918f848ceb9f26",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0c9780d36b604c5a848876909843872d",
+      "End": "2adbb87b1cbd49809b66a56f9a30be26",
+      "Id": "16688e8fae1c45e2b7d39d67e7dd81c0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5f14f80d12b14b92b74cd8d4647e4133",
+      "End": "69b35fab0fd141f0b0ca13cfd8c20b6c",
+      "Id": "f8db5f9b2ba141839366d2c92ef09a4d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0a9dc157283c482ba252a6b26f35fd5d",
+      "End": "5bfb5c202f9d48e58e3ba1ffe2007aea",
+      "Id": "ab378a36ba554c689c94aefc7721250a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "18c45e671f804b838ede1a1a66e9c762",
+      "End": "d1204a8a5af04530b6c4bad082261f6e",
+      "Id": "a4f74bae0ac74f47adf4f162b4082a57",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b953fb1d88e74b70ada7ba62b8cf2abc",
+      "End": "c2024d0ddf484d8aa2fd30bd0f3216b5",
+      "Id": "e792cbf0f0ca40ffa77291fd4f32ab7e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9e45ee6d797a48caa86cbfcc3dbdb70b",
+      "End": "ef5e0e4fd0e840dcb77fc290068b96b2",
+      "Id": "c52e4eb214ac495bb2e2c0f18d6d28b0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2bff0577a97f43ecad85dc1b3b831e43",
+      "End": "8551ec6331da43739e1f8e28c03f1a36",
+      "Id": "11b84e7de1ba42308dc6c9bf9cd795f2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01d72933efd543a7bdc33bcfda7bbec1",
+      "End": "ea5daecbec9043a6a29c84c849c67ec7",
+      "Id": "d91c5a7bb99245cba7fbb5720ee83b72",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01d72933efd543a7bdc33bcfda7bbec1",
+      "End": "2ce4d7e066924d4795047dee1dde97a8",
+      "Id": "f1cc19aa8b96408b95e14e00b5ff772a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4cd7a9fe25a245a9b87e440bfc55142a",
+      "End": "b7d14e83be0242e491f069286967676d",
+      "Id": "b048f250ecf94bd19492373397c2952d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "da3f748ebc5341e2889bcc3ee5055a9f",
+      "End": "a6b0a045719f4cf5b33e92eae57821ad",
+      "Id": "6077dab39e364b82913e85abba5cc321",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9ee4f28550b74f11bbef76905f00c221",
+      "End": "c36ae17cd2a34cb081bd7b91194590f1",
+      "Id": "6a02e81a581c4ae4a7e20cbd4f1c8620",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d97fd5c055e845d7842285f9c9ebd59b",
+      "End": "93125db10a4f449e81c4d7008cbebbf4",
+      "Id": "ad7be2d10f68456e8e6e67ee47f6ec98",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3724d884ca144fe387dc88e4687c1891",
+      "End": "af1486a302d54262afb2e1e7bb3dce13",
+      "Id": "67747cd469594f2daaee34c6e34b82d7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5a77aca64c714c55b87d78f06dac4093",
+      "End": "7e0d6a0c6ae541d1b288c7148561b128",
+      "Id": "2a8e7242652d4f308ee651ca2650c08b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dc10aa11b2a34ae79f106a03e1375a1f",
+      "End": "b528b4bfaa134f7db9995f37c50a4f1c",
+      "Id": "4ed2872469d54f5e80e34d3d959494cb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3e1a1662cdc440168f6efa5561f6ca36",
+      "End": "2cb44c2b829e4107abab890e0d41d11c",
+      "Id": "78de5e2432bd4c9086a5580ad83b4868",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "200e6558-d741-418e-bb9a-d736c5df3601",
+    "a2cfe55e-a1a1-46b8-8060-6eabdd8eb6a9",
+    "1cebb933-452f-46a4-94f1-9413c7b149bd"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Modelical",
+      "Version": "2023.6.30",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "ab4d2ced23d740b692dfb92b098592f7",
+        "4fbc0976327242988f31e3fe80ef346a"
+      ]
+    },
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "b791ab3ed5bd4df4b2ec2ca2b6c817d6",
+        "ab67bb4554494abba36ad0e249855fb2"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.1.2727",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": 38800.97265625,
+      "EyeY": 7922.30078125,
+      "EyeZ": 28136.7734375,
+      "LookX": -197.8515625,
+      "LookY": -4393.62255859375,
+      "LookZ": -8605.37890625,
+      "UpX": -0.44254910945892334,
+      "UpY": 0.48749327659606934,
+      "UpZ": -0.75266236066818237
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Element.Solids",
+        "ShowGeometry": false,
+        "Id": "d7e0aaa94aef483b8c9ca347624c5f5a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 419.28209539246348,
+        "Y": 122.36385632795134
+      },
+      {
+        "Name": "Wall.Inserts",
+        "ShowGeometry": true,
+        "Id": "ab4d2ced23d740b692dfb92b098592f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 79.018600913317641,
+        "Y": 72.776601826048392
+      },
+      {
+        "Name": "Element.GetParameterValueByName",
+        "ShowGeometry": true,
+        "Id": "c194e1cd46ea429e8112dd1b1e351fa9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 209.83148800911408,
+        "Y": 441.92759990346462
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "4c6abdb1d42f4288809c651d5ba4638b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -181.6731996967593,
+        "Y": 479.15729398380574
+      },
+      {
+        "Name": "Level Plane",
+        "ShowGeometry": true,
+        "Id": "b791ab3ed5bd4df4b2ec2ca2b6c817d6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 712.9107039798206,
+        "Y": 484.31701525681632
+      },
+      {
+        "Name": "Geometry.Intersect",
+        "ShowGeometry": false,
+        "Id": "a81590de8bd04f7a874555676b884f9f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 962.53810788141027,
+        "Y": 212.29859705129331
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": false,
+        "Id": "0b4ae36c02604c3b82f74ddfdd565bf7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1295.6261739932293,
+        "Y": 229.2864578371948
+      },
+      {
+        "Name": "Select Model Elements",
+        "ShowGeometry": true,
+        "Id": "e7b8c64955044a0292c152f9990a8b14",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -330.04542019103963,
+        "Y": -1.3241897864659222
+      },
+      {
+        "Name": "BoundingBox.ByGeometry",
+        "ShowGeometry": true,
+        "Id": "133a9ca1a7cb44a9a1f90dd5c3099e3c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1360.4007841218395,
+        "Y": -32.937647501026277
+      },
+      {
+        "Name": "Solid.ByUnion",
+        "ShowGeometry": false,
+        "Id": "6c945cde89ae4cadb2817cad9bd8decb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 896.5338581121905,
+        "Y": -42.01231329685703
+      },
+      {
+        "Name": "Room.FinishBoundary",
+        "ShowGeometry": true,
+        "Id": "f4f9347e95214c828c8c4223671cf531",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 75.26552863816346,
+        "Y": 699.9102302120026
+      },
+      {
+        "Name": "Select Model Element",
+        "ShowGeometry": true,
+        "Id": "f31663de09d34bafafd6b42d77e0a763",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -303.01919825924119,
+        "Y": 695.77011179143688
+      },
+      {
+        "Name": "Cuboid.ByCorners",
+        "ShowGeometry": false,
+        "Id": "9f6ff32077d84f1a84f1f9a304b8f214",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2042.3998952013624,
+        "Y": -22.577258994554711
+      },
+      {
+        "Name": "BoundingBox.MaxPoint",
+        "ShowGeometry": true,
+        "Id": "9f3d2533f82741afa882d8798f0e4622",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1725.6965240234192,
+        "Y": 110.34568876261125
+      },
+      {
+        "Name": "BoundingBox.MinPoint",
+        "ShowGeometry": true,
+        "Id": "8ad4ed88a02b48898625d6d3b5effa42",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1712.9821551075165,
+        "Y": -32.97992447120231
+      },
+      {
+        "Name": "Geometry.Intersect",
+        "ShowGeometry": false,
+        "Id": "3b2f079c50f54ccca475dd53c11284fc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2481.947588551925,
+        "Y": 128.47393532351725
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": false,
+        "Id": "31dee1284a184f94a063a65497bf1885",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2810.0057961853072,
+        "Y": 87.416642787245451
+      },
+      {
+        "Name": "Surface.ByUnion",
+        "ShowGeometry": false,
+        "Id": "99d65f8b09844281b294fa9bc60c4354",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3059.1983728476825,
+        "Y": 111.1965965987165
+      },
+      {
+        "Name": "Room.CenterLocation",
+        "ShowGeometry": true,
+        "Id": "4fbc0976327242988f31e3fe80ef346a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 80.832262469882608,
+        "Y": 898.10248050543873
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "68b2648f53f24413b5223a6a68c10638",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2932.0,
+        "Y": 314.0
+      },
+      {
+        "Name": "Solid.ByUnion",
+        "ShowGeometry": false,
+        "Id": "501fd13a1c39426089ef7ec856b9d54d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3628.9016078143786,
+        "Y": 547.84869749559255
+      },
+      {
+        "Name": "Solid.Difference",
+        "ShowGeometry": false,
+        "Id": "4ead3ac1d7c546bd8ebae82def6fb53e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3920.2094421495231,
+        "Y": 309.33941646232159
+      },
+      {
+        "Name": "Geometry.Intersect",
+        "ShowGeometry": false,
+        "Id": "41cffb77c810461bb495ca564c9243ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4391.900728658431,
+        "Y": 406.9695648739829
+      },
+      {
+        "Name": "Surface.Thicken",
+        "ShowGeometry": false,
+        "Id": "ff9cf82abb8e46d69867241f8072309d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3531.56267616373,
+        "Y": 131.67432259225652
+      },
+      {
+        "Name": "Surface.Thicken",
+        "ShowGeometry": false,
+        "Id": "c348a045879d4609889c69a9c45e71a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3212.1378860089076,
+        "Y": 552.0785625379574
+      },
+      {
+        "Name": "List.GetItemAtIndex",
+        "ShowGeometry": true,
+        "Id": "8645deedc8fa4f07bdb4cc9849b81867",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 725.9118557752488,
+        "Y": 621.34263531340116
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "f759a578473249fbb08acd6ccb920c7c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 438.77169266131477,
+        "Y": 764.32358069283418
+      },
+      {
+        "Name": "Level Plane",
+        "ShowGeometry": true,
+        "Id": "ab67bb4554494abba36ad0e249855fb2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1173.119479207206,
+        "Y": 641.05478652991133
+      },
+      {
+        "Name": "Surface.Thicken",
+        "ShowGeometry": true,
+        "Id": "c4302688cb634be096b85aa4c1f7dc5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4784.5750853846157,
+        "Y": 409.01492899770113
+      }
+    ],
+    "Annotations": [],
+    "X": -2826.8781560682705,
+    "Y": -13.888867771708703,
+    "Zoom": 0.78991546909501587
+  }
+}

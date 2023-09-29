@@ -1,0 +1,498 @@
+{
+  "Uuid": "f304bb06-469e-40da-b166-cd336b2eeab7",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "CENTER ROOM TAGS",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 196,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "Id": "74b767d058d14cbc9cdfcaaba935bb9e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e5ffa7ddb74c47a9b5b0fb9c3a6893af",
+          "Name": "Category",
+          "Description": "Vybraná kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny předdefinované kategorie"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "56d8d80d7f9e4562958b1207b34393b1",
+      "Inputs": [
+        {
+          "Id": "d52d7e72f31943b8af2518fc150a0c2c",
+          "Name": "Category",
+          "Description": "Kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8cdfe2c0ae1948758c15943f75b4b40f",
+          "Name": "Elements",
+          "Description": "Třída prvku.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Získejte z modelu všechny prvky určité kategorie."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Elements.RoomTag.CenterOnRoomLocation@Revit.Elements.Element[]",
+      "Id": "ee17d9a9047b42a7a90d25e5c5c02756",
+      "Inputs": [
+        {
+          "Id": "f677a9cba9d24114b04e18b83ff3ab15",
+          "Name": "roomTag",
+          "Description": "The room tag to set.\n\nElement[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d92a7dda4ee9438794cc719c95756421",
+          "Name": "roomTag",
+          "Description": "The room tag.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will set the room tag to the same as the room location.\n\nRoomTag.CenterOnRoomLocation (roomTag: Element[]): Element[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "1cebb933-452f-46a4-94f1-9413c7b149bd",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "810fabc021a846b89d71588491080ed1",
+      "Inputs": [
+        {
+          "Id": "151676b8d88941a18684a9dfe0f41f15",
+          "Name": "_rooms",
+          "Description": "Room(s) to move location.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d58bef0c1ae4c93afd039af327aefa1",
+          "Name": "_centeredRooms",
+          "Description": "Moved to geometrical center.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fdd4f280b6ff42f682d365fb0b80572a",
+          "Name": "_movedRooms",
+          "Description": "Moved to closest possible point to geometrical center.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "682237de1e5e4665a2756fa0a3c7b796",
+          "Name": "_errorRooms",
+          "Description": "Could not be moved",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node moves the room location of the selected rooms to the closest possible point to geometrical center."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Elements.Rooms.RoomTagsInView@Revit.Elements.Room,Revit.Elements.Views.FloorPlanView",
+      "Id": "a969dbe54c604a77993db335d019355e",
+      "Inputs": [
+        {
+          "Id": "245a1812da82455fad2ceca355e5f952",
+          "Name": "room",
+          "Description": "The room to check.\n\nRoom",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c74e134986cb4514b87acafdbee945c3",
+          "Name": "view",
+          "Description": "The view to check in.\n\nFloorPlanView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "62a7295d5a8d42cc99161ad0c775725b",
+          "Name": "roomTags",
+          "Description": "We return a list here because a room can have more than one tag. Whether or not it should, is a different conversation.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Return room tags for given room in given view\n\nRooms.RoomTagsInView (room: Room, view: FloorPlanView): Element[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "WombatDynamo.View.GetActiveView@bool",
+      "Id": "4f76f03f057e4eca902be51ce3415322",
+      "Inputs": [
+        {
+          "Id": "d1f5e3b39a7446aba1ca69c2adec8bb1",
+          "Name": "update",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "29af99a06f2e4bc0a6a11d5a8bb52a71",
+          "Name": "View",
+          "Description": "View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "View.GetActiveView (update: bool): View"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "bd6998a865734737b1e536ea9cf8de69",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "338972a195814552b0aa329fa0da92ee",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Výběr mezi hodnotami true a false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "ba6b0edcf1dd405883cd83629b3e3b5c",
+      "Inputs": [
+        {
+          "Id": "db5014f9d7654eecb7704041f8a8ba95",
+          "Name": "item0",
+          "Description": "Index položky č. 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9398bb7654c94915a0064fd745f779f9",
+          "Name": "item1",
+          "Description": "Index položky č. 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f24bcc7c8b404a469e915b62aacccf24",
+          "Name": "item2",
+          "Description": "Index položky č. 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5c6a690005654e2ebe3b04b2e674f569",
+          "Name": "list",
+          "Description": "Seznam (typ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Vytvoří nový seznam z daných vstupů"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e5ffa7ddb74c47a9b5b0fb9c3a6893af",
+      "End": "d52d7e72f31943b8af2518fc150a0c2c",
+      "Id": "b9b81fdc8537482c92b2ed279a242ad8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8cdfe2c0ae1948758c15943f75b4b40f",
+      "End": "151676b8d88941a18684a9dfe0f41f15",
+      "Id": "8a321cda28e948a1a05a268d0d073bca",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5d58bef0c1ae4c93afd039af327aefa1",
+      "End": "db5014f9d7654eecb7704041f8a8ba95",
+      "Id": "7bd65a3541c14fe3837dfbc029551c11",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fdd4f280b6ff42f682d365fb0b80572a",
+      "End": "9398bb7654c94915a0064fd745f779f9",
+      "Id": "7a8615259dce4fdb98e931640c9b4259",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "682237de1e5e4665a2756fa0a3c7b796",
+      "End": "f24bcc7c8b404a469e915b62aacccf24",
+      "Id": "67dd6036c3ec4e0ab0d0ba3769a13d7a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "62a7295d5a8d42cc99161ad0c775725b",
+      "End": "f677a9cba9d24114b04e18b83ff3ab15",
+      "Id": "b4dfaddaf9fd4235b9f5460f1adc78ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "29af99a06f2e4bc0a6a11d5a8bb52a71",
+      "End": "c74e134986cb4514b87acafdbee945c3",
+      "Id": "0448f3b0eb2044b8abe9692f99be3831",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "338972a195814552b0aa329fa0da92ee",
+      "End": "d1f5e3b39a7446aba1ca69c2adec8bb1",
+      "Id": "f2841544ced5475ba70024a690f787ca",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5c6a690005654e2ebe3b04b2e674f569",
+      "End": "245a1812da82455fad2ceca355e5f952",
+      "Id": "4ba8d43f981843e3ba74ee26279977f7",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "1cebb933-452f-46a4-94f1-9413c7b149bd"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Rhythm",
+      "Version": "2023.2.2",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "ee17d9a9047b42a7a90d25e5c5c02756",
+        "a969dbe54c604a77993db335d019355e"
+      ]
+    },
+    {
+      "Name": "Modelical",
+      "Version": "2023.6.30",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "810fabc021a846b89d71588491080ed1"
+      ]
+    },
+    {
+      "Name": "WombatDynamo",
+      "Version": "2.3.4",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "4f76f03f057e4eca902be51ce3415322"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "74b767d058d14cbc9cdfcaaba935bb9e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 701.5,
+        "Y": 451.0
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "56d8d80d7f9e4562958b1207b34393b1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1120.5,
+        "Y": 430.0
+      },
+      {
+        "Name": "ʳʰʸᵗʰᵐ|RoomTag.CenterOnRoomLocation",
+        "ShowGeometry": true,
+        "Id": "ee17d9a9047b42a7a90d25e5c5c02756",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2500.060535828397,
+        "Y": 337.00693441522492
+      },
+      {
+        "Name": "Room.CenterLocation",
+        "ShowGeometry": true,
+        "Id": "810fabc021a846b89d71588491080ed1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1480.3539206334422,
+        "Y": 317.41568253376846
+      },
+      {
+        "Name": "ʳʰʸᵗʰᵐ|Rooms.RoomTagsInView",
+        "ShowGeometry": true,
+        "Id": "a969dbe54c604a77993db335d019355e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2108.0397072814421,
+        "Y": 339.69659600291772
+      },
+      {
+        "Name": "View.GetActiveView",
+        "ShowGeometry": true,
+        "Id": "4f76f03f057e4eca902be51ce3415322",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1838.233717908598,
+        "Y": 547.305400697134
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "bd6998a865734737b1e536ea9cf8de69",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1563.9237380975603,
+        "Y": 603.84193319546023
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "ba6b0edcf1dd405883cd83629b3e3b5c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1829.2892121613047,
+        "Y": 284.16954141900504
+      }
+    ],
+    "Annotations": [],
+    "X": -278.87487135643187,
+    "Y": 142.77141126825995,
+    "Zoom": 0.52537827866172859
+  }
+}

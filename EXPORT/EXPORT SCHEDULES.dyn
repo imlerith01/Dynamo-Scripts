@@ -913,31 +913,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "DSCore.String.Remove@string,int,int",
-      "Id": "5383380495ad4e438c18aa56201a6576",
+      "FunctionSignature": "Revit.Elements.Family.Name",
+      "Id": "225cc1adc0e5478a88f0d41917fe750c",
       "Inputs": [
         {
-          "Id": "5a7b94d2bece449b9b7a4d378b1f928e",
-          "Name": "string",
-          "Description": "Řetězec, z něhož se mají odebrat znaky.\n\nstring",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "be2a1c0c40df46a298f20563db101591",
-          "Name": "startIndex",
-          "Description": "Index, ve které chcete začít s odstraňováním\n\nint",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "80eb967867b24bff821779cb78e3b067",
-          "Name": "count",
-          "Description": "Počet znaků, které mají být odebrány. Poznámka: Pokud je hodnota Počet záporná, bude proces odebírání probíhat zprava doleva.\n\nint",
+          "Id": "76be7fa8ce1247e590cc40ff90b56629",
+          "Name": "family",
+          "Description": "Revit.Elements.Family",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -946,9 +928,9 @@
       ],
       "Outputs": [
         {
-          "Id": "6c4b1359e8d14370bbff94610c60973b",
+          "Id": "bbb261aa27ec4d78bc017939944679bd",
           "Name": "string",
-          "Description": "Řetězec s odstraněnými znaky",
+          "Description": "string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -956,36 +938,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Odstraní znaky z řetězce.\n\nString.Remove (string: string, startIndex: int, count: int): string"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "0;\n20;",
-      "Id": "16a05d34e48c4e5d8b746206b9b0ee95",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "5ed344cc86bc4633aaa26e4535f9b6d0",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "f8745f99628d4ab7874cabebb64cd29c",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 2",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+      "Description": "Název této rodiny\n\nFamily.Name: string"
     }
   ],
   "Connectors": [
@@ -1117,8 +1070,8 @@
     },
     {
       "Start": "dfc270f4f81f408abbb0dada977e7ca5",
-      "End": "682cbb41f6f149b59d5b5dc1642b7c11",
-      "Id": "3221f45f970b447c8a68cfb9841ee541",
+      "End": "76be7fa8ce1247e590cc40ff90b56629",
+      "Id": "d726aa3e774c40d4a58c6eff3841ba42",
       "IsHidden": "False"
     },
     {
@@ -1129,8 +1082,8 @@
     },
     {
       "Start": "30649c83d52b4793a29c5b0eeac03274",
-      "End": "5a7b94d2bece449b9b7a4d378b1f928e",
-      "Id": "7bab98694b9c4f95b85810ec9a81ad81",
+      "End": "5c7d5426a434498f99cc931ad1d96c73",
+      "Id": "a76875051d69497f8aef4dab845cd1f0",
       "IsHidden": "False"
     },
     {
@@ -1170,21 +1123,9 @@
       "IsHidden": "False"
     },
     {
-      "Start": "6c4b1359e8d14370bbff94610c60973b",
-      "End": "5c7d5426a434498f99cc931ad1d96c73",
-      "Id": "b6f301da7e4f4130a74f2fd74e802bf3",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "5ed344cc86bc4633aaa26e4535f9b6d0",
-      "End": "be2a1c0c40df46a298f20563db101591",
-      "Id": "046ff422a8074bdca0c5d7e5cbb6e7c2",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "f8745f99628d4ab7874cabebb64cd29c",
-      "End": "80eb967867b24bff821779cb78e3b067",
-      "Id": "75bbd292bee8455c83e167bf0cc813d3",
+      "Start": "bbb261aa27ec4d78bc017939944679bd",
+      "End": "682cbb41f6f149b59d5b5dc1642b7c11",
+      "Id": "c171fbea2fcd4106841456e26ae5de5b",
       "IsHidden": "False"
     }
   ],
@@ -1243,7 +1184,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.16.1.2727",
+      "Version": "2.16.2.5624",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -1267,7 +1208,7 @@
         "Id": "c9af0aa84a0d4b3eab8238e9893d799f",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Excluded": false,
+        "Excluded": true,
         "X": 4005.4904824588734,
         "Y": 688.974839938666
       },
@@ -1278,8 +1219,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2699.4453206409971,
-        "Y": 826.02997896329157
+        "X": 3143.7727728661839,
+        "Y": 864.96152715826042
       },
       {
         "Name": "Boolean",
@@ -1438,8 +1379,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2824.6726531142072,
-        "Y": 534.17846473693078
+        "X": 3232.2636918708104,
+        "Y": 531.02535188534387
       },
       {
         "Name": "Code Block",
@@ -1502,29 +1443,19 @@
         "Y": 358.89112201922063
       },
       {
-        "Name": "String.Remove",
+        "Name": "Family.Name",
         "ShowGeometry": true,
-        "Id": "5383380495ad4e438c18aa56201a6576",
+        "Id": "225cc1adc0e5478a88f0d41917fe750c",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 3397.539869835271,
-        "Y": 423.08111167025896
-      },
-      {
-        "Name": "Code Block",
-        "ShowGeometry": true,
-        "Id": "16a05d34e48c4e5d8b746206b9b0ee95",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 3152.2542666371987,
-        "Y": 581.80945445147745
+        "X": 2822.4801037258862,
+        "Y": 546.73938859857947
       }
     ],
     "Annotations": [],
-    "X": -1336.989715350835,
-    "Y": 141.59697406299219,
-    "Zoom": 0.503304461710616
+    "X": -1242.8872860043975,
+    "Y": 28.45975616684666,
+    "Zoom": 0.59952424380385771
   }
 }

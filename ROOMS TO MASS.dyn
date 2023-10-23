@@ -1,0 +1,402 @@
+{
+  "Uuid": "a57c172b-90fa-46a0-ae47-24e8d23daf39",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ROOMS TO MASS",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "1df81660-e754-4966-80f5-2d78e98c7911-000083d1"
+      ],
+      "Id": "f71f3db9c7b9488887791ddb93a9210b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d9551c611d754afa930b35ee4a92c272",
+          "Name": "Element",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "e86655b5c649429286707f97b456f318",
+      "Inputs": [
+        {
+          "Id": "7bfcdbbd54bf481ab9f1926196a526f1",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4cfbd2cfeece4d7fbac9d525cd173d83",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte všechny geometrie přiřazené k tomuto objektu.\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.DirectShape.ByGeometry@Autodesk.DesignScript.Geometry.Geometry,Revit.Elements.Category,Revit.Elements.Material,string",
+      "Id": "9c2d8462b0dd4c4489136a67bb8e35b0",
+      "Inputs": [
+        {
+          "Id": "c7da0f1f9472432ea66fde80839ea8a1",
+          "Name": "geometry",
+          "Description": "Těleso nebo povrch, které budou mozaikovány a umístěny do modelu aplikace Revit jako prvek DirectShape\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "42e314b3005a469f88ab878bac5d37be",
+          "Name": "category",
+          "Description": "Je nutné, aby se jednalo o předdefinovanou kategorii nejvyšší úrovně.\n\nCategory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dfce3ac3f66447ac9211fc236bd99143",
+          "Name": "material",
+          "Description": "Materiál, který má být použit u ploch prvku DirectShape\n\nMaterial\nVýchozí hodnota : Revit.Elements.DirectShape.DynamoPreviewMaterial",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6d4394ee659d42969dd5bab56acc1a88",
+          "Name": "name",
+          "Description": "Řetězec s názvem prvku DirectShape\n\nstring\nVýchozí hodnota : \"DirectShape\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ac9eb4ac4f9f4e8aa90daafd10dfb151",
+          "Name": "DirectShape",
+          "Description": "Prvek DirectShape",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Umožňuje vytvořit prvek DirectShape aplikace Revit s použitím dané geometrie, názvu tvaru, kategorie a materiálu. Geometrie bude před umístěním do modelu aplikace Revit mozaikována. Kategorii prvku DirectShape nelze po vytvoření změnit, takže pokud se změní zadání kategorie, bude generován nový prvek DirectShape.\n\nDirectShape.ByGeometry (geometry: Geometry, category: Category, material: Material = Revit.Elements.DirectShape.DynamoPreviewMaterial, name: string = \"DirectShape\"): DirectShape"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 220,
+      "SelectedString": "OST_Mass",
+      "NodeType": "ExtensionNode",
+      "Id": "9808915a992e44bea1d7c41fd7860fc5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4af5b261db50425fa5bcb64c88a3574d",
+          "Name": "Category",
+          "Description": "Vybraná kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny předdefinované kategorie"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "7e17a93d59f64b8eaac763be32297726",
+      "Inputs": [
+        {
+          "Id": "3f66c9d3121c41c6a87a28ffaf933a4d",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1ce494e6e3a5443eb22e6b6d7246d1ad",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte všechny geometrie přiřazené k tomuto objektu.\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "1df81660-e754-4966-80f5-2d78e98c7911-000083d3"
+      ],
+      "Id": "95d38dcad76d4bf4a01fa941c3799dc3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "40d6e9f8f98f434c8fcf432e7ed5d011",
+          "Name": "Element",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Union@Autodesk.DesignScript.Geometry.Solid",
+      "Id": "8a5a8a96e0e640ad85816062998ec681",
+      "Inputs": [
+        {
+          "Id": "986e8ef89aac4e38be47b791812ca09f",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "39aa259f243844089064cc8a30b43bc9",
+          "Name": "solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3d3bb7600adc41d1b244602fed739c1e",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Logické sjednocení tohoto tělesa a dalšího tělesa\n\nSolid.Union (solid: Solid): Solid"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "d9551c611d754afa930b35ee4a92c272",
+      "End": "7bfcdbbd54bf481ab9f1926196a526f1",
+      "Id": "b81590a9ebe04b129a970c8bde08d00a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4cfbd2cfeece4d7fbac9d525cd173d83",
+      "End": "986e8ef89aac4e38be47b791812ca09f",
+      "Id": "9be4f8969eb1497c809c4aea5205e478",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4af5b261db50425fa5bcb64c88a3574d",
+      "End": "42e314b3005a469f88ab878bac5d37be",
+      "Id": "3397cf24a5fd40df88e9ff13dce7cc1e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1ce494e6e3a5443eb22e6b6d7246d1ad",
+      "End": "39aa259f243844089064cc8a30b43bc9",
+      "Id": "da8a20d8dcea451e959d685499cc2529",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "40d6e9f8f98f434c8fcf432e7ed5d011",
+      "End": "3f66c9d3121c41c6a87a28ffaf933a4d",
+      "Id": "83089ce9cc4d41368356150dd5350a10",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3d3bb7600adc41d1b244602fed739c1e",
+      "End": "c7da0f1f9472432ea66fde80839ea8a1",
+      "Id": "e6876dccf1fc4cbe8036694cb203656c",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [
+    {
+      "NodeId": "9c2d8462-b0dd-4c44-8913-6a67bb8e35b0",
+      "Binding": {
+        "ByGeometry_InClassDecl-1_InFunctionScope-1_Instance1_9c2d8462-b0dd-4c44-8913-6a67bb8e35b0": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTYuMi41NjI0JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD4xPC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwRWFYSmxZM1JUYUdGd1pWTjBZWFJsSUdsa1BTSnlaV1l0TVNJZ2VHMXNibk02WVRFOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZZMnh5TDI1ellYTnpaVzB2VW1WMmFYUXVSV3hsYldWdWRITXZVbVYyYVhST2IyUmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakUyTGpJdU9UTTFOQ1V5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpGa1pqZ3hOall3TFdVM05UUXRORGsyTmkwNE1HWTFMVEprTnpobE9UaGpOemt4TVMwd01EQXdPRFF3T0R3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK016TTRNREE4TDJsdWRFbEVQZzBLUEhONWJtTkpaQ0JwWkQwaWNtVm1MVFFpUGpobVpUaG1PR0psTFdNMU9Ea3ROR1ExTUMwNE5qa3hMVFZsWVRSbU1UVmlaR000T1R3dmMzbHVZMGxrUGcwS1BHMWhkR1Z5YVdGc1NXUStNek0zTlRROEwyMWhkR1Z5YVdGc1NXUStEUW84TDJFeE9rUnBjbVZqZEZOb1lYQmxVM1JoZEdVK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMF9EYXRhPg0KPEJhc2UtMC0wX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0wX0hhc05lc3RlZERhdGE+DQo8L2ExOkNhbGxTaXRlX3gwMDJCX1RyYWNlU2VyaWFsaXNlckhlbHBlcj4NCjwvU09BUC1FTlY6Qm9keT4NCjwvU09BUC1FTlY6RW52ZWxvcGU+DQo="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": 4712.412109375,
+      "EyeY": 6812.5166015625,
+      "EyeZ": 12574.724609375,
+      "LookX": 3913.2607421875,
+      "LookY": -5593.31640625,
+      "LookZ": -7005.005859375,
+      "UpX": 0.18663354218006134,
+      "UpY": 0.92387980222702026,
+      "UpZ": -0.33408719301223755
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Select Model Element",
+        "ShowGeometry": true,
+        "Id": "f71f3db9c7b9488887791ddb93a9210b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 522.5,
+        "Y": 231.0
+      },
+      {
+        "Name": "Element.Geometry",
+        "ShowGeometry": true,
+        "Id": "e86655b5c649429286707f97b456f318",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 904.5,
+        "Y": 232.0
+      },
+      {
+        "Name": "DirectShape.ByGeometry",
+        "ShowGeometry": true,
+        "Id": "9c2d8462b0dd4c4489136a67bb8e35b0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1674.3269648144976,
+        "Y": 152.52011098350076
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "9808915a992e44bea1d7c41fd7860fc5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1293.6861169264846,
+        "Y": 332.71857603859257
+      },
+      {
+        "Name": "Element.Geometry",
+        "ShowGeometry": true,
+        "Id": "7e17a93d59f64b8eaac763be32297726",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 903.5,
+        "Y": 373.0
+      },
+      {
+        "Name": "Select Model Element",
+        "ShowGeometry": true,
+        "Id": "95d38dcad76d4bf4a01fa941c3799dc3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 521.24052192594547,
+        "Y": 411.56277644379975
+      },
+      {
+        "Name": "Solid.Union",
+        "ShowGeometry": true,
+        "Id": "8a5a8a96e0e640ad85816062998ec681",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1295.6814732178336,
+        "Y": 144.73241876648751
+      }
+    ],
+    "Annotations": [],
+    "X": -278.782240337345,
+    "Y": 72.763831336748126,
+    "Zoom": 0.79397968142532216
+  }
+}

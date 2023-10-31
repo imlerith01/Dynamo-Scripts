@@ -474,13 +474,13 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Code Block",
+        "Name": "Material name",
         "Id": "53166d54f86c45ba814769a7003f1e85",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1137.123521779376,
-        "Y": 804.53723871320381
+        "X": 715.99061563302462,
+        "Y": 746.90061033277721
       },
       {
         "ShowGeometry": true,
@@ -489,8 +489,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 258.22622253153014,
-        "Y": 287.865753849675
+        "X": 345.70448454239971,
+        "Y": 279.80854550656858
       },
       {
         "ShowGeometry": true,
@@ -514,13 +514,13 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Code Block",
+        "Name": "String to search for",
         "Id": "60940e77689243f985a3b28736547d0f",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1015.1011631749016,
-        "Y": 551.50644183656732
+        "X": 705.69127345363722,
+        "Y": 633.0498924574764
       },
       {
         "ShowGeometry": true,
@@ -539,13 +539,31 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 535.93806713401216,
-        "Y": 325.50132297134314
+        "X": 565.864840979836,
+        "Y": 279.46013243930651
       }
     ],
-    "Annotations": [],
-    "X": -78.568909268977,
-    "Y": -46.67980115820086,
-    "Zoom": 0.86878726500712378
+    "Annotations": [
+      {
+        "Id": "27020d13d7384fa391021e0b32616123",
+        "Title": "Vstupní hodnoty",
+        "Nodes": [
+          "53166d54f86c45ba814769a7003f1e85",
+          "60940e77689243f985a3b28736547d0f"
+        ],
+        "Left": 695.69127345363722,
+        "Top": 537.0498924574764,
+        "Width": 197.0,
+        "Height": 302.8507178753008,
+        "FontSize": 36.0,
+        "InitialTop": 633.0498924574764,
+        "InitialHeight": 236.8507178753008,
+        "TextblockHeight": 86.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -46.4795087595345,
+    "Y": -52.426575765896075,
+    "Zoom": 0.89500050427131683
   }
 }

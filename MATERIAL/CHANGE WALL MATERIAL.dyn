@@ -10,36 +10,6 @@
   "Outputs": [],
   "Nodes": [
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "archilab.Revit.Elements.Elements.Type@Revit.Elements.Element",
-      "Id": "a432e1cad097439f84a8d30efd05d50f",
-      "Inputs": [
-        {
-          "Id": "ddc5c634c871487aab45cc507ddcdb3d",
-          "Name": "element",
-          "Description": "Element",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "34d3960f9490466d838fa979d209420d",
-          "Name": "Element",
-          "Description": "Element",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Get Element Type.\n\nElements.Type (element: Element): Element"
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
       "FunctionSignature": "af477429-479b-4cc9-848a-be978e9d9bf2",
       "FunctionType": "Graph",
@@ -189,65 +159,6 @@
       "Description": "Všechny předdefinované kategorie"
     },
     {
-      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
-      "NodeType": "ExtensionNode",
-      "Id": "1853360c98e24e85951e65d411ee4251",
-      "Inputs": [
-        {
-          "Id": "68c035753de446a2ad8a2a15e1111ecd",
-          "Name": "Category",
-          "Description": "Kategorie",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "d93dc06102fd467ab7e54ea3d1f41105",
-          "Name": "Elements",
-          "Description": "Typ prvku.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Získejte z modelu všechny prvky určité kategorie."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "DSCore.List.UniqueItems@var[]..[]",
-      "Id": "041e9f8cd1974004997b6149c90cae00",
-      "Inputs": [
-        {
-          "Id": "d788ebdc049449d1a163124deccf7775",
-          "Name": "list",
-          "Description": "Seznam, z něhož se mají filtrovat duplicity\n\nvar[]..[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "8623dc6347014366909559416372641e",
-          "Name": "list",
-          "Description": "Filtrovaný seznam",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Vytvoří nový seznam obsahující všechny jedinečné položky v daném seznamu.\n\nList.UniqueItems (list: var[]..[]): var[]..[]"
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
       "FunctionSignature": "Revit.Elements.Family.Name",
@@ -392,14 +303,49 @@
       ],
       "Replication": "Auto",
       "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "b1b51409-ea2b-4410-a242-b4b8607f7fd7",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "d4f7291f76c049d1845a8653649fb879",
+      "Inputs": [
+        {
+          "Id": "374d61d5989b4c3594b5ccd9adaf6892",
+          "Name": "CategoryOrElemType",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2582d033ab9a438aaa3ad759b75ea927",
+          "Name": "refresh",
+          "Description": "bool\nVýchozí hodnota : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "db8d57b7194b4c8cbf7381f75e415bae",
+          "Name": "elements",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Works with either categories, element types or revit classes and uses multi-filters to get multiple groups with a single query. Can be applied as a function. No ties to the Document.Changed event."
     }
   ],
   "Connectors": [
-    {
-      "Start": "34d3960f9490466d838fa979d209420d",
-      "End": "d788ebdc049449d1a163124deccf7775",
-      "Id": "9f00367fd7da45c8bbe17db999cf5362"
-    },
     {
       "Start": "07a40e0d212b48f09b4fa6c700cf0f9a",
       "End": "8c94a0a0d8e0478c9b39a8d50a136447",
@@ -417,23 +363,8 @@
     },
     {
       "Start": "ecd8b22c61994e078e198318e469d464",
-      "End": "68c035753de446a2ad8a2a15e1111ecd",
-      "Id": "4d28be6f5f2f4a2da636534114515e70"
-    },
-    {
-      "Start": "d93dc06102fd467ab7e54ea3d1f41105",
-      "End": "ddc5c634c871487aab45cc507ddcdb3d",
-      "Id": "e23354bbdb2c4eb6b6a84aaa260af35d"
-    },
-    {
-      "Start": "8623dc6347014366909559416372641e",
-      "End": "6f205d046b0f4819ac3fe1818f9d0e35",
-      "Id": "c33d2e07d1c544adbdbd80458d01e208"
-    },
-    {
-      "Start": "8623dc6347014366909559416372641e",
-      "End": "bf5b9807d294411da5d957d281c6a882",
-      "Id": "de8ef8d311c740c09fd654a5ecab97fd"
+      "End": "374d61d5989b4c3594b5ccd9adaf6892",
+      "Id": "9a53e183a71a4a1d8f9f1ba572adcf2b"
     },
     {
       "Start": "62c31bd58fd046a48866d64201d2caac",
@@ -454,26 +385,37 @@
       "Start": "9f70fac4530646e993f0adc36b238a39",
       "End": "d85330f218414057afe1bee857cf1099",
       "Id": "6f5da6ea3ec34149a875267c451d799a"
+    },
+    {
+      "Start": "db8d57b7194b4c8cbf7381f75e415bae",
+      "End": "6f205d046b0f4819ac3fe1818f9d0e35",
+      "Id": "feb8ca92270d4672a58f8421443264af"
+    },
+    {
+      "Start": "db8d57b7194b4c8cbf7381f75e415bae",
+      "End": "bf5b9807d294411da5d957d281c6a882",
+      "Id": "0805ed91520540f6b4f6c79048c3b2f5"
     }
   ],
   "Dependencies": [
-    "af477429-479b-4cc9-848a-be978e9d9bf2"
+    "af477429-479b-4cc9-848a-be978e9d9bf2",
+    "b1b51409-ea2b-4410-a242-b4b8607f7fd7"
   ],
   "NodeLibraryDependencies": [
-    {
-      "Name": "archi-lab.net",
-      "Version": "2023.213.1722",
-      "ReferenceType": "Package",
-      "Nodes": [
-        "a432e1cad097439f84a8d30efd05d50f"
-      ]
-    },
     {
       "Name": "Clockwork for Dynamo 2.x",
       "Version": "2.4.0",
       "ReferenceType": "Package",
       "Nodes": [
         "0528f90fc6344e52b225ff7ca5f72bd2"
+      ]
+    },
+    {
+      "Name": "spring nodes",
+      "Version": "210.1.1",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "d4f7291f76c049d1845a8653649fb879"
       ]
     }
   ],
@@ -500,16 +442,6 @@
       "UpZ": 0.0
     },
     "NodeViews": [
-      {
-        "ShowGeometry": true,
-        "Name": "Elements.Type",
-        "Id": "a432e1cad097439f84a8d30efd05d50f",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 415.3708445293762,
-        "Y": 346.81735074075789
-      },
       {
         "ShowGeometry": true,
         "Name": "FamilyType.SetCompoundLayerMaterial",
@@ -557,28 +489,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -69.490635363527474,
-        "Y": 476.62139991643966
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "All Elements of Category",
-        "Id": "1853360c98e24e85951e65d411ee4251",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 142.6044693959916,
-        "Y": 478.3175648117334
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "List.UniqueItems",
-        "Id": "041e9f8cd1974004997b6149c90cae00",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 727.09004434025121,
-        "Y": 252.75687067659862
+        "X": 258.22622253153014,
+        "Y": 287.865753849675
       },
       {
         "ShowGeometry": true,
@@ -587,8 +499,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 963.10552778163731,
-        "Y": 327.60027395586496
+        "X": 953.84144699308456,
+        "Y": 413.293021249979
       },
       {
         "ShowGeometry": true,
@@ -619,11 +531,21 @@
         "Excluded": false,
         "X": 1565.451880500264,
         "Y": 296.52218390928221
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ꟿ Collect.AllTypesOf",
+        "Id": "d4f7291f76c049d1845a8653649fb879",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 535.93806713401216,
+        "Y": 325.50132297134314
       }
     ],
     "Annotations": [],
-    "X": -1968.0059841204734,
-    "Y": -332.48914314952481,
-    "Zoom": 1.4602832810129684
+    "X": -78.568909268977,
+    "Y": -46.67980115820086,
+    "Zoom": 0.86878726500712378
   }
 }

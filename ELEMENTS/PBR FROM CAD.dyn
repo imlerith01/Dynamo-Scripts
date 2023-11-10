@@ -1,0 +1,886 @@
+{
+  "Uuid": "14efd3cd-b8e1-43e9-b8db-06b2a0cb168e",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "PBR FROM CAD",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "WombatDynamo.AreaPlanView": {
+        "Key": "WombatDynamo.AreaPlanView",
+        "Value": "WombatDynamo.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CAD.CurvesFromCADLayers@Revit.Elements.ImportInstance,string[],bool,string[]",
+      "Id": "972da525c051426ba9618dcb3bb0f9fe",
+      "Inputs": [
+        {
+          "Id": "5728e1adbcef4673b90e66e89b292cbf",
+          "Name": "importInstance",
+          "Description": "Input the ImportInstance to convert to curves.\n\nImportInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74c2bdebf4e24310ac977b42b5d64af7",
+          "Name": "layerNames",
+          "Description": "Input the layer names for conversion. Leave unconnected to convert all layers. Names are case-sensitive.\n\nstring[]\nVýchozí hodnota : []",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "86bcf7ee3be946f8b918042433c3e71f",
+          "Name": "createModelCurves",
+          "Description": "Set to True to convert into Revit Model Lines.\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d1a5b31a29a2481fa05b5346c3c65683",
+          "Name": "lineStyleMap",
+          "Description": "Input the LineStyle name to map to each layer. Longest lacing is used by default.\n\nstring[]\nVýchozí hodnota : []",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fc39e96b4497419fb3d1f2c7bf424449",
+          "Name": "Curve[][]",
+          "Description": "Curve[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2876c56fbae34959a674579822f20b88",
+          "Name": "layerKeys[]",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ToLinkStatus curves from a CAD link or import by layer name. Enter LineStyle names to map to each layer during conversion.\r\rThe node is optimized to convert curve types that typically fail when using Dynamo Element.Curves node or Revit Explode.\r\rVisit bimorph.com/bimorph-nodes for support.\n\nCAD.CurvesFromCADLayers (importInstance: ImportInstance, layerNames: string[] = [], createModelCurves: bool = false, lineStyleMap: string[] = []): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "95aa63bb-5497-4c03-8b5c-39e8dc017757-0000836c"
+      ],
+      "Id": "a879fd6dae314c6cbf90205212ce1718",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5589bb02a3a14df8b8645979327d8a8a",
+          "Name": "Element",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"_PO_hranice-PU\";",
+      "Id": "7529a9a99de24bd28c6feaf63b516b81",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3e101fbc0a9a40b9ad607a7a34c4b158",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynamoMEP.AreaBoundary.ByCurveAndView@Autodesk.DesignScript.Geometry.Curve,Revit.Elements.Views.AreaPlanView",
+      "Id": "7cc7c5d8a163432a9eaa79c6980dc0fc",
+      "Inputs": [
+        {
+          "Id": "c9b27439165a4dc8a1375a3dbd0fd0db",
+          "Name": "curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d01159993227481aa4624b002a9dcbd3",
+          "Name": "view",
+          "Description": "AreaPlanView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "be352ede99bf4b6caa266646ef3cef82",
+          "Name": "AreaBoundary",
+          "Description": "AreaBoundary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AreaBoundary.ByCurveAndView (curve: Curve, view: AreaPlanView): AreaBoundary"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"1NP\";",
+      "Id": "91abf744b18740bcb3ef0170bcf43c26",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1142b93a2d354192a944775f596b48ff",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "fe01ef7b-8161-4735-be7f-240056edca72",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "002f926d026e4fd687cc2fef1a907f64",
+      "Inputs": [
+        {
+          "Id": "2964aef5e55247e6b9a2306bddf296a5",
+          "Name": "view",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90616cdb4527471b814203b293788bd7",
+          "Name": "points",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fda5663d372c455b8055b7b90578183e",
+          "Name": "areas",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Given a view and a list of points, will create new areas at them. Note that you will need to provide a single view and list of points, or apply @levels to your inputs to have them work."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.FromLayers@Revit.Elements.ImportInstance,string[]",
+      "Id": "67c2ea228a90483c9d9d691953f9121b",
+      "Inputs": [
+        {
+          "Id": "e93c23b48594483fb579cbf105f036a0",
+          "Name": "importInstance",
+          "Description": "Input the ImportInstance to convert to curves.\n\nImportInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1eeb4a64a6ef41248d3471531a0f3077",
+          "Name": "layerNames",
+          "Description": "Input the layer names to filter and convert text elements. Leave unconnected to convert text on all layers. Names are case-sensitive.\n\nstring[]\nVýchozí hodnota : []",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cae0b66877a8453d93e218b5cd409462",
+          "Name": "CADTextData[][]",
+          "Description": "CADTextData[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8bfaa4707b2c43a89e603b7eef7db6be",
+          "Name": "layerKeys[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Extract text from a CAD link or import by layer name. Works recursively to extract text from CAD blocks regardless of any nested depth. The node also avoids exploding the CAD instance, so it is not affected by Revits 10,000 element import limit! \r\rVisit bimorph.com/bimorph-nodes for support\n\nCADTextData.FromLayers (importInstance: ImportInstance, layerNames: string[] = []): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"_PO_popis\";",
+      "Id": "076cefba1afc41e089565c1e684fbdad",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6f61304a3ed84ff5b14b5dee66336ad7",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.Height",
+      "Id": "11e44fb39f9a4f9787377570b95de265",
+      "Inputs": [
+        {
+          "Id": "302f7f8eaca54ebda0dfa4e80952407d",
+          "Name": "cADTextData",
+          "Description": "CADTextData",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7dface69a2bd4db98df6984893e5a1aa",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The height of this CADTextData object in the active Document's display units. \r\rVisit bimorph.com/bimorph-nodes for support\n\nCADTextData.Height: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "400;",
+      "Id": "cd630866a9954fad95d1ba6f5f5ba48b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "087a37c9c42d4b50b9791b1fc04b8381",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": ">@var[]..[],var[]..[]",
+      "Id": "b538b2457ae043789a43cd0f4d5345fc",
+      "Inputs": [
+        {
+          "Id": "8da2353b0c764b1ab6742db501b73735",
+          "Name": "x",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dff0d36921a9471fb6c78909ed9af4b6",
+          "Name": "y",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "840666fd4787432c9d077244e3326ce1",
+          "Name": "bool",
+          "Description": "Hodnota True, pokud X je větší než Y, hodnota False, pokud není",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X větší než hodnota Y\n\n> (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "1595d3e651954fecbb9eb1e08bb063e3",
+      "Inputs": [
+        {
+          "Id": "8c8899433b5f44a593c4cabc3ffbe924",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "efcdca5d57da4c8b8bc4b303dda9b878",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b49c5a1882e9411fbd2bef3c3a5d25e4",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d1da1d5731bd4aa492e4d536c1bad7a8",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.OriginPoint",
+      "Id": "7945866911fc4bd6b4f1a8859ed5da13",
+      "Inputs": [
+        {
+          "Id": "973d8c99bf844d38b188932d02c5c37a",
+          "Name": "cADTextData",
+          "Description": "CADTextData",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bc068535b4b144e081237eb2159f8591",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The placement point of this CADTextData object.\r\r Visit bimorph.com/bimorph-nodes for support\n\nCADTextData.OriginPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "baa5ff93-c463-41a0-a9a8-f552bb0e3f55",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e8c518db717345a6b8d4f82a99a9d08a",
+      "Inputs": [
+        {
+          "Id": "cf8df1e0010f46258e6c509748c7a4b8",
+          "Name": "name",
+          "Description": "string[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1af5cdf43c98420991d081adbaf0a7b9",
+          "Name": "docOrRevitLinkInstance",
+          "Description": "To use with a linked model or a background opened document\n\nvar[]..[]\nVýchozí hodnota : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8c851f3b67f24e41ba123c051199c7ac",
+          "Name": "Level",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Collects Levels by name in the active or given document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "WombatDynamo.AreaPlanView.ByLevel@Revit.Elements.Level",
+      "Id": "dbc83f20c8cc497f82c30c3fec58cc1f",
+      "Inputs": [
+        {
+          "Id": "04824575570d48deadd2758254e0c90d",
+          "Name": "level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2990e1ef05cd49abb4b7384d0c37f17a",
+          "Name": "AreaPlanView",
+          "Description": "AreaPlanView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Revit Area Plan at a given Level\n\nAreaPlanView.ByLevel (level: Level): AreaPlanView"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fc39e96b4497419fb3d1f2c7bf424449",
+      "End": "c9b27439165a4dc8a1375a3dbd0fd0db",
+      "Id": "1fea23ba6f4d4c1196b6cb0fd4c4e41a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5589bb02a3a14df8b8645979327d8a8a",
+      "End": "5728e1adbcef4673b90e66e89b292cbf",
+      "Id": "4110ad974ebc49c38c0be301d10ef17d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5589bb02a3a14df8b8645979327d8a8a",
+      "End": "e93c23b48594483fb579cbf105f036a0",
+      "Id": "02d8927fa3f14301b1b28f45e54cb72a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3e101fbc0a9a40b9ad607a7a34c4b158",
+      "End": "74c2bdebf4e24310ac977b42b5d64af7",
+      "Id": "8681b15e56f642aaaa1a119406b63549",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1142b93a2d354192a944775f596b48ff",
+      "End": "cf8df1e0010f46258e6c509748c7a4b8",
+      "Id": "a10337a2572f4c638faf0f6c48fdfed7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cae0b66877a8453d93e218b5cd409462",
+      "End": "302f7f8eaca54ebda0dfa4e80952407d",
+      "Id": "f562a7e46aac45579a4dc3f9016cd85a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cae0b66877a8453d93e218b5cd409462",
+      "End": "8c8899433b5f44a593c4cabc3ffbe924",
+      "Id": "4caf645dd1484d368d814dcce97ecad9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6f61304a3ed84ff5b14b5dee66336ad7",
+      "End": "1eeb4a64a6ef41248d3471531a0f3077",
+      "Id": "0e0f6fdb047b4ce5865ab75545d833b8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7dface69a2bd4db98df6984893e5a1aa",
+      "End": "8da2353b0c764b1ab6742db501b73735",
+      "Id": "ab3b30eb18bb4d53af1a530174dfabbf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "087a37c9c42d4b50b9791b1fc04b8381",
+      "End": "dff0d36921a9471fb6c78909ed9af4b6",
+      "Id": "2433e197b218402abbcbcd87bccc1a74",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "840666fd4787432c9d077244e3326ce1",
+      "End": "efcdca5d57da4c8b8bc4b303dda9b878",
+      "Id": "f49492785e3b4c86b28ebb493be18ea9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b49c5a1882e9411fbd2bef3c3a5d25e4",
+      "End": "973d8c99bf844d38b188932d02c5c37a",
+      "Id": "82242a52982b480fab4183762547d743",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bc068535b4b144e081237eb2159f8591",
+      "End": "90616cdb4527471b814203b293788bd7",
+      "Id": "f9470f99893144978b9caa46d724c5d3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8c851f3b67f24e41ba123c051199c7ac",
+      "End": "04824575570d48deadd2758254e0c90d",
+      "Id": "b264c9b7087a4e2ead551a8838eca28c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2990e1ef05cd49abb4b7384d0c37f17a",
+      "End": "d01159993227481aa4624b002a9dcbd3",
+      "Id": "33f210c8712249ea96cf9e9acb9a59b9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2990e1ef05cd49abb4b7384d0c37f17a",
+      "End": "2964aef5e55247e6b9a2306bddf296a5",
+      "Id": "c131311a41664d2c97ed3b09a3a99cf6",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "fe01ef7b-8161-4735-be7f-240056edca72",
+    "baa5ff93-c463-41a0-a9a8-f552bb0e3f55"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "bimorphNodes",
+      "Version": "4.2.4",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "972da525c051426ba9618dcb3bb0f9fe",
+        "67c2ea228a90483c9d9d691953f9121b",
+        "11e44fb39f9a4f9787377570b95de265",
+        "7945866911fc4bd6b4f1a8859ed5da13"
+      ]
+    },
+    {
+      "Name": "DynamoMEP",
+      "Version": "1.0.3",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "7cc7c5d8a163432a9eaa79c6980dc0fc"
+      ]
+    },
+    {
+      "Name": "Crumple",
+      "Version": "2022.5.27",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "002f926d026e4fd687cc2fef1a907f64"
+      ]
+    },
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "e8c518db717345a6b8d4f82a99a9d08a"
+      ]
+    },
+    {
+      "Name": "WombatDynamo",
+      "Version": "2.3.4",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "dbc83f20c8cc497f82c30c3fec58cc1f"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [
+    {
+      "NodeId": "dbc83f20-c8cc-497f-82c3-0c3fec58cc1f",
+      "Binding": {
+        "ByLevel_InClassDecl-1_InFunctionScope-1_Instance0_dbc83f20-c8cc-497f-82c3-0c3fec58cc1f": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTYuMi41NjI0JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT50cnVlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfRGF0YSBpZD0icmVmLTMiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRTJMakl1T1RNMU5DVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQamsxWVdFMk0ySmlMVFUwT1RjdE5HTXdNeTA0WWpWakxUTTVaVGhrWXpBeE56YzFOeTB3TURBd09EVm1PVHd2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTXpReU9UYzhMMmx1ZEVsRVBnMEtQQzloTVRwVFpYSnBZV3hwZW1GaWJHVkpaRDROQ2p3dlUwOUJVQzFGVGxZNlFtOWtlVDROQ2p3dlUwOUJVQzFGVGxZNlJXNTJaV3h2Y0dVK0RRbz08L0Jhc2UtMF9EYXRhPg0KPEJhc2UtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjwvYTE6Q2FsbFNpdGVfeDAwMkJfVHJhY2VTZXJpYWxpc2VySGVscGVyPg0KPC9TT0FQLUVOVjpCb2R5Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg=="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": 17199.1767578125,
+      "EyeY": 46805.046875,
+      "EyeZ": 50402.375,
+      "LookX": -3557.482421875,
+      "LookY": -54060.86328125,
+      "LookZ": -42270.93359375,
+      "UpX": -0.053343448787927628,
+      "UpY": 0.77162414789199829,
+      "UpZ": -0.6338379979133606
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "CAD.CurvesFromCADLayers",
+        "ShowGeometry": true,
+        "Id": "972da525c051426ba9618dcb3bb0f9fe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 607.8080443291559,
+        "Y": 216.54149051349177
+      },
+      {
+        "Name": "Select Model Element",
+        "ShowGeometry": true,
+        "Id": "a879fd6dae314c6cbf90205212ce1718",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 209.34555079280091,
+        "Y": 216.44577468137285
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "7529a9a99de24bd28c6feaf63b516b81",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 196.80548586014703,
+        "Y": 417.52113336943569
+      },
+      {
+        "Name": "AreaBoundary.ByCurveAndView",
+        "ShowGeometry": true,
+        "Id": "7cc7c5d8a163432a9eaa79c6980dc0fc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2127.6897053079279,
+        "Y": 202.86020372456892
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "91abf744b18740bcb3ef0170bcf43c26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 973.074596537688,
+        "Y": 417.89094237300111
+      },
+      {
+        "Name": "© Areas.Create",
+        "ShowGeometry": true,
+        "Id": "002f926d026e4fd687cc2fef1a907f64",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2199.0532417644549,
+        "Y": -46.658687088408612
+      },
+      {
+        "Name": "CADTextData.FromLayers",
+        "ShowGeometry": true,
+        "Id": "67c2ea228a90483c9d9d691953f9121b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 549.08549575665768,
+        "Y": -127.13500970001559
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "076cefba1afc41e089565c1e684fbdad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 99.0,
+        "Y": -48.0
+      },
+      {
+        "Name": "CADTextData.Height",
+        "ShowGeometry": true,
+        "Id": "11e44fb39f9a4f9787377570b95de265",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1007.0724646221538,
+        "Y": -74.8545087589521
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "cd630866a9954fad95d1ba6f5f5ba48b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1109.0,
+        "Y": 59.0
+      },
+      {
+        "Name": ">",
+        "ShowGeometry": true,
+        "Id": "b538b2457ae043789a43cd0f4d5345fc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1358.7028311737388,
+        "Y": -85.485073869288357
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "1595d3e651954fecbb9eb1e08bb063e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1549.4068166043289,
+        "Y": -286.65549202825389
+      },
+      {
+        "Name": "CADTextData.OriginPoint",
+        "ShowGeometry": true,
+        "Id": "7945866911fc4bd6b4f1a8859ed5da13",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1876.6399003533095,
+        "Y": -268.34460819624621
+      },
+      {
+        "Name": "Level ByName",
+        "ShowGeometry": true,
+        "Id": "e8c518db717345a6b8d4f82a99a9d08a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1301.4377344891266,
+        "Y": 446.1528341210323
+      },
+      {
+        "Name": "AreaPlanView.ByLevel",
+        "ShowGeometry": true,
+        "Id": "dbc83f20c8cc497f82c30c3fec58cc1f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1713.8047446642088,
+        "Y": 336.75494461013415
+      }
+    ],
+    "Annotations": [],
+    "X": -689.37301087358787,
+    "Y": -27.98194312010105,
+    "Zoom": 1.0134440767424451
+  }
+}

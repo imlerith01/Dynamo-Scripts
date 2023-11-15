@@ -1,0 +1,1459 @@
+{
+  "Uuid": "14efd3cd-b8e1-43e9-b8db-06b2a0cb168e",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "IMPORT PBR",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "95aa63bb-5497-4c03-8b5c-39e8dc017757-0000836c"
+      ],
+      "Id": "c23d3db8c29f434d857fd6d9ff8b21bd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "153219fdc2e4483799c654a5bad77212",
+          "Name": "Element",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"_PO_znacky\";",
+      "Id": "fda130e3381a4a7b9b3cc0069be70a65",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b324688f6cd54280b2128bc7468b6cd5",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.FromLayers@Revit.Elements.ImportInstance,string[]",
+      "Id": "e489e2cf8562455bb2c4f325ffb8d347",
+      "Inputs": [
+        {
+          "Id": "6e03c1f13ed44fb8a8eb14ed3aad244a",
+          "Name": "importInstance",
+          "Description": "Input the ImportInstance to convert to curves.\n\nImportInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "844d3ecfd41b4fc48561168d0fc3dcea",
+          "Name": "layerNames",
+          "Description": "Input the layer names to filter and convert text elements. Leave unconnected to convert text on all layers. Names are case-sensitive.\n\nstring[]\nVýchozí hodnota : []",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea50d5e54972444eb0cc522a9b029cd6",
+          "Name": "CADTextData[][]",
+          "Description": "CADTextData[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c20b225803394270bab1c252be16d103",
+          "Name": "layerKeys[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Extract text from a CAD link or import by layer name. Works recursively to extract text from CAD blocks regardless of any nested depth. The node also avoids exploding the CAD instance, so it is not affected by Revits 10,000 element import limit! \r\rVisit bimorph.com/bimorph-nodes for support\n\nCADTextData.FromLayers (importInstance: ImportInstance, layerNames: string[] = []): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "==@var[]..[],var[]..[]",
+      "Id": "5e19a46d830c4d49bbe211fbec54f10d",
+      "Inputs": [
+        {
+          "Id": "6893bc544b624f4a81f6367b6be7fec2",
+          "Name": "x",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a563f75f47a247dbb5d4fbd44a10ca08",
+          "Name": "y",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dd0a5135293642448e80e6be0bcd0a23",
+          "Name": "bool",
+          "Description": "Výsledek kontroly rovnosti",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X rovna hodnotě Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.TextValue",
+      "Id": "3f163e1a247d4e13ba4e298f6453c8cf",
+      "Inputs": [
+        {
+          "Id": "b724b3be62284f24a8483f552b72a01e",
+          "Name": "cADTextData",
+          "Description": "CADTextData",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d6ce4dc9b8474dd280adef07f9ac5bf6",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The text value of this CADTextData object. \r\rVisit bimorph.com/bimorph-nodes for support\n\nCADTextData.TextValue: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[\"21A\", \"34A\", \"183B\", \"55B\"];",
+      "Id": "5ac3feffbb504308bc1828fa527ec40c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0860b7b8aac0422c8002ce3e9a553150",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "36c8d2bc8fb74270bec0bb6139f3b438",
+      "Inputs": [
+        {
+          "Id": "759eaab717bd42498827f0e5a84ba90c",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ccaf5d1da6de4cd79072ffe6b65504e4",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0b0d8fe0c4a444029ebb035fe9f7cf24",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12b85513d54048fa94821fdc2c6e3cc5",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.OriginPoint",
+      "Id": "720c8ccb2ba948d68594e399cdedc96e",
+      "Inputs": [
+        {
+          "Id": "f48329266c0243faa513bc9713cc1063",
+          "Name": "cADTextData",
+          "Description": "CADTextData",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b75c3c77391247d28823cb5f896e4424",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The placement point of this CADTextData object.\r\r Visit bimorph.com/bimorph-nodes for support\n\nCADTextData.OriginPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "0b019f6b891f4e4080ff5c0b066618b1",
+      "Inputs": [
+        {
+          "Id": "7cfeb75b34854348a2690bd77b6c6760",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a45c55f74be14b7ea2256b4ced3fa471",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fd84a878434c4dc98c4fdad1a8292a32",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "CADTextData.Rotation",
+      "Id": "a2ac4bf1120d472eba58871b0554fde5",
+      "Inputs": [
+        {
+          "Id": "0792ddfe65524d489b6242fac86e2be4",
+          "Name": "cADTextData",
+          "Description": "CADTextData",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7dc7e770066e4d2d84ab75a1ea990525",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The rotation of this CADTextData object in degrees. \r\rVisit bimorph.com/bimorph-nodes for support\n\nCADTextData.Rotation: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "f4980b5194924b4a84017fd152494f62",
+      "Inputs": [
+        {
+          "Id": "cacf2535cf92487ca30df26b29755f13",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aaa7e396d2c2470daafb6b5aca1f2862",
+          "Name": "direction",
+          "Description": "Směr posunutí\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "60e0da429fe94c368d694ae0a4ad1140",
+          "Name": "distance",
+          "Description": "Vzdálenost posunutí v daném směru\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d12abe1ef21e43958a2b3e8efccaeb71",
+          "Name": "Geometry",
+          "Description": "Transformovaná geometrie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Převede libovolný typ geometrie podle zadané vzdálenosti v daném směru.\n\nGeometry.Translate (direction: Vector, distance: double): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.YAxis",
+      "Id": "4e6f850e20064e7cac444555a970c7fa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "33694ebd6f2b4dd48bd9ea1f823b7cdd",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat kanonický vektor osy Y (0,1,0)\n\nVector.YAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "350;",
+      "Id": "1df6a73a7d6e491f908206572f78c152",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3c1f1aced5734d5bb37d6025097e0655",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.XAxis",
+      "Id": "64807a1df3a74ae4b2b49ee5c76fd7bd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c8e0f132c06042e9a0607b586d01d8f5",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat kanonický vektor osy X (1,0,0)\n\nVector.XAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Reverse",
+      "Id": "28331b77d3894d6aa36950d34b69eca2",
+      "Inputs": [
+        {
+          "Id": "d7484bd6b86e46f18f09c01d83f0791f",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d5ebdede80949c08da534986285147f",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat opačný vektor. V podstatě dojde ke znegování komponent X, Y a Z vektoru.\n\nVector.Reverse ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "ed978fc4d5f34ef18279b1a728df9a5f",
+      "Inputs": [
+        {
+          "Id": "d04a60f635ba4295bba88edbc5c6f6da",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45afab36d1ae466591474c883155fed2",
+          "Name": "direction",
+          "Description": "Směr posunutí\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7157735a43ad4782bd72c238c23b0b66",
+          "Name": "distance",
+          "Description": "Vzdálenost posunutí v daném směru\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea9e959acdbf4880b624267628c432fe",
+          "Name": "Geometry",
+          "Description": "Transformovaná geometrie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Převede libovolný typ geometrie podle zadané vzdálenosti v daném směru.\n\nGeometry.Translate (direction: Vector, distance: double): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Reverse",
+      "Id": "4b5dab034cba4fc7b3ff41dde37ae697",
+      "Inputs": [
+        {
+          "Id": "3cf9961bc39b40e19cbbf417f6186574",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "60645daebc144a3eb2911096062bd270",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat opačný vektor. V podstatě dojde ke znegování komponent X, Y a Z vektoru.\n\nVector.Reverse ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Rotate@Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "b5b4545139a748718e41fbe5014a4e5e",
+      "Inputs": [
+        {
+          "Id": "bab31223f0b34f27b22c5a78c6e83bf4",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d31d7cde98d046d9a428d11ffbf0c44c",
+          "Name": "axis",
+          "Description": "Vektor osy rotace\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a8281d90bfb4f84b2b0d07d70d14c8c",
+          "Name": "degrees",
+          "Description": "Počet stupňů k otočení\n\ndouble\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "10f9a33c4d3443a68ce18a13c12afa33",
+          "Name": "Vector",
+          "Description": "Otočený vektor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Otočí vektor kolem osy o zadaný počet stupňů.\n\nVector.Rotate (axis: Vector, degrees: double = 0): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ZAxis",
+      "Id": "fbab42bb37f34960b539935f0ae75efb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3e69e6d79fb84c68b5c786db09ef7ed5",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat kanonický vektor osy Z (0,0,1)\n\nVector.ZAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Rotate@Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "bf793ee868084b2a8135b4d24b1f69ae",
+      "Inputs": [
+        {
+          "Id": "39119e89639d4073b46350c0e9f70cd8",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b00773c5cb6045c1b019b796400c48d4",
+          "Name": "axis",
+          "Description": "Vektor osy rotace\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94e68ef595f847b5822480e0349875ed",
+          "Name": "degrees",
+          "Description": "Počet stupňů k otočení\n\ndouble\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9c0d854f873d4feaab8f8c96ac20d5cf",
+          "Name": "Vector",
+          "Description": "Otočený vektor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Otočí vektor kolem osy o zadaný počet stupňů.\n\nVector.Rotate (axis: Vector, degrees: double = 0): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ZAxis",
+      "Id": "70e3ea8427954496a8ee0f1e6de00a65",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "325cd39e26d54358a1f2976ec26499d2",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat kanonický vektor osy Z (0,0,1)\n\nVector.ZAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.ByPointAndLevel@Revit.Elements.FamilyType,Autodesk.DesignScript.Geometry.Point,Revit.Elements.Level",
+      "Id": "3db658b237be491c8ac827b12f2411ed",
+      "Inputs": [
+        {
+          "Id": "46e35c226f404dc6905c198566af80de",
+          "Name": "familyType",
+          "Description": "Typ rodiny. Také se označuje jako symbol rodiny.\n\nFamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9c6ccfac0c2f402f8bb99f93e9e4d362",
+          "Name": "point",
+          "Description": "Bod v metrech\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9d941bd7224840518f4556f21b433cd0",
+          "Name": "level",
+          "Description": "Podlaží pro hostování instance rodiny\n\nLevel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53e55630916548759bad487c0e635648",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Umožňuje umístit prvek FamilyInstance aplikace Revit na základě prvku FamilyType (v rozhraní API aplikace Revit je označován také jako prvek FamilySymbol), jeho souřadnic v prostoru a úrovně.\n\nFamilyInstance.ByPointAndLevel (familyType: FamilyType, point: Point, level: Level): FamilyInstance"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 311,
+      "SelectedString": "OST_Levels",
+      "NodeType": "ExtensionNode",
+      "Id": "99f8f3c5b9834e609946fd626ef63a85",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4f73bf8a1e164c4e8ef5380a03784f3a",
+          "Name": "Category",
+          "Description": "Vybraná kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny předdefinované kategorie"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "d4aa2fcd313447cc9ad6e3038ea573db",
+      "Inputs": [
+        {
+          "Id": "3384ef8a019f4d5caefd512f7ff995de",
+          "Name": "Category",
+          "Description": "Kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1d009ce7812e485096ca4433d0542354",
+          "Name": "Elements",
+          "Description": "Třída prvku.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Získejte z modelu všechny prvky určité kategorie."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "WombatDynamo.Level.ByName@string",
+      "Id": "12ae1340e85e460992cd7aa70e753d2d",
+      "Inputs": [
+        {
+          "Id": "98360335b19648d79710d45207e9af1f",
+          "Name": "name",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c791d779f65401082e15c359b2eb860",
+          "Name": "Level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Retrieve a level by its name.\n\nLevel.ByName (name: string): Level"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"1NP\";",
+      "Id": "cbf0fbf107254340800197b29c7b7caf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "181fbe1a7459407fb71fadab708936b6",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 2,
+      "SelectedString": "#Hasící přístroj, ruční:Volný",
+      "NodeType": "ExtensionNode",
+      "Id": "af973e47a5a04d17ae37bbaa98a0f31d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "db5f9b700d8f419eb9f8e1bfc8d1f12f",
+          "Name": "Family Type",
+          "Description": "Vybrané Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny typy rodiny, jež jsou k dispozici v dokumentu."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "b7d53942-f5f1-46b5-b32c-8da905c94724",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "41f6d1794def4ffaa797945efc531c8f",
+      "Inputs": [
+        {
+          "Id": "9371cec66ea747569bac7bb59795f310",
+          "Name": "element",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eed8d014fff14107863ce34c778f3072",
+          "Name": "degree",
+          "Description": "The angle around Z-axis\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2a551057dc604c11a4714f3d4a5eb471",
+          "Name": "Element",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the angle of the element around its local Z-axis.\r\n(Same as the Rotate command in Revit)"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "153219fdc2e4483799c654a5bad77212",
+      "End": "6e03c1f13ed44fb8a8eb14ed3aad244a",
+      "Id": "7d92cf68d111476cbbba611dd889893b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b324688f6cd54280b2128bc7468b6cd5",
+      "End": "844d3ecfd41b4fc48561168d0fc3dcea",
+      "Id": "3c3b688fd7dd46a1a755ec32af16a0a0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ea50d5e54972444eb0cc522a9b029cd6",
+      "End": "b724b3be62284f24a8483f552b72a01e",
+      "Id": "f07dc6688d2f441d8453e29a724f9b66",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ea50d5e54972444eb0cc522a9b029cd6",
+      "End": "759eaab717bd42498827f0e5a84ba90c",
+      "Id": "891f81612f4444a1848158b94e4a180a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dd0a5135293642448e80e6be0bcd0a23",
+      "End": "ccaf5d1da6de4cd79072ffe6b65504e4",
+      "Id": "232c5931c7284d5dab9e80a45430b9c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d6ce4dc9b8474dd280adef07f9ac5bf6",
+      "End": "6893bc544b624f4a81f6367b6be7fec2",
+      "Id": "c390b9b21ed645c5b7c6ab0cf403c0e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0860b7b8aac0422c8002ce3e9a553150",
+      "End": "a563f75f47a247dbb5d4fbd44a10ca08",
+      "Id": "362427efc4a9428cba479e5b4becd301",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0b0d8fe0c4a444029ebb035fe9f7cf24",
+      "End": "7cfeb75b34854348a2690bd77b6c6760",
+      "Id": "e63f0b7be32342e699f380e191e27fd4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b75c3c77391247d28823cb5f896e4424",
+      "End": "cacf2535cf92487ca30df26b29755f13",
+      "Id": "70d82e130a4240efa7660baa65485f83",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd84a878434c4dc98c4fdad1a8292a32",
+      "End": "f48329266c0243faa513bc9713cc1063",
+      "Id": "a0ceb38c6fa64ddbaf2972d628be9ebb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd84a878434c4dc98c4fdad1a8292a32",
+      "End": "0792ddfe65524d489b6242fac86e2be4",
+      "Id": "0bf40e29a88e4fed8fc0bb2188397bda",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7dc7e770066e4d2d84ab75a1ea990525",
+      "End": "3a8281d90bfb4f84b2b0d07d70d14c8c",
+      "Id": "62834fbbcf2b472aba03b5b64fd11b69",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7dc7e770066e4d2d84ab75a1ea990525",
+      "End": "94e68ef595f847b5822480e0349875ed",
+      "Id": "10e1696feab94f7390c3e1bacee22862",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7dc7e770066e4d2d84ab75a1ea990525",
+      "End": "eed8d014fff14107863ce34c778f3072",
+      "Id": "cb03461aab7a409a9f7c512f411fdbdb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d12abe1ef21e43958a2b3e8efccaeb71",
+      "End": "d04a60f635ba4295bba88edbc5c6f6da",
+      "Id": "ddbb5060500b4113877b3b096ff44a9a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "33694ebd6f2b4dd48bd9ea1f823b7cdd",
+      "End": "3cf9961bc39b40e19cbbf417f6186574",
+      "Id": "6d892893dc454c3288149f0348083401",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3c1f1aced5734d5bb37d6025097e0655",
+      "End": "60e0da429fe94c368d694ae0a4ad1140",
+      "Id": "74236bcb4b16408ab6e27362b5b8afc4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3c1f1aced5734d5bb37d6025097e0655",
+      "End": "7157735a43ad4782bd72c238c23b0b66",
+      "Id": "d08f9c6cadc04fd183a44b1b564dc903",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c8e0f132c06042e9a0607b586d01d8f5",
+      "End": "d7484bd6b86e46f18f09c01d83f0791f",
+      "Id": "4fb37fd3ef0d4cddbd9eb8aaac8a9758",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5d5ebdede80949c08da534986285147f",
+      "End": "bab31223f0b34f27b22c5a78c6e83bf4",
+      "Id": "84c42ab65e7149c996245f4cb47df145",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ea9e959acdbf4880b624267628c432fe",
+      "End": "9c6ccfac0c2f402f8bb99f93e9e4d362",
+      "Id": "a5557e5bb8994306bb418b3a4ffe8671",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "60645daebc144a3eb2911096062bd270",
+      "End": "39119e89639d4073b46350c0e9f70cd8",
+      "Id": "9ee66ed1013b4373aa40ff9bcfc02ce5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "10f9a33c4d3443a68ce18a13c12afa33",
+      "End": "aaa7e396d2c2470daafb6b5aca1f2862",
+      "Id": "6033d31fb1f443acbeb13672068d7206",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3e69e6d79fb84c68b5c786db09ef7ed5",
+      "End": "d31d7cde98d046d9a428d11ffbf0c44c",
+      "Id": "e0d584adac2d46ce93f2fb339a153576",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9c0d854f873d4feaab8f8c96ac20d5cf",
+      "End": "45afab36d1ae466591474c883155fed2",
+      "Id": "a1ec6089e9104779900ace02615aa6bd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "325cd39e26d54358a1f2976ec26499d2",
+      "End": "b00773c5cb6045c1b019b796400c48d4",
+      "Id": "2031683348664558b648b16e602a4544",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "53e55630916548759bad487c0e635648",
+      "End": "9371cec66ea747569bac7bb59795f310",
+      "Id": "c41a9a459043496eb6afaba81099f2df",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4f73bf8a1e164c4e8ef5380a03784f3a",
+      "End": "3384ef8a019f4d5caefd512f7ff995de",
+      "Id": "dc918b7d8d6f4696b8d5a1ee4a19144d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0c791d779f65401082e15c359b2eb860",
+      "End": "9d941bd7224840518f4556f21b433cd0",
+      "Id": "24ac9d366c294f6e914932e6d8cee72f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "181fbe1a7459407fb71fadab708936b6",
+      "End": "98360335b19648d79710d45207e9af1f",
+      "Id": "9706c58d8dde4a999cb7d589351e9507",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "db5f9b700d8f419eb9f8e1bfc8d1f12f",
+      "End": "46e35c226f404dc6905c198566af80de",
+      "Id": "ef8da267c59a4378ba522ebd1fa6749b",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "b7d53942-f5f1-46b5-b32c-8da905c94724"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "bimorphNodes",
+      "Version": "4.2.4",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "e489e2cf8562455bb2c4f325ffb8d347",
+        "3f163e1a247d4e13ba4e298f6453c8cf",
+        "720c8ccb2ba948d68594e399cdedc96e",
+        "a2ac4bf1120d472eba58871b0554fde5"
+      ]
+    },
+    {
+      "Name": "WombatDynamo",
+      "Version": "2.3.4",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "12ae1340e85e460992cd7aa70e753d2d"
+      ]
+    },
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "41f6d1794def4ffaa797945efc531c8f"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [
+    {
+      "NodeId": "3db658b2-37be-491c-8ac8-27b12f2411ed",
+      "Binding": {
+        "ByPointAndLevel_InClassDecl-1_InFunctionScope-1_Instance0_3db658b2-37be-491c-8ac8-27b12f2411ed": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTYuMi41NjI0JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD43PC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObFpUd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTXpROEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObFpqd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTXpVOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTFfRGF0YT4NCjxCYXNlLTAtMV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0yX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTJfSGFzRGF0YT4NCjxCYXNlLTAtMl9EYXRhIGlkPSJyZWYtNSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObU1Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTXpZOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTJfRGF0YT4NCjxCYXNlLTAtMl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0zX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTNfSGFzRGF0YT4NCjxCYXNlLTAtM19EYXRhIGlkPSJyZWYtNiI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObU1Ud3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTXpjOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTNfRGF0YT4NCjxCYXNlLTAtM19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtM19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC00X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTRfSGFzRGF0YT4NCjxCYXNlLTAtNF9EYXRhIGlkPSJyZWYtNyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObU1qd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTXpnOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTRfRGF0YT4NCjxCYXNlLTAtNF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC01X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTVfSGFzRGF0YT4NCjxCYXNlLTAtNV9EYXRhIGlkPSJyZWYtOCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObU16d3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTXprOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTVfRGF0YT4NCjxCYXNlLTAtNV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC02X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTZfSGFzRGF0YT4NCjxCYXNlLTAtNl9EYXRhIGlkPSJyZWYtOSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFMkxqSXVPVE0xTkNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqUmlNekppTWpRMkxXUTNNakV0TkRZMk1pMDRPVGRtTFRVek9EVmhNRFk0TWpneVppMHdNREF4TWpObU5Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStOelEzTkRBOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTZfRGF0YT4NCjxCYXNlLTAtNl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNl9IYXNOZXN0ZWREYXRhPg0KPC9hMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXI+DQo8L1NPQVAtRU5WOkJvZHk+DQo8L1NPQVAtRU5WOkVudmVsb3BlPg0K"
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": 18868.58984375,
+      "EyeY": 14187.669921875,
+      "EyeZ": 16558.63671875,
+      "LookX": 1941.09765625,
+      "LookY": -19879.328125,
+      "LookZ": -11368.67578125,
+      "UpX": 0.12408879399299622,
+      "UpY": 0.67558944225311279,
+      "UpZ": -0.72676044702529907
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Select Model Element",
+        "ShowGeometry": true,
+        "Id": "c23d3db8c29f434d857fd6d9ff8b21bd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 667.13673503058124,
+        "Y": 56.651145322097307
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "fda130e3381a4a7b9b3cc0069be70a65",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 686.667174215462,
+        "Y": -108.17029363542449
+      },
+      {
+        "Name": "CADTextData.FromLayers",
+        "ShowGeometry": true,
+        "Id": "e489e2cf8562455bb2c4f325ffb8d347",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1244.5354195284826,
+        "Y": -168.9374651213729
+      },
+      {
+        "Name": "==",
+        "ShowGeometry": true,
+        "Id": "5e19a46d830c4d49bbe211fbec54f10d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2154.4905613145511,
+        "Y": -25.459297444029119
+      },
+      {
+        "Name": "CADTextData.TextValue",
+        "ShowGeometry": true,
+        "Id": "3f163e1a247d4e13ba4e298f6453c8cf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1817.9752505560089,
+        "Y": -128.90793560342678
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "5ac3feffbb504308bc1828fa527ec40c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1718.106841282131,
+        "Y": 28.056318673129056
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "36c8d2bc8fb74270bec0bb6139f3b438",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2452.2501496483505,
+        "Y": -221.31089188255038
+      },
+      {
+        "Name": "CADTextData.OriginPoint",
+        "ShowGeometry": true,
+        "Id": "720c8ccb2ba948d68594e399cdedc96e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3076.597422433691,
+        "Y": -215.04199243147741
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "0b019f6b891f4e4080ff5c0b066618b1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2748.24096850632,
+        "Y": -216.45259138558617
+      },
+      {
+        "Name": "CADTextData.Rotation",
+        "ShowGeometry": true,
+        "Id": "a2ac4bf1120d472eba58871b0554fde5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3382.9277060314726,
+        "Y": 149.57015573088916
+      },
+      {
+        "Name": "Geometry.Translate",
+        "ShowGeometry": true,
+        "Id": "f4980b5194924b4a84017fd152494f62",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4195.36416945107,
+        "Y": -69.806989432762464
+      },
+      {
+        "Name": "Vector.YAxis",
+        "ShowGeometry": true,
+        "Id": "4e6f850e20064e7cac444555a970c7fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3636.661973383415,
+        "Y": 409.1471413082046
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "1df6a73a7d6e491f908206572f78c152",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3871.9078048492293,
+        "Y": 200.50075561603228
+      },
+      {
+        "Name": "Vector.XAxis",
+        "ShowGeometry": true,
+        "Id": "64807a1df3a74ae4b2b49ee5c76fd7bd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2625.985916504168,
+        "Y": -28.280322969789836
+      },
+      {
+        "Name": "Vector.Reverse",
+        "ShowGeometry": true,
+        "Id": "28331b77d3894d6aa36950d34b69eca2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2838.8178137629452,
+        "Y": -29.151136088676765
+      },
+      {
+        "Name": "Geometry.Translate",
+        "ShowGeometry": true,
+        "Id": "ed978fc4d5f34ef18279b1a728df9a5f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4662.62427108596,
+        "Y": 106.19260343014918
+      },
+      {
+        "Name": "Vector.Reverse",
+        "ShowGeometry": true,
+        "Id": "4b5dab034cba4fc7b3ff41dde37ae697",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3888.12416260379,
+        "Y": 413.60663726598693
+      },
+      {
+        "Name": "Vector.Rotate",
+        "ShowGeometry": true,
+        "Id": "b5b4545139a748718e41fbe5014a4e5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3811.3315238547329,
+        "Y": -0.62770514009008593
+      },
+      {
+        "Name": "Vector.ZAxis",
+        "ShowGeometry": true,
+        "Id": "fbab42bb37f34960b539935f0ae75efb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2900.4019910696879,
+        "Y": 104.42496313174206
+      },
+      {
+        "Name": "Vector.Rotate",
+        "ShowGeometry": true,
+        "Id": "bf793ee868084b2a8135b4d24b1f69ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4359.7487348413442,
+        "Y": 347.49684109347589
+      },
+      {
+        "Name": "Vector.ZAxis",
+        "ShowGeometry": true,
+        "Id": "70e3ea8427954496a8ee0f1e6de00a65",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3940.6035724592775,
+        "Y": 548.01878567813867
+      },
+      {
+        "Name": "FamilyInstance.ByPointAndLevel",
+        "ShowGeometry": true,
+        "Id": "3db658b237be491c8ac827b12f2411ed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5189.8615842389781,
+        "Y": 89.110402439864941
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "99f8f3c5b9834e609946fd626ef63a85",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 643.6224496887869,
+        "Y": 620.96429868585687
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "d4aa2fcd313447cc9ad6e3038ea573db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 977.413500325393,
+        "Y": 602.15916907252677
+      },
+      {
+        "Name": "Level.ByName",
+        "ShowGeometry": true,
+        "Id": "12ae1340e85e460992cd7aa70e753d2d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4259.7374079978963,
+        "Y": 737.1118089400552
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "cbf0fbf107254340800197b29c7b7caf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3851.123486248578,
+        "Y": 748.73958094671707
+      },
+      {
+        "Name": "Family Types",
+        "ShowGeometry": true,
+        "Id": "af973e47a5a04d17ae37bbaa98a0f31d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4583.0656467970321,
+        "Y": -87.824988033889383
+      },
+      {
+        "Name": "Element SetRotation",
+        "ShowGeometry": true,
+        "Id": "41f6d1794def4ffaa797945efc531c8f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5652.3308753949877,
+        "Y": 243.24514977834264
+      }
+    ],
+    "Annotations": [],
+    "X": 95.109616697185857,
+    "Y": 339.93368702116243,
+    "Zoom": 0.29671411845721229
+  }
+}

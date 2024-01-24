@@ -1,0 +1,248 @@
+{
+  "Uuid": "d3046c2b-2804-45b8-b9d4-e8c6be836892",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MOVE IFC TO SURVEY POINT",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementById, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "a7179d987719448981bbc568d1c5aeef",
+      "Inputs": [
+        {
+          "Id": "8cfd5c921be14db7882dc9319e775b87",
+          "Name": "Id",
+          "Description": "ID prvku jako objekt string, int nebo ElementId",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "807b4ec3224844e68210bf4aeef31c56",
+          "Name": "Element",
+          "Description": "Seznam prvků, které odpovídají dotazu.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Získá prvek s určeným ID."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"331397\";",
+      "Id": "d14aaf2e32cd436497fc2b2e7311f270",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "525164fec4484c8ea119e8bdc230985d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "d0e002bc-b698-422e-9027-0908d87ed18c",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "908e964fb82048e089466feaf049b5de",
+      "Inputs": [
+        {
+          "Id": "759345142e514988bd8e093bb1854197",
+          "Name": "element",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "547590283f0a4be98bb54cc1c223fd10",
+          "Name": "location",
+          "Description": "Point\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "04c51b10363c498eb4d3b9f8c1e6298f",
+          "Name": "Element",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Modify the location of the given element.\r\n(Same as the Move command in Revit.)\r\nWorks for point/ line/ sketch based elements, view-specific elements, groups and link instances."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Coordinates.SurveyPoint",
+      "Id": "2f2748b5cd204933aa29c199a7310e75",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "59485c362c204a7394e7b6ee57c0e499",
+          "Name": "Point",
+          "Description": "Bod zaměření",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získání bodu zaměření\n\nCoordinates.SurveyPoint ( ): Point"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "807b4ec3224844e68210bf4aeef31c56",
+      "End": "759345142e514988bd8e093bb1854197",
+      "Id": "38b7a6fade404649ae7942f97f870d32",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "525164fec4484c8ea119e8bdc230985d",
+      "End": "8cfd5c921be14db7882dc9319e775b87",
+      "Id": "70efce337148450da5436acc8d95215c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59485c362c204a7394e7b6ee57c0e499",
+      "End": "547590283f0a4be98bb54cc1c223fd10",
+      "Id": "fb855886b9f94e5aafa70fd91332b1df",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "d0e002bc-b698-422e-9027-0908d87ed18c"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "908e964fb82048e089466feaf049b5de"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Element By Id",
+        "ShowGeometry": true,
+        "Id": "a7179d987719448981bbc568d1c5aeef",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 650.5,
+        "Y": 348.5
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "d14aaf2e32cd436497fc2b2e7311f270",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 339.0,
+        "Y": 316.0
+      },
+      {
+        "Name": "Element SetLocation",
+        "ShowGeometry": true,
+        "Id": "908e964fb82048e089466feaf049b5de",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 969.5,
+        "Y": 416.5
+      },
+      {
+        "Name": "Coordinates.SurveyPoint",
+        "ShowGeometry": true,
+        "Id": "2f2748b5cd204933aa29c199a7310e75",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 341.5,
+        "Y": 556.5
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}

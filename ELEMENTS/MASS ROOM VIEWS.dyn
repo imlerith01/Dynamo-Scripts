@@ -1,0 +1,1657 @@
+{
+  "Uuid": "dc8e0c2e-17af-40f2-80e0-b834c6a801a8",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MASS ROOM VIEWS",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Rooms.C": {
+        "Key": "Rhythm.Revit.Elements.Rooms",
+        "Value": "RhythmRevit.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 196,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "Id": "1abc8a40ffd04e4ba748537b0599fc5e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ccb0e8d7411e47469ad7bd8865bbca13",
+          "Name": "Category",
+          "Description": "Vybraná kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechny předdefinované kategorie"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "f44eaeaa13de425cb74d345fb2c95499",
+      "Inputs": [
+        {
+          "Id": "a1d8173c961a4c1d9bb6066e50bda728",
+          "Name": "Category",
+          "Description": "Kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea339abaa65e42a2b7e7a739fe19476a",
+          "Name": "Elements",
+          "Description": "Třída prvku.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Získejte z modelu všechny prvky určité kategorie."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "f3cea8d40ebe4414a5cc38151753a98a",
+      "Inputs": [
+        {
+          "Id": "7a3d21d531eb42b893fd45ac1ff8199a",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7117bae7c1994dc4bfe0005ef9451c86",
+          "Name": "parameterName",
+          "Description": "Název parametru, jehož hodnotu chcete získat\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d1f16196405c4579bd6b8eb0f019939c",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte hodnotu z jednoho z parametrů prvku.\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Podlaží\";",
+      "Id": "3b1e31bb9eb146b8b0fbeaf2c4d1622b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e998642a656c44c0a8b472dd6fe06fd7",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"1.NP\";",
+      "Id": "4b9f24ba3d75496dbb2a38c0a35797ff",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "eca6aee73ef343758ca3a31e4ea9b254",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "==@var[]..[],var[]..[]",
+      "Id": "ff68445d64314cebad6cbb7a50d5a97e",
+      "Inputs": [
+        {
+          "Id": "352af2d1afcf428bb402347ae8c31f05",
+          "Name": "x",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1aef5c8cf0843cf8a021a9db1089888",
+          "Name": "y",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "27e48a65ccb346849715cdf4e884341b",
+          "Name": "bool",
+          "Description": "Výsledek kontroly rovnosti",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X rovna hodnotě Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "588b754a0d504217a2db5974c2b0469b",
+      "Inputs": [
+        {
+          "Id": "057cc26dc7114f8f838e27b286f83fbb",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1356c1f77327417187f20518e45ad93c",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "33cd0d2f0697451694b5f7b5c99424e8",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "638df359c1234ec4a4356bb29ed2f937",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "28630374fcb64b5ab48b992b05a03c6b",
+      "Inputs": [
+        {
+          "Id": "450cfad72b904883af7ba70ff9ec1799",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cf28833deaf6486b81b7d653637f9baf",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte všechny geometrie přiřazené k tomuto objektu.\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "baa5ff93-c463-41a0-a9a8-f552bb0e3f55",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b91c056083964914b268fc1bee5c6725",
+      "Inputs": [
+        {
+          "Id": "7cfcaea0ea4c405ea298f8b30be0bceb",
+          "Name": "name",
+          "Description": "string[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1062e40328d2441dac30a6da94a8e30f",
+          "Name": "docOrRevitLinkInstance",
+          "Description": "To use with a linked model or a background opened document\n\nvar[]..[]\nVýchozí hodnota : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2c9e72c46fd44d9c92fea0f30cba6c6f",
+          "Name": "Level",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Collects Levels by name in the active or given document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a2cfe55e-a1a1-46b8-8060-6eabdd8eb6a9",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "082680c4e1ec4931b00ab18b64faf8dc",
+      "Inputs": [
+        {
+          "Id": "e19f31b23d7e466a946fed5751f12cd1",
+          "Name": "level",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "85fb4bba0b5f4e98be427e40692544bb",
+          "Name": "Plane",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Constructs a Plane from a level."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Intersect@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "07236a6fd56448fcab4247640b3af539",
+      "Inputs": [
+        {
+          "Id": "08871cb0dcc7491b963070d7ec70384e",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9859f4da3ecb4f3780c0d4e7808662b6",
+          "Name": "other",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7de57bae79ad49c5b7af0dac4a53b048",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat geometrii průsečíku pro tento objekt a jiný\n\nGeometry.Intersect (other: Geometry): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "939a124a-d449-4df9-b79d-6b990857aa72",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "4cece39f36364b91bfdd2e2f881cbbaf",
+      "Inputs": [
+        {
+          "Id": "117959f401794ec2a84284dee324db7b",
+          "Name": "surf",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b2907f70904d49c29ad2bf2c1ef09667",
+          "Name": "curves",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get only the outer perimeter of a surface, dropping  the inner openings."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[],double,bool,double",
+      "Id": "075c9bda6bac4a63826c4d6174062cf9",
+      "Inputs": [
+        {
+          "Id": "86861683f9e941edbb8fa358e7ce7182",
+          "Name": "curves",
+          "Description": "Křivky ke spojení do objektu PolyCurve\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "30a9ccfdd3424f70bde2aa901fb35461",
+          "Name": "joinTolerance",
+          "Description": "Tolerance, která určuje velikost povolené mezery mezi spojovanými křivkami\n\ndouble\nVýchozí hodnota : 0.001",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "539476f644d54f4691e82e1c7e490323",
+          "Name": "trimCurves",
+          "Description": "bool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2acc96e610c4462bac94c14f117496b0",
+          "Name": "trimLength",
+          "Description": "double\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d3eb4163363d497db7b1863de160cd0b",
+          "Name": "PolyCurve",
+          "Description": "Objekt Polycurve vytvořený podle spojených křivek",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte objekt PolyCurve spojením křivek. Obrátí křivku podle potřeby připojení. Vyberte preferovanou toleranci spojení od 1e-6 do 1e-3 jednotek.\n\nPolyCurve.ByJoinedCurves (curves: Curve[], joinTolerance: double = 0.001, trimCurves: bool = false, trimLength: double = 0): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.View.CropBoxActive",
+      "Id": "eb45089abaa340f58217ad2e43552fc8",
+      "Inputs": [
+        {
+          "Id": "c24d496dccf44e23aadcb28866451fab",
+          "Name": "view",
+          "Description": "Revit.Elements.Views.View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d83e3e61b2d345b3a0e6cf5e1a50e1e1",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda je pro pohled aktivní možnost Ořezat kvádr/oblast.\n\nView.CropBoxActive: bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "ecce77dc-1290-438e-a056-970b256fd553",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "28bacab3ca59439f8296af6e2f88b588",
+      "Inputs": [
+        {
+          "Id": "7e629644a29a457b910e5e2343cbff27",
+          "Name": "passThrough",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "982fd59be67e4f85a498c1613f8e107c",
+          "Name": "waitFor",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7808dbbb18ed4bcfbc1f14c2d55639ac",
+          "Name": "passThrough",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Forces a sequential order of execution. The node wired into the output of the Passthrough node will be executed *after* the node wired into the waitFor input (e.g. important for some Revit operations). The value of the passThrough input will be passed on to the node wired into the output port of the Passthrough node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a9547ad1-c04c-471a-b0ff-0c0f14cfe020",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e6eb6876bcb24fe7a7e46914cc566226",
+      "Inputs": [
+        {
+          "Id": "aeb5a098b0a14dd9bfac5985f64313b1",
+          "Name": "views",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "498adf036320423fa47430d2a58b103d",
+          "Name": "curves",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6df2c533c5324f9e8c1741163acde0cc",
+          "Name": "Views",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Input views and lists of curves to set the view crop regions"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "74735899e7bf41fbac487147c33caa7f",
+      "Inputs": [
+        {
+          "Id": "cfc33aa1938d468ca259811bb439f1dd",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "637d2a35937a409db173bc2dcf7aa3f3",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4fd80df91d46482a8cc24ee5e0dc18a2",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "c60d0b05cd35486280e17a1f386d488f",
+      "Inputs": [
+        {
+          "Id": "0d1b384b54474e8fb3e1535e7d39a32c",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "01f3efe1f1634e99b81ef90b16bdbd71",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "099faf269df94079b80aed7e669f2701",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "fbfba0b2-62c4-4639-9f83-4af9665a373d",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "54862f8b4eb242669ff2a9b4c0279831",
+      "Inputs": [
+        {
+          "Id": "afdaeb179f284ee2873ac6fb13b5e02d",
+          "Name": "curve",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e3f4b171828433084375159d44ec3d3",
+          "Name": "distance",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "21ea2b1682e34e459b1aa62d65e9c596",
+          "Name": "point",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f4b926c92da549e4a21a15d110cc3307",
+          "Name": "curve",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Offsets a curve towards the specified point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "150;",
+      "Id": "d4d5505fbf2d41cfb454d36f5a1108bd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "38d59c5f4680473ba1fcdbba50837498",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "a = Autodesk.Point.ByCoordinates(100000,100000,100000);",
+      "Id": "246a74bdfde042fc844774cd0d9020a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "103a32f93e364e80897b40edb9f5f020",
+          "Name": "",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.Number",
+      "Id": "65bd92470342479a965fe3fc98517196",
+      "Inputs": [
+        {
+          "Id": "5f6dbe6634d84f5bb9892307595b9ea2",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb02d5c966e54e038c026611c30f1814",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získání čísla místnosti\n\nRoom.Number: string"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 15,
+      "SelectedString": "1.NP - KCB",
+      "NodeType": "ExtensionNode",
+      "Id": "f23531acabb947aa9f1049337e680cdd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6997f54b1dd944db99055549f5d3cc13",
+          "Name": "Views",
+          "Description": "Vybrané Views",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Všechna zobrazení, která jsou k dispozici v aktuálním dokumentu."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "34ac4ca3-86ac-40f2-9ed1-2ea1e7e3b6c3",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "20ee6213c7dc4f25bfbe76b9f9a334f8",
+      "Inputs": [
+        {
+          "Id": "57200ad09ce541adaf32eb0ddb9ebc5b",
+          "Name": "view",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d60ed01af7a946918ea8a76b2c5064b5",
+          "Name": "name",
+          "Description": "string[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "84fd9f0e3f5e4ac78317e0372f9eb948",
+          "Name": "view",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Duplicates a given view with detailing"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.Area",
+      "Id": "3b784f778e484d17875aacb74e77124b",
+      "Inputs": [
+        {
+          "Id": "0565644445b649f49aace95eb1f33a2d",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "07ea2c62cad14b5592609efe43803b70",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získání plochy místnosti\n\nRoom.Area: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "6f97801186304b158ddde08c9f9b8424",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "66631562535143a8aa34f6f083cda18a",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": ">@var[]..[],var[]..[]",
+      "Id": "828cb36063cf44b3b363a1a752376590",
+      "Inputs": [
+        {
+          "Id": "9df950a8a0164d9d9d00fc05ea6eb060",
+          "Name": "x",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b1b969c0feae4f138034db73e1825d50",
+          "Name": "y",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7d149242a7404800975d006c4ab94502",
+          "Name": "bool",
+          "Description": "Hodnota True, pokud X je větší než Y, hodnota False, pokud není",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X větší než hodnota Y\n\n> (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "e60cedec32eb4d4a81b97f68e9b91e22",
+      "Inputs": [
+        {
+          "Id": "193b0be3af40429cb1a59d2802feae60",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "771559f283a94da6bf7c8b74c65779da",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7982685acfe14e0fbee3798d2284f457",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8edbb3d2c099474696ff196d67594745",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ccb0e8d7411e47469ad7bd8865bbca13",
+      "End": "a1d8173c961a4c1d9bb6066e50bda728",
+      "Id": "5eec8ec854fb49909bec4c241681053f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ea339abaa65e42a2b7e7a739fe19476a",
+      "End": "0565644445b649f49aace95eb1f33a2d",
+      "Id": "7ebcb104cfe941daaf600871bbed3d6a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ea339abaa65e42a2b7e7a739fe19476a",
+      "End": "193b0be3af40429cb1a59d2802feae60",
+      "Id": "d67ace99556749c69b6137549dbcd97a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d1f16196405c4579bd6b8eb0f019939c",
+      "End": "352af2d1afcf428bb402347ae8c31f05",
+      "Id": "f179ec228ed048d78ffdb83634f065ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e998642a656c44c0a8b472dd6fe06fd7",
+      "End": "7117bae7c1994dc4bfe0005ef9451c86",
+      "Id": "d51778ecb4f141a79a04a64af53e178b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eca6aee73ef343758ca3a31e4ea9b254",
+      "End": "a1aef5c8cf0843cf8a021a9db1089888",
+      "Id": "1a1283e66781461da94eca58744b91ba",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eca6aee73ef343758ca3a31e4ea9b254",
+      "End": "7cfcaea0ea4c405ea298f8b30be0bceb",
+      "Id": "aa3da1db46de46bca0372dad17cf7c97",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "27e48a65ccb346849715cdf4e884341b",
+      "End": "1356c1f77327417187f20518e45ad93c",
+      "Id": "6053a20f8c78472c8202691bb899fead",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "33cd0d2f0697451694b5f7b5c99424e8",
+      "End": "450cfad72b904883af7ba70ff9ec1799",
+      "Id": "c05253f19baf420ca3b8089605da5b57",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "33cd0d2f0697451694b5f7b5c99424e8",
+      "End": "5f6dbe6634d84f5bb9892307595b9ea2",
+      "Id": "3703f9647732416699aed2b6984470a4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cf28833deaf6486b81b7d653637f9baf",
+      "End": "08871cb0dcc7491b963070d7ec70384e",
+      "Id": "2f2849083c9c450599a0a91c384d1e5e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2c9e72c46fd44d9c92fea0f30cba6c6f",
+      "End": "e19f31b23d7e466a946fed5751f12cd1",
+      "Id": "5fe34610dd1c4a1d8676625394cae113",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "85fb4bba0b5f4e98be427e40692544bb",
+      "End": "9859f4da3ecb4f3780c0d4e7808662b6",
+      "Id": "cd43cf208cb54bdaac4f74b915ab3655",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7de57bae79ad49c5b7af0dac4a53b048",
+      "End": "117959f401794ec2a84284dee324db7b",
+      "Id": "b35f40ae034649ef8c6f37938ba7a39f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b2907f70904d49c29ad2bf2c1ef09667",
+      "End": "86861683f9e941edbb8fa358e7ce7182",
+      "Id": "1091f435138b48039a7c7fd46b0c86f2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d3eb4163363d497db7b1863de160cd0b",
+      "End": "afdaeb179f284ee2873ac6fb13b5e02d",
+      "Id": "06676727448a400d91f4aacf8d116361",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7808dbbb18ed4bcfbc1f14c2d55639ac",
+      "End": "0d1b384b54474e8fb3e1535e7d39a32c",
+      "Id": "b43b30fb04bc4e9facbdfa1bb375d255",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4fd80df91d46482a8cc24ee5e0dc18a2",
+      "End": "aeb5a098b0a14dd9bfac5985f64313b1",
+      "Id": "ab189ae81c3d4fd9858b1bd3b9a1bee6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "099faf269df94079b80aed7e669f2701",
+      "End": "498adf036320423fa47430d2a58b103d",
+      "Id": "0d8ae1959777487c832f8cd607dcd297",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f4b926c92da549e4a21a15d110cc3307",
+      "End": "7e629644a29a457b910e5e2343cbff27",
+      "Id": "1c07ae7e5a2b441c8fc4ad843e4a5f5d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "38d59c5f4680473ba1fcdbba50837498",
+      "End": "8e3f4b171828433084375159d44ec3d3",
+      "Id": "69234f8165c24e2ca18f37089bd1ef5d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "103a32f93e364e80897b40edb9f5f020",
+      "End": "21ea2b1682e34e459b1aa62d65e9c596",
+      "Id": "13997c318c1543a7be043c5fac996324",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb02d5c966e54e038c026611c30f1814",
+      "End": "d60ed01af7a946918ea8a76b2c5064b5",
+      "Id": "344e4b78a7c94588aa4f71dfcac7a5c3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6997f54b1dd944db99055549f5d3cc13",
+      "End": "57200ad09ce541adaf32eb0ddb9ebc5b",
+      "Id": "40dbd598758f44bd826e50d893572f10",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "84fd9f0e3f5e4ac78317e0372f9eb948",
+      "End": "982fd59be67e4f85a498c1613f8e107c",
+      "Id": "69c94cec70e1499db839b4875df73d5d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "84fd9f0e3f5e4ac78317e0372f9eb948",
+      "End": "c24d496dccf44e23aadcb28866451fab",
+      "Id": "ad95648ca2824cfeb8ce9074a06b0eff",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "84fd9f0e3f5e4ac78317e0372f9eb948",
+      "End": "cfc33aa1938d468ca259811bb439f1dd",
+      "Id": "99c2a16936234147bb0ed035c9604b50",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "07ea2c62cad14b5592609efe43803b70",
+      "End": "9df950a8a0164d9d9d00fc05ea6eb060",
+      "Id": "b1307dccb57e49cf9e4263337fa81c61",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "66631562535143a8aa34f6f083cda18a",
+      "End": "b1b969c0feae4f138034db73e1825d50",
+      "Id": "559c4435b91346d6b3c865b309cdde9d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7d149242a7404800975d006c4ab94502",
+      "End": "771559f283a94da6bf7c8b74c65779da",
+      "Id": "b9561eeaae264ffe8368ab2b374de6e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7982685acfe14e0fbee3798d2284f457",
+      "End": "7a3d21d531eb42b893fd45ac1ff8199a",
+      "Id": "008ef0b5e9304187a1240284ae1057b1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7982685acfe14e0fbee3798d2284f457",
+      "End": "057cc26dc7114f8f838e27b286f83fbb",
+      "Id": "86e6246dc6fe44b88126d7c8308a55ef",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "baa5ff93-c463-41a0-a9a8-f552bb0e3f55",
+    "a2cfe55e-a1a1-46b8-8060-6eabdd8eb6a9",
+    "939a124a-d449-4df9-b79d-6b990857aa72",
+    "ecce77dc-1290-438e-a056-970b256fd553",
+    "a9547ad1-c04c-471a-b0ff-0c0f14cfe020",
+    "fbfba0b2-62c4-4639-9f83-4af9665a373d",
+    "34ac4ca3-86ac-40f2-9ed1-2ea1e7e3b6c3"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "b91c056083964914b268fc1bee5c6725",
+        "082680c4e1ec4931b00ab18b64faf8dc"
+      ]
+    },
+    {
+      "Name": "spring nodes",
+      "Version": "210.1.1",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "4cece39f36364b91bfdd2e2f881cbbaf",
+        "54862f8b4eb242669ff2a9b4c0279831"
+      ]
+    },
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.4.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "28bacab3ca59439f8296af6e2f88b588",
+        "20ee6213c7dc4f25bfbe76b9f9a334f8"
+      ]
+    },
+    {
+      "Name": "MEPover",
+      "Version": "2022.10.30",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "e6eb6876bcb24fe7a7e46914cc566226"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": -10267.1845703125,
+      "EyeY": 42366.91796875,
+      "EyeZ": 28637.0390625,
+      "LookX": -7899.20703125,
+      "LookY": -41653.6875,
+      "LookZ": -23869.94140625,
+      "UpX": -0.22789432108402252,
+      "UpY": 0.68835437297821045,
+      "UpZ": -0.68864542245864868
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "1abc8a40ffd04e4ba748537b0599fc5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1259.112725362404,
+        "Y": -439.208220660654
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "f44eaeaa13de425cb74d345fb2c95499",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -923.112725362404,
+        "Y": -439.208220660654
+      },
+      {
+        "Name": "Element.GetParameterValueByName",
+        "ShowGeometry": true,
+        "Id": "f3cea8d40ebe4414a5cc38151753a98a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 333.88727463759597,
+        "Y": -344.708220660654
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "3b1e31bb9eb146b8b0fbeaf2c4d1622b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1.112725362404035,
+        "Y": -244.880720660654
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "4b9f24ba3d75496dbb2a38c0a35797ff",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 525.01673629982679,
+        "Y": -168.83757217293669
+      },
+      {
+        "Name": "==",
+        "ShowGeometry": true,
+        "Id": "ff68445d64314cebad6cbb7a50d5a97e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 822.79388848013787,
+        "Y": -334.9567175146218
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "588b754a0d504217a2db5974c2b0469b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1092.6447903677567,
+        "Y": -530.8316697387562
+      },
+      {
+        "Name": "Element.Geometry",
+        "ShowGeometry": false,
+        "Id": "28630374fcb64b5ab48b992b05a03c6b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2147.8466715637387,
+        "Y": 149.38977814816718
+      },
+      {
+        "Name": "Level ByName",
+        "ShowGeometry": true,
+        "Id": "b91c056083964914b268fc1bee5c6725",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1043.887274637596,
+        "Y": 0.68228512367068106
+      },
+      {
+        "Name": "Level Plane",
+        "ShowGeometry": true,
+        "Id": "082680c4e1ec4931b00ab18b64faf8dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2147.8466715637387,
+        "Y": 309.38977814816724
+      },
+      {
+        "Name": "Geometry.Intersect",
+        "ShowGeometry": true,
+        "Id": "07236a6fd56448fcab4247640b3af539",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2458.8466715637387,
+        "Y": 212.38977814816721
+      },
+      {
+        "Name": "ꟿ Surface.OuterPerimeterCurves",
+        "ShowGeometry": false,
+        "Id": "4cece39f36364b91bfdd2e2f881cbbaf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2810.8466715637387,
+        "Y": 212.38977814816721
+      },
+      {
+        "Name": "PolyCurve.ByJoinedCurves",
+        "ShowGeometry": true,
+        "Id": "075c9bda6bac4a63826c4d6174062cf9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3233.8466715637387,
+        "Y": 212.38977814816721
+      },
+      {
+        "Name": "View.CropBoxActive",
+        "ShowGeometry": true,
+        "Id": "eb45089abaa340f58217ad2e43552fc8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5188.8578990023207,
+        "Y": -331.28625538076312
+      },
+      {
+        "Name": "Passthrough",
+        "ShowGeometry": true,
+        "Id": "28bacab3ca59439f8296af6e2f88b588",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4530.5428164479963,
+        "Y": 1.5889291998111617
+      },
+      {
+        "Name": "View.SetCropBoxCurves",
+        "ShowGeometry": true,
+        "Id": "e6eb6876bcb24fe7a7e46914cc566226",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5204.5428164479963,
+        "Y": -104.41107080018884
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "74735899e7bf41fbac487147c33caa7f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4909.5428164479963,
+        "Y": -176.41107080018881
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "c60d0b05cd35486280e17a1f386d488f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4909.5428164479963,
+        "Y": 1.5889291998111617
+      },
+      {
+        "Name": "ꟿ Curve.Offset+",
+        "ShowGeometry": false,
+        "Id": "54862f8b4eb242669ff2a9b4c0279831",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3847.8466715637387,
+        "Y": 401.38977814816724
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "d4d5505fbf2d41cfb454d36f5a1108bd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3233.8466715637387,
+        "Y": 473.21727814816717
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "246a74bdfde042fc844774cd0d9020a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3233.8466715637387,
+        "Y": 620.21727814816722
+      },
+      {
+        "Name": "Room.Number",
+        "ShowGeometry": true,
+        "Id": "65bd92470342479a965fe3fc98517196",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3533.83755740521,
+        "Y": -289.391233420482
+      },
+      {
+        "Name": "Views",
+        "ShowGeometry": true,
+        "Id": "f23531acabb947aa9f1049337e680cdd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3533.83755740521,
+        "Y": -437.391233420482
+      },
+      {
+        "Name": "View.DuplicateWithDetailing",
+        "ShowGeometry": true,
+        "Id": "20ee6213c7dc4f25bfbe76b9f9a334f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3833.3705391305039,
+        "Y": -313.97570305083264
+      },
+      {
+        "Name": "Room.Area",
+        "ShowGeometry": true,
+        "Id": "3b784f778e484d17875aacb74e77124b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -571.37085291562221,
+        "Y": -344.5930257319007
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "6f97801186304b158ddde08c9f9b8424",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -547.96932474603568,
+        "Y": -164.21330166412429
+      },
+      {
+        "Name": ">",
+        "ShowGeometry": true,
+        "Id": "828cb36063cf44b3b363a1a752376590",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -265.11272536240403,
+        "Y": -393.708220660654
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "e60cedec32eb4d4a81b97f68e9b91e22",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1.112725362404035,
+        "Y": -427.708220660654
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "c7322b8a7da34065908a6210fa94c5e7",
+        "Title": "Filter rooms",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1abc8a40ffd04e4ba748537b0599fc5e",
+          "f44eaeaa13de425cb74d345fb2c95499",
+          "f3cea8d40ebe4414a5cc38151753a98a",
+          "3b1e31bb9eb146b8b0fbeaf2c4d1622b",
+          "4b9f24ba3d75496dbb2a38c0a35797ff",
+          "ff68445d64314cebad6cbb7a50d5a97e",
+          "588b754a0d504217a2db5974c2b0469b",
+          "b91c056083964914b268fc1bee5c6725",
+          "3b784f778e484d17875aacb74e77124b",
+          "6f97801186304b158ddde08c9f9b8424",
+          "828cb36063cf44b3b363a1a752376590",
+          "e60cedec32eb4d4a81b97f68e9b91e22"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1269.112725362404,
+        "Top": -603.8316697387562,
+        "Width": 2620.0,
+        "Height": 766.51395486242689,
+        "FontSize": 36.0,
+        "InitialTop": -530.8316697387562,
+        "InitialHeight": 851.05585638242565,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f753955c31944295b0fb2152954e2f5b",
+        "Title": "Crop geometry",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "28630374fcb64b5ab48b992b05a03c6b",
+          "082680c4e1ec4931b00ab18b64faf8dc",
+          "07236a6fd56448fcab4247640b3af539",
+          "4cece39f36364b91bfdd2e2f881cbbaf",
+          "075c9bda6bac4a63826c4d6174062cf9",
+          "54862f8b4eb242669ff2a9b4c0279831",
+          "d4d5505fbf2d41cfb454d36f5a1108bd",
+          "246a74bdfde042fc844774cd0d9020a8"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2137.8466715637387,
+        "Top": 76.389778148167181,
+        "Width": 1932.0,
+        "Height": 687.8275000000001,
+        "FontSize": 36.0,
+        "InitialTop": 149.38977814816718,
+        "InitialHeight": 615.8275000000001,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e59df7a99c5d4f7dbed81c3b46953f71",
+        "Title": "Set cropbox",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "eb45089abaa340f58217ad2e43552fc8",
+          "28bacab3ca59439f8296af6e2f88b588",
+          "e6eb6876bcb24fe7a7e46914cc566226",
+          "74735899e7bf41fbac487147c33caa7f",
+          "c60d0b05cd35486280e17a1f386d488f"
+        ],
+        "HasNestedGroups": false,
+        "Left": 4520.5428164479963,
+        "Top": -404.28625538076312,
+        "Width": 944.0,
+        "Height": 567.87518458057434,
+        "FontSize": 36.0,
+        "InitialTop": -331.28625538076312,
+        "InitialHeight": 477.87518458057428,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9b414faa9cda4c09973828e49e3e3782",
+        "Title": "Create views",
+        "DescriptionText": "<Dvojitým kliknutím sem upravte popis skupiny>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "f23531acabb947aa9f1049337e680cdd",
+          "65bd92470342479a965fe3fc98517196",
+          "20ee6213c7dc4f25bfbe76b9f9a334f8"
+        ],
+        "HasNestedGroups": false,
+        "Left": 3523.83755740521,
+        "Top": -510.391233420482,
+        "Width": 605.53298172529367,
+        "Height": 358.41553036964939,
+        "FontSize": 36.0,
+        "InitialTop": -437.391233420482,
+        "InitialHeight": 293.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 847.544834304824,
+    "Y": 547.37077738042251,
+    "Zoom": 0.49717994731561072
+  }
+}

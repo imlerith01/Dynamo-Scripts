@@ -12,7 +12,7 @@
       "Name": "File Path",
       "Type": "string",
       "Type2": "string",
-      "Value": "C:\\OneDrive\\OneDrive - PFM-Group a.s\\Testing\\Nový List Microsoft Excelu.xlsx",
+      "Value": "..\\..\\..\\..\\..\\Users\\dvoracek\\DC\\ACCDocs\\Atelier 99 s.r.o-\\PřF-UPOL - Novostavba objektu F1\\Project Files\\006_DOKUMENTY\\02_KNIHA MÍSTNOSTÍ\\UPOL_F1_Kniha_mistnosti_SO01_2NP.xlsx",
       "Description": "Umožňuje vybrat soubor v systému a získat cestu k tomuto souboru.",
       "SelectedIndex": 0
     }
@@ -346,12 +346,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "\"Číslo\";\n \"Název\";\n \"Plocha\";",
+      "Code": "\"Číslo\";\n \"Název\";\n \"Plocha\";\n \"Oddělení\";",
       "Id": "1d8cd687c07345868ec84c7ad42911fb",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "fe5ca8e7bc51431788846c9b2536c1b8",
+          "Id": "958c3b0d3eff4a6c94378176793065a1",
           "Name": "",
           "Description": "Hodnota výrazu na řádku 1",
           "UsingDefaultValue": false,
@@ -360,7 +360,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "33f1903d3c924072a5f179e647a15c1f",
+          "Id": "e038d1ff92494b748e4d58c31d62bc58",
           "Name": "",
           "Description": "Hodnota výrazu na řádku 2",
           "UsingDefaultValue": false,
@@ -369,9 +369,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "019281de8bff418283c9618b7feb34ba",
+          "Id": "aa9aa50bd87b46fab01da84559e09799",
           "Name": "",
           "Description": "Hodnota výrazu na řádku 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e5725fb46a241acbc674cc40b865a39",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 4",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -419,253 +428,6 @@
       ],
       "Replication": "Auto",
       "Description": "Získejte hodnotu z jednoho z parametrů prvku.\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
-      "HintPath": "C:\\OneDrive\\OneDrive - PFM-Group a.s\\Testing\\Nový List Microsoft Excelu.xlsx",
-      "InputValue": "C:\\OneDrive\\OneDrive - PFM-Group a.s\\Testing\\Nový List Microsoft Excelu.xlsx",
-      "NodeType": "ExtensionNode",
-      "Id": "d12b126c9bf04fb282bdd436058506fc",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "f4a3b5b22400431184cd7290ba5dab2b",
-          "Name": "",
-          "Description": "Cesta k souboru",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Umožňuje vybrat soubor v systému a získat cestu k tomuto souboru."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "3;\n3;",
-      "Id": "0e77d71c805f47b7916cc6f439bb556c",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "738711467905407a98ca659b57edd1d0",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "52af24083c9b4dac829f8dd91b5b9e2d",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 2",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Umožňuje přímé vytváření kódu DesignScript."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "DSOffice.Data.ExportToExcel@string,string,int,int,var[][],bool,bool",
-      "Id": "c31b47b55c3147408d75639ba44fcda9",
-      "Inputs": [
-        {
-          "Id": "d572c714e3b742b8822c068d861a81fe",
-          "Name": "filePath",
-          "Description": "Soubor, který představuje sešit aplikace Excel\n\nstring",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "79ab61df4cbf4041a9c9d19124b20965",
-          "Name": "sheetName",
-          "Description": "Název listu obsahující data\n\nstring",
-          "UsingDefaultValue": false,
-          "Level": 1,
-          "UseLevels": true,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "ebb0327d616d4e6bbf36d51b26105b67",
-          "Name": "startRow",
-          "Description": "Počáteční řádek pro zápis dat. Zadejte hodnotu 0 pro řádek 1, hodnotu 1 pro řádek 2 atd.\n\nint",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "dfa61d01045648b48f742e77892e72ca",
-          "Name": "startColumn",
-          "Description": "Počáteční sloupec pro zápis dat. Zadejte hodnotu 0 pro sloupec A, hodnotu 1 pro sloupec B atd.\n\nint",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "417d367b6e78491d84af601b6bdf93d1",
-          "Name": "data",
-          "Description": "Data k zápisu do tabulky\n\nvar[][]",
-          "UsingDefaultValue": false,
-          "Level": 1,
-          "UseLevels": true,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5ab403662adf4c5984b27d786a196ba1",
-          "Name": "overWrite",
-          "Description": "Přepnout ke smazání tabulky před zápisem\n\nbool\nVýchozí hodnota : false",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "0ea388ae86e04224806e0d3782afb9b5",
-          "Name": "writeAsString",
-          "Description": "Přepnout k zapsáním souboru aplikace Excel ve formě řetězců.\n\nbool\nVýchozí hodnota : false",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "e7e5511518744e599f35c88497d88f5d",
-          "Name": "data",
-          "Description": "Řádky dat z listu aplikace Excel",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Longest",
-      "Description": "Zapíše data do tabulky aplikace Microsoft Excel. Data se zapíší podle řádků a podseznamy budou zapsány do následujících řádků. Řádky a sloupce jsou indexovány od nuly. Například hodnota v seznamu dat v bodě [0,0] bude zapsána do buňky A1. Hodnoty NULL a prázdné seznamy budou zapsány do aplikace Excel jako prázdné buňky. Tento uzel vyžaduje instalaci aplikace Microsoft Excel.\n\nData.ExportToExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false, writeAsString: bool = false): var[][]"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "DSOffice.Data.ExportToExcel@string,string,int,int,var[][],bool,bool",
-      "Id": "22d235e2269b4be284a24bcd14b000a4",
-      "Inputs": [
-        {
-          "Id": "49260b282a1f490db5e6984ac46dfaa2",
-          "Name": "filePath",
-          "Description": "Soubor, který představuje sešit aplikace Excel\n\nstring",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "92577bd817d04179a07e451d17271e9f",
-          "Name": "sheetName",
-          "Description": "Název listu obsahující data\n\nstring",
-          "UsingDefaultValue": false,
-          "Level": 1,
-          "UseLevels": true,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "3c9170fb9f64409b9d8a87a89ae128eb",
-          "Name": "startRow",
-          "Description": "Počáteční řádek pro zápis dat. Zadejte hodnotu 0 pro řádek 1, hodnotu 1 pro řádek 2 atd.\n\nint",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5d49b1189ad044e68ca224da9ba6c778",
-          "Name": "startColumn",
-          "Description": "Počáteční sloupec pro zápis dat. Zadejte hodnotu 0 pro sloupec A, hodnotu 1 pro sloupec B atd.\n\nint",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "016c5aa177a841dbbe9bca66402e4dc2",
-          "Name": "data",
-          "Description": "Data k zápisu do tabulky\n\nvar[][]",
-          "UsingDefaultValue": false,
-          "Level": 1,
-          "UseLevels": true,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "3aa8de72946647aeaaa1aef814af14dd",
-          "Name": "overWrite",
-          "Description": "Přepnout ke smazání tabulky před zápisem\n\nbool\nVýchozí hodnota : false",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5bdbb8b0789e48c59631fb4308ca272a",
-          "Name": "writeAsString",
-          "Description": "Přepnout k zapsáním souboru aplikace Excel ve formě řetězců.\n\nbool\nVýchozí hodnota : false",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "b1b5661cb284491c87cd4c3eb3bc2ef5",
-          "Name": "data",
-          "Description": "Řádky dat z listu aplikace Excel",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Longest",
-      "Description": "Zapíše data do tabulky aplikace Microsoft Excel. Data se zapíší podle řádků a podseznamy budou zapsány do následujících řádků. Řádky a sloupce jsou indexovány od nuly. Například hodnota v seznamu dat v bodě [0,0] bude zapsána do buňky A1. Hodnoty NULL a prázdné seznamy budou zapsány do aplikace Excel jako prázdné buňky. Tento uzel vyžaduje instalaci aplikace Microsoft Excel.\n\nData.ExportToExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false, writeAsString: bool = false): var[][]"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "5;\n5;",
-      "Id": "8b77caac7b9440fa849a2ab044aedaa0",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "8601e7af947b400abbd77e3c04ef0d37",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "af95d48db8524726ab8a87e5f9a14ba3",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 2",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Umožňuje přímé vytváření kódu DesignScript."
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -1010,12 +772,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "\"Blok A\";",
+      "Code": "\"Blok C\";",
       "Id": "e1a4795262204eb49db69d2d37d9480c",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "8ff501070acb458fb80e40c1a919f26a",
+          "Id": "13bf197905e84e96992d440965de39ec",
           "Name": "",
           "Description": "Hodnota výrazu na řádku 1",
           "UsingDefaultValue": false,
@@ -1074,6 +836,684 @@
       ],
       "Replication": "Auto",
       "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "1ef09b327e9844c194181d7480735996",
+      "Inputs": [
+        {
+          "Id": "5876fe03e17f458a8ff1ed077c448412",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e1de26ee7f1045048fb449f515ba6966",
+          "Name": "parameterName",
+          "Description": "Název parametru, jehož hodnotu chcete získat\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "650ace3388ad4faa97117e9eaadd52a1",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte hodnotu z jednoho z parametrů prvku.\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "==@var[]..[],var[]..[]",
+      "Id": "e67a9b482b644b81980da1ea25c97b50",
+      "Inputs": [
+        {
+          "Id": "6172a21a666944a28feb414f4abaa430",
+          "Name": "x",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5ff0a2030bd48248bc608e7cf6865c3",
+          "Name": "y",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cd03b4a1850940b19a3b4dab5f069328",
+          "Name": "bool",
+          "Description": "Výsledek kontroly rovnosti",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X rovna hodnotě Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"2.NP\";",
+      "Id": "a0ea7066ab0046d7a09cdb2c61d1775e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "25225b4efb40468190ad69ecbc25227d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Podlaží\";",
+      "Id": "19582fa4b11440ddaeda0c1227908f39",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1aea1984a4f04754b427507477e4c52a",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "a85e381f38ae4bc58162ec2045523fb1",
+      "Inputs": [
+        {
+          "Id": "b4d6c6dac11d4725beb18db719e6702f",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7a545124266f4dafa928663727313bb8",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e0972e174d5045e3b853ed419362a9a3",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "299055bf476945d9b780f0ccea75932a",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "ae4922ddb4674c128e1103eb79489252",
+      "Inputs": [
+        {
+          "Id": "6c276eae4387483fb7d02b6678340661",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "32107a37c298462d968b1792939e1cca",
+          "Name": "parameterName",
+          "Description": "Název parametru, jehož hodnotu chcete získat\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9105752b266f4c4ca856a92d19db544e",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte hodnotu z jednoho z parametrů prvku.\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "4;\n8;",
+      "Id": "8769df3c072e4abb95f3db35c7faec95",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8d8853a9e7704311b589d2e13b8a0ce6",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab58f863c20644e1bfe19c77ea119d75",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportToExcel@string,string,int,int,var[][],bool,bool",
+      "Id": "3c0cdbaae9f34890a2daa4c3894c17ba",
+      "Inputs": [
+        {
+          "Id": "3a0ff1e7f2904e1fa5f81cd1b0a194d6",
+          "Name": "filePath",
+          "Description": "Soubor, který představuje sešit aplikace Excel\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b15ab2932f2d40958a2dbadde3f57439",
+          "Name": "sheetName",
+          "Description": "Název listu obsahující data\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9a79bb1d9114ec2bab6a217a4ac219a",
+          "Name": "startRow",
+          "Description": "Počáteční řádek pro zápis dat. Zadejte hodnotu 0 pro řádek 1, hodnotu 1 pro řádek 2 atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5f6648f4a9b1429f9f8484a98f49c0fd",
+          "Name": "startColumn",
+          "Description": "Počáteční sloupec pro zápis dat. Zadejte hodnotu 0 pro sloupec A, hodnotu 1 pro sloupec B atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "081bbbb033ae41e1b0e4f782e854b7cb",
+          "Name": "data",
+          "Description": "Data k zápisu do tabulky\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "053d6e4da0b54527bbd447188b250af3",
+          "Name": "overWrite",
+          "Description": "Přepnout ke smazání tabulky před zápisem\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1ebc623d8974442eb352adff99d46c6a",
+          "Name": "writeAsString",
+          "Description": "Přepnout k zapsáním souboru aplikace Excel ve formě řetězců.\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a20d214325084612b3dcd2a85c2407d3",
+          "Name": "data",
+          "Description": "Řádky dat z listu aplikace Excel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Zapíše data do tabulky aplikace Microsoft Excel. Data se zapíší podle řádků a podseznamy budou zapsány do následujících řádků. Řádky a sloupce jsou indexovány od nuly. Například hodnota v seznamu dat v bodě [0,0] bude zapsána do buňky A1. Hodnoty NULL a prázdné seznamy budou zapsány do aplikace Excel jako prázdné buňky. Tento uzel vyžaduje instalaci aplikace Microsoft Excel.\n\nData.ExportToExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false, writeAsString: bool = false): var[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;\n6;",
+      "Id": "f8ee4f35a4c64d46a80d42418cdf5aeb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1f60f448bacd4f24872976b44fcedcae",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9cec208c06f84e29bfebc7eafd81fa34",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportToExcel@string,string,int,int,var[][],bool,bool",
+      "Id": "07ca7782b2aa48378f4e96093a00012e",
+      "Inputs": [
+        {
+          "Id": "bc30415e312c42699e3e7a91b6834356",
+          "Name": "filePath",
+          "Description": "Soubor, který představuje sešit aplikace Excel\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c60009af1bd044228762cf38f761c635",
+          "Name": "sheetName",
+          "Description": "Název listu obsahující data\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a6d92767796849ef9d86100f7de7ff82",
+          "Name": "startRow",
+          "Description": "Počáteční řádek pro zápis dat. Zadejte hodnotu 0 pro řádek 1, hodnotu 1 pro řádek 2 atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "26c3f81405ee475ab7cc99040ded8047",
+          "Name": "startColumn",
+          "Description": "Počáteční sloupec pro zápis dat. Zadejte hodnotu 0 pro sloupec A, hodnotu 1 pro sloupec B atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6497f7b53a4d440695023556e5784e57",
+          "Name": "data",
+          "Description": "Data k zápisu do tabulky\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f7193b7f5af4534b201bb82a589c2bf",
+          "Name": "overWrite",
+          "Description": "Přepnout ke smazání tabulky před zápisem\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74d840eef3e94bd29464fbcd903947ae",
+          "Name": "writeAsString",
+          "Description": "Přepnout k zapsáním souboru aplikace Excel ve formě řetězců.\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "89ef3f5dd3b44ae5b12ef8d267d969a6",
+          "Name": "data",
+          "Description": "Řádky dat z listu aplikace Excel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Zapíše data do tabulky aplikace Microsoft Excel. Data se zapíší podle řádků a podseznamy budou zapsány do následujících řádků. Řádky a sloupce jsou indexovány od nuly. Například hodnota v seznamu dat v bodě [0,0] bude zapsána do buňky A1. Hodnoty NULL a prázdné seznamy budou zapsány do aplikace Excel jako prázdné buňky. Tento uzel vyžaduje instalaci aplikace Microsoft Excel.\n\nData.ExportToExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false, writeAsString: bool = false): var[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;\n8;",
+      "Id": "8b77caac7b9440fa849a2ab044aedaa0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0f1aa34d839d464792be67b71b30740f",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "66a311c07e8e4c11aef8d3c8c83190ec",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportToExcel@string,string,int,int,var[][],bool,bool",
+      "Id": "22d235e2269b4be284a24bcd14b000a4",
+      "Inputs": [
+        {
+          "Id": "d32f92d816474220a31ab6cb9dd5ed09",
+          "Name": "filePath",
+          "Description": "Soubor, který představuje sešit aplikace Excel\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac5229af443944faa8808e0311020b16",
+          "Name": "sheetName",
+          "Description": "Název listu obsahující data\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "93e0864de49640f0ba73a54c999c8c67",
+          "Name": "startRow",
+          "Description": "Počáteční řádek pro zápis dat. Zadejte hodnotu 0 pro řádek 1, hodnotu 1 pro řádek 2 atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "60520556b2d94abb8256eefd7c46ca8f",
+          "Name": "startColumn",
+          "Description": "Počáteční sloupec pro zápis dat. Zadejte hodnotu 0 pro sloupec A, hodnotu 1 pro sloupec B atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b2131a6db48c4207811db695615b17e0",
+          "Name": "data",
+          "Description": "Data k zápisu do tabulky\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da607dec6b674eb9afe5719c407fab22",
+          "Name": "overWrite",
+          "Description": "Přepnout ke smazání tabulky před zápisem\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f5a9071742c94062ac7d61d0743fa237",
+          "Name": "writeAsString",
+          "Description": "Přepnout k zapsáním souboru aplikace Excel ve formě řetězců.\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a398b4ebc6424b49bccf03a005e7a456",
+          "Name": "data",
+          "Description": "Řádky dat z listu aplikace Excel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Zapíše data do tabulky aplikace Microsoft Excel. Data se zapíší podle řádků a podseznamy budou zapsány do následujících řádků. Řádky a sloupce jsou indexovány od nuly. Například hodnota v seznamu dat v bodě [0,0] bude zapsána do buňky A1. Hodnoty NULL a prázdné seznamy budou zapsány do aplikace Excel jako prázdné buňky. Tento uzel vyžaduje instalaci aplikace Microsoft Excel.\n\nData.ExportToExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false, writeAsString: bool = false): var[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportToExcel@string,string,int,int,var[][],bool,bool",
+      "Id": "c31b47b55c3147408d75639ba44fcda9",
+      "Inputs": [
+        {
+          "Id": "f5b5b7992b9846c9b7e0106527c45a9e",
+          "Name": "filePath",
+          "Description": "Soubor, který představuje sešit aplikace Excel\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f4df30e4c6ce443baf54af072917c355",
+          "Name": "sheetName",
+          "Description": "Název listu obsahující data\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "683763eba2194d8c8f84f6e37be71bf2",
+          "Name": "startRow",
+          "Description": "Počáteční řádek pro zápis dat. Zadejte hodnotu 0 pro řádek 1, hodnotu 1 pro řádek 2 atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0de9ba2d592440b29232c66d3072ca21",
+          "Name": "startColumn",
+          "Description": "Počáteční sloupec pro zápis dat. Zadejte hodnotu 0 pro sloupec A, hodnotu 1 pro sloupec B atd.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e73328e20b9441e8ad925ae0e1a6842a",
+          "Name": "data",
+          "Description": "Data k zápisu do tabulky\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d2fcd3313974d1ab1e18393b32c331e",
+          "Name": "overWrite",
+          "Description": "Přepnout ke smazání tabulky před zápisem\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7af5e94d7b1948de937f8ac25094b2b2",
+          "Name": "writeAsString",
+          "Description": "Přepnout k zapsáním souboru aplikace Excel ve formě řetězců.\n\nbool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e479febef87462891e274a558e715fa",
+          "Name": "data",
+          "Description": "Řádky dat z listu aplikace Excel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Zapíše data do tabulky aplikace Microsoft Excel. Data se zapíší podle řádků a podseznamy budou zapsány do následujících řádků. Řádky a sloupce jsou indexovány od nuly. Například hodnota v seznamu dat v bodě [0,0] bude zapsána do buňky A1. Hodnoty NULL a prázdné seznamy budou zapsány do aplikace Excel jako prázdné buňky. Tento uzel vyžaduje instalaci aplikace Microsoft Excel.\n\nData.ExportToExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false, writeAsString: bool = false): var[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;\n7;",
+      "Id": "0e77d71c805f47b7916cc6f439bb556c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "23362230bde444c9b7ea0717c8beb68d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc3bf97fbb974312aff0f03f15c92238",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\dvoracek\\DC\\ACCDocs\\Atelier 99 s.r.o-\\PřF-UPOL - Novostavba objektu F1\\Project Files\\006_DOKUMENTY\\02_KNIHA MÍSTNOSTÍ\\UPOL_F1_Kniha_mistnosti_SO01_2NP.xlsx",
+      "InputValue": "..\\..\\..\\..\\..\\Users\\dvoracek\\DC\\ACCDocs\\Atelier 99 s.r.o-\\PřF-UPOL - Novostavba objektu F1\\Project Files\\006_DOKUMENTY\\02_KNIHA MÍSTNOSTÍ\\UPOL_F1_Kniha_mistnosti_SO01_2NP.xlsx",
+      "NodeType": "ExtensionNode",
+      "Id": "d12b126c9bf04fb282bdd436058506fc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7cb3612954364592a5a1470499d56fbc",
+          "Name": "",
+          "Description": "Cesta k souboru",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje vybrat soubor v systému a získat cestu k tomuto souboru."
     }
   ],
   "Connectors": [
@@ -1097,7 +1537,7 @@
     },
     {
       "Start": "fd911f79d00a4ee3b5f45ca4f7ac4a85",
-      "End": "417d367b6e78491d84af601b6bdf93d1",
+      "End": "e73328e20b9441e8ad925ae0e1a6842a",
       "Id": "7be03a67a5534f129045795df2d7dc16",
       "IsHidden": "False"
     },
@@ -1109,14 +1549,32 @@
     },
     {
       "Start": "515a7587be7e4901bcc70753c7120d55",
-      "End": "79ab61df4cbf4041a9c9d19124b20965",
-      "Id": "d302be435f5a423e83efc77e640bb17f",
+      "End": "b15ab2932f2d40958a2dbadde3f57439",
+      "Id": "163cfa0719dd4c17a26f8e50b92273aa",
       "IsHidden": "False"
     },
     {
       "Start": "515a7587be7e4901bcc70753c7120d55",
-      "End": "92577bd817d04179a07e451d17271e9f",
+      "End": "6497f7b53a4d440695023556e5784e57",
+      "Id": "3a52c91ae4cf48139eb2d8696cf25acc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "515a7587be7e4901bcc70753c7120d55",
+      "End": "c60009af1bd044228762cf38f761c635",
+      "Id": "8c3f31d61b2b4ababd0c173b4d134489",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "515a7587be7e4901bcc70753c7120d55",
+      "End": "ac5229af443944faa8808e0311020b16",
       "Id": "4e846c09872247909c14085d9419e700",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "515a7587be7e4901bcc70753c7120d55",
+      "End": "f4df30e4c6ce443baf54af072917c355",
+      "Id": "d302be435f5a423e83efc77e640bb17f",
       "IsHidden": "False"
     },
     {
@@ -1156,69 +1614,45 @@
       "IsHidden": "False"
     },
     {
+      "Start": "bc9ec8edfe554e5a92125fde748e33eb",
+      "End": "6c276eae4387483fb7d02b6678340661",
+      "Id": "5de1a5ec1b7e4ee882172438e923fc7d",
+      "IsHidden": "False"
+    },
+    {
       "Start": "cbbe16e8772a4b42aea4add0a5e54006",
       "End": "d924187e219e467190d6ba2f3074a59a",
       "Id": "240af2a1e7e84a4fa7de92eb77b916b0",
       "IsHidden": "False"
     },
     {
-      "Start": "fe5ca8e7bc51431788846c9b2536c1b8",
+      "Start": "958c3b0d3eff4a6c94378176793065a1",
       "End": "d63cc752b5a443468e7b8e3d72cb835b",
-      "Id": "bcef6221acc8460a89f805a9be04e043",
+      "Id": "57327d2e47a2439a9b7a801ef6d756a6",
       "IsHidden": "False"
     },
     {
-      "Start": "33f1903d3c924072a5f179e647a15c1f",
+      "Start": "e038d1ff92494b748e4d58c31d62bc58",
       "End": "1f68b6edba0c43ab9de92d13eae114ec",
-      "Id": "81e4481a5439409ca50bff6dbd53ebf6",
+      "Id": "d22872fed19f4659bfb1dc6224cf7283",
       "IsHidden": "False"
     },
     {
-      "Start": "019281de8bff418283c9618b7feb34ba",
+      "Start": "aa9aa50bd87b46fab01da84559e09799",
       "End": "eb713433b5f34a1d9d319558bef8fe40",
-      "Id": "097130a13f834baa92f0189392ad3bf6",
+      "Id": "e2f7ccd3bfaf4ba2b6d5fd21a3a0d52e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6e5725fb46a241acbc674cc40b865a39",
+      "End": "32107a37c298462d968b1792939e1cca",
+      "Id": "5308a83aa0184c26a73a9ee05c0f673a",
       "IsHidden": "False"
     },
     {
       "Start": "604a9bb86ada434b8219f161c2839857",
       "End": "2b6df255e91246278358564061bf0b06",
       "Id": "2cc80a01be3e4a68a5d24872dc419e49",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "f4a3b5b22400431184cd7290ba5dab2b",
-      "End": "d572c714e3b742b8822c068d861a81fe",
-      "Id": "8d3ef8e961a04a5f879864fa3a793fd1",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "f4a3b5b22400431184cd7290ba5dab2b",
-      "End": "49260b282a1f490db5e6984ac46dfaa2",
-      "Id": "055cf859166244bb81009dd83ec00e94",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "738711467905407a98ca659b57edd1d0",
-      "End": "ebb0327d616d4e6bbf36d51b26105b67",
-      "Id": "120db9ce42be4f05b353bda9b2a1f60d",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "52af24083c9b4dac829f8dd91b5b9e2d",
-      "End": "dfa61d01045648b48f742e77892e72ca",
-      "Id": "d042ebdeb27740d981175c59cb31aa82",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "8601e7af947b400abbd77e3c04ef0d37",
-      "End": "3c9170fb9f64409b9d8a87a89ae128eb",
-      "Id": "63f1b4f13ba8419c8e17b7f2ba783603",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "af95d48db8524726ab8a87e5f9a14ba3",
-      "End": "5d49b1189ad044e68ca224da9ba6c778",
-      "Id": "246c8b36aa2442c4b45dc9a8d34dcab4",
       "IsHidden": "False"
     },
     {
@@ -1259,7 +1693,7 @@
     },
     {
       "Start": "b8651f27dbeb4e37a976defd5045ec58",
-      "End": "016c5aa177a841dbbe9bca66402e4dc2",
+      "End": "b2131a6db48c4207811db695615b17e0",
       "Id": "95d302472aa34f53a54f4609188c9cca",
       "IsHidden": "False"
     },
@@ -1294,26 +1728,148 @@
       "IsHidden": "False"
     },
     {
-      "Start": "8ff501070acb458fb80e40c1a919f26a",
+      "Start": "13bf197905e84e96992d440965de39ec",
       "End": "27f29014643e466383201bcecebc09a3",
-      "Id": "5f0c510eb11b43a0a49465e6643513cb",
+      "Id": "fb677558df384621bee6e9d8b0b141fc",
       "IsHidden": "False"
     },
     {
       "Start": "72fb2c91783f4cce9778aaed7ab2375e",
+      "End": "5876fe03e17f458a8ff1ed077c448412",
+      "Id": "ea43a05fd5764527950d411562e80c42",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "72fb2c91783f4cce9778aaed7ab2375e",
+      "End": "b4d6c6dac11d4725beb18db719e6702f",
+      "Id": "6027057f800942b89a00cc8410b6f56b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "650ace3388ad4faa97117e9eaadd52a1",
+      "End": "6172a21a666944a28feb414f4abaa430",
+      "Id": "e2c675fabbdc49dfa30847d8cede05f4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cd03b4a1850940b19a3b4dab5f069328",
+      "End": "7a545124266f4dafa928663727313bb8",
+      "Id": "9c74c0237eab4f4db43f22e04fe5a822",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "25225b4efb40468190ad69ecbc25227d",
+      "End": "c5ff0a2030bd48248bc608e7cf6865c3",
+      "Id": "f2139bd601674556bd65704cc4629a88",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1aea1984a4f04754b427507477e4c52a",
+      "End": "e1de26ee7f1045048fb449f515ba6966",
+      "Id": "33ab066eba6446e99b63d2f0ee432991",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e0972e174d5045e3b853ed419362a9a3",
       "End": "21a835fd72764aada6038c4c4e503523",
-      "Id": "3462572b9f86470f8bb815819b4c0b79",
+      "Id": "7268bb5aa6bf4794838fb3bf87e0b7b0",
       "IsHidden": "False"
     },
     {
-      "Start": "72fb2c91783f4cce9778aaed7ab2375e",
+      "Start": "e0972e174d5045e3b853ed419362a9a3",
       "End": "7f887815e54d42c393884c6c75226eee",
-      "Id": "7d26bb62a6644eb1a8642448cd31d6f7",
+      "Id": "6ad815e8a989452b8785fe2881d1c312",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9105752b266f4c4ca856a92d19db544e",
+      "End": "081bbbb033ae41e1b0e4f782e854b7cb",
+      "Id": "f38f7c478c354dd6a103fb96bc1c77f4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8d8853a9e7704311b589d2e13b8a0ce6",
+      "End": "c9a79bb1d9114ec2bab6a217a4ac219a",
+      "Id": "aada8ebf26af4db4a06eb3fdb9a0ea89",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ab58f863c20644e1bfe19c77ea119d75",
+      "End": "5f6648f4a9b1429f9f8484a98f49c0fd",
+      "Id": "ca5ad5df4c6244118cb51f73b2edb51e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1f60f448bacd4f24872976b44fcedcae",
+      "End": "a6d92767796849ef9d86100f7de7ff82",
+      "Id": "593bf69691f94c139b77df2c3e4bffa6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9cec208c06f84e29bfebc7eafd81fa34",
+      "End": "26c3f81405ee475ab7cc99040ded8047",
+      "Id": "b1d395fd50a0441b9710eecfef06fee9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0f1aa34d839d464792be67b71b30740f",
+      "End": "93e0864de49640f0ba73a54c999c8c67",
+      "Id": "ee6de47e1f004a049bc7bfac668f8e18",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "66a311c07e8e4c11aef8d3c8c83190ec",
+      "End": "60520556b2d94abb8256eefd7c46ca8f",
+      "Id": "dca01d837dbb4089b69f8b7119a1e470",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "23362230bde444c9b7ea0717c8beb68d",
+      "End": "683763eba2194d8c8f84f6e37be71bf2",
+      "Id": "f5cc3bbffc294e0a855fb79dfc37f12a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fc3bf97fbb974312aff0f03f15c92238",
+      "End": "0de9ba2d592440b29232c66d3072ca21",
+      "Id": "e542ecad8daf461ca166595b71ea33bf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7cb3612954364592a5a1470499d56fbc",
+      "End": "3a0ff1e7f2904e1fa5f81cd1b0a194d6",
+      "Id": "0960f58015b648bb8197f035cfd48922",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7cb3612954364592a5a1470499d56fbc",
+      "End": "bc30415e312c42699e3e7a91b6834356",
+      "Id": "b3e1b40fa1d142e7bfd11d23e1d3b12b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7cb3612954364592a5a1470499d56fbc",
+      "End": "d32f92d816474220a31ab6cb9dd5ed09",
+      "Id": "055cf859166244bb81009dd83ec00e94",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7cb3612954364592a5a1470499d56fbc",
+      "End": "f5b5b7992b9846c9b7e0106527c45a9e",
+      "Id": "8d3ef8e961a04a5f879864fa3a793fd1",
       "IsHidden": "False"
     }
   ],
   "Dependencies": [],
-  "NodeLibraryDependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "UPOL_F1_Kniha_mistnosti_SO01_2NP.xlsx",
+      "ReferenceType": "External",
+      "Nodes": [
+        "d12b126c9bf04fb282bdd436058506fc"
+      ]
+    }
+  ],
   "Thumbnail": "",
   "GraphDocumentationURL": null,
   "ExtensionWorkspaceData": [
@@ -1368,8 +1924,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -797.52571963773482,
-        "Y": 893.60754778124544
+        "X": -1929.6725752632542,
+        "Y": 225.81264412972541
       },
       {
         "Name": "All Elements of Category",
@@ -1378,8 +1934,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -449.37632388813495,
-        "Y": 888.176378947465
+        "X": -1581.5231795136544,
+        "Y": 220.38147529594494
       },
       {
         "Name": "Element.GetParameterValueByName",
@@ -1398,8 +1954,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 620.99831681466083,
-        "Y": 969.44335508208871
+        "X": 671.5345680843825,
+        "Y": 804.1999818380059
       },
       {
         "Name": "Element.GetParameterValueByName",
@@ -1418,8 +1974,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 955.99831681466083,
-        "Y": 860.61585508208861
+        "X": 1104.0287767658774,
+        "Y": 690.99169085113158
       },
       {
         "Name": ">",
@@ -1428,8 +1984,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1400.951133364608,
-        "Y": 979.739110334462
+        "X": 1521.4423788925774,
+        "Y": 806.8750385242995
       },
       {
         "Name": "Code Block",
@@ -1438,8 +1994,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 955.99831681466083,
-        "Y": 1038.4433550820886
+        "X": 1076.4895623426305,
+        "Y": 865.579283271926
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -1448,8 +2004,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1958.9983168146609,
-        "Y": 898.61585508208861
+        "X": 2079.4895623426305,
+        "Y": 725.75178327192612
       },
       {
         "Name": "Object.IsNull",
@@ -1458,8 +2014,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1659.7152161143445,
-        "Y": 1008.0130634858862
+        "X": 1780.206461642314,
+        "Y": 835.14899167572366
       },
       {
         "Name": "Code Block",
@@ -1478,58 +2034,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 3232.0178441402381,
-        "Y": 1460.6576928423117
-      },
-      {
-        "Name": "File Path",
-        "ShowGeometry": true,
-        "Id": "d12b126c9bf04fb282bdd436058506fc",
-        "IsSetAsInput": true,
-        "IsSetAsOutput": false,
-        "Excluded": true,
-        "X": 5264.0178441402386,
-        "Y": 1204.0606515560567
-      },
-      {
-        "Name": "Code Block",
-        "ShowGeometry": true,
-        "Id": "0e77d71c805f47b7916cc6f439bb556c",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 5535.9982342059229,
-        "Y": 1057.1764357893521
-      },
-      {
-        "Name": "Data.ExportToExcel",
-        "ShowGeometry": true,
-        "Id": "c31b47b55c3147408d75639ba44fcda9",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 6030.092598810963,
-        "Y": 831.688103823328
-      },
-      {
-        "Name": "Data.ExportToExcel",
-        "ShowGeometry": true,
-        "Id": "22d235e2269b4be284a24bcd14b000a4",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 6000.0178441402386,
-        "Y": 1351.0606515560567
-      },
-      {
-        "Name": "Code Block",
-        "ShowGeometry": true,
-        "Id": "8b77caac7b9440fa849a2ab044aedaa0",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 5534.6906361767606,
-        "Y": 1469.5587884892386
+        "X": 3211.3503588285375,
+        "Y": 1460.6576928423115
       },
       {
         "Name": "Math.Round",
@@ -1608,8 +2114,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -89.001683185339175,
-        "Y": 738.61585508208861
+        "X": -1221.1485388108586,
+        "Y": 70.820951430568584
       },
       {
         "Name": "Code Block",
@@ -1618,8 +2124,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -446.00168318533917,
-        "Y": 721.4433550820886
+        "X": -1578.1485388108586,
+        "Y": 53.648451430568684
       },
       {
         "Name": "==",
@@ -1628,8 +2134,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 328.20244723182748,
-        "Y": 983.92169917237345
+        "X": -803.944408393692,
+        "Y": 316.12679552085342
       },
       {
         "Name": "Code Block",
@@ -1638,8 +2144,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 21.140826047075848,
-        "Y": 1021.4526811759062
+        "X": -1104.8409503453704,
+        "Y": 365.98793599053306
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -1648,8 +2154,158 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 620.99831681466083,
-        "Y": 785.61585508208873
+        "X": -511.14853881085867,
+        "Y": 117.82095143056881
+      },
+      {
+        "Name": "Element.GetParameterValueByName",
+        "ShowGeometry": true,
+        "Id": "1ef09b327e9844c194181d7480735996",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -172.5504506640533,
+        "Y": 457.46437482597071
+      },
+      {
+        "Name": "==",
+        "ShowGeometry": true,
+        "Id": "e67a9b482b644b81980da1ea25c97b50",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 244.65367975311369,
+        "Y": 702.77021891625577
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "a0ea7066ab0046d7a09cdb2c61d1775e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -62.407941431638392,
+        "Y": 740.30120091978756
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "19582fa4b11440ddaeda0c1227908f39",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -398.50676810512505,
+        "Y": 678.93231165156
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "a85e381f38ae4bc58162ec2045523fb1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 537.4495493359467,
+        "Y": 504.46437482597071
+      },
+      {
+        "Name": "Element.GetParameterValueByName",
+        "ShowGeometry": true,
+        "Id": "ae4922ddb4674c128e1103eb79489252",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3189.3911556848552,
+        "Y": 1694.458620430923
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "8769df3c072e4abb95f3db35c7faec95",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5611.04342542608,
+        "Y": 2005.79081819449
+      },
+      {
+        "Name": "Data.ExportToExcel",
+        "ShowGeometry": true,
+        "Id": "3c0cdbaae9f34890a2daa4c3894c17ba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6351.53964307484,
+        "Y": 1808.23514356272
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "f8ee4f35a4c64d46a80d42418cdf5aeb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5859.36846513171,
+        "Y": 725.322962337861
+      },
+      {
+        "Name": "Data.ExportToExcel",
+        "ShowGeometry": true,
+        "Id": "07ca7782b2aa48378f4e96093a00012e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6335.08960817455,
+        "Y": 471.477444990266
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "8b77caac7b9440fa849a2ab044aedaa0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5539.24430301257,
+        "Y": 1460.45145481761
+      },
+      {
+        "Name": "Data.ExportToExcel",
+        "ShowGeometry": true,
+        "Id": "22d235e2269b4be284a24bcd14b000a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6346.09652366206,
+        "Y": 1337.39965104862
+      },
+      {
+        "Name": "Data.ExportToExcel",
+        "ShowGeometry": true,
+        "Id": "c31b47b55c3147408d75639ba44fcda9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6360.23344440744,
+        "Y": 830.607046315622
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "0e77d71c805f47b7916cc6f439bb556c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5540.55190104174,
+        "Y": 1048.06910211773
+      },
+      {
+        "Name": "File Path",
+        "ShowGeometry": true,
+        "Id": "d12b126c9bf04fb282bdd436058506fc",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5267.27553261565,
+        "Y": 1194.95331788443
       }
     ],
     "Annotations": [
@@ -1673,16 +2329,21 @@
           "9bc5134b4e324814842abb7ac4f4e76e",
           "69411af2a3b548d28dfc91848d962cee",
           "e1a4795262204eb49db69d2d37d9480c",
-          "bd63db8574b0448d8e0ca9562ebee494"
+          "bd63db8574b0448d8e0ca9562ebee494",
+          "1ef09b327e9844c194181d7480735996",
+          "19582fa4b11440ddaeda0c1227908f39",
+          "e67a9b482b644b81980da1ea25c97b50",
+          "a0ea7066ab0046d7a09cdb2c61d1775e",
+          "a85e381f38ae4bc58162ec2045523fb1"
         ],
         "HasNestedGroups": false,
-        "Left": -807.52571963773482,
-        "Top": 648.4433550820886,
-        "Width": 3011.5240364523956,
-        "Height": 522.0,
+        "Left": -1939.6725752632542,
+        "Top": -19.351548569431316,
+        "Width": 4264.1621376058847,
+        "Height": 1016.9308318413573,
         "FontSize": 36.0,
-        "InitialTop": 721.4433550820886,
-        "InitialHeight": 370.82750000000033,
+        "InitialTop": 53.648451430568684,
+        "InitialHeight": 956.9308318413573,
         "TextblockHeight": 63.0,
         "Background": "#FFC1D676"
       },
@@ -1697,16 +2358,17 @@
           "e27e867d6ca3435ca3ddb96bcb61f5c6",
           "15d2cb108c4d4d4d8c846424424ad874",
           "1d8cd687c07345868ec84c7ad42911fb",
-          "a682836d02ab4edabe0360093df66202"
+          "a682836d02ab4edabe0360093df66202",
+          "ae4922ddb4674c128e1103eb79489252"
         ],
         "HasNestedGroups": false,
         "Left": 2942.0518696469758,
         "Top": 783.091062537073,
         "Width": 645.96597449326237,
-        "Height": 839.56663030523873,
+        "Height": 1073.36755789385,
         "FontSize": 36.0,
         "InitialTop": 856.091062537073,
-        "InitialHeight": 749.56663030523873,
+        "InitialHeight": 983.36755789385006,
         "TextblockHeight": 63.0,
         "Background": "#FFC1D676"
       },
@@ -1749,22 +2411,26 @@
           "0e77d71c805f47b7916cc6f439bb556c",
           "c31b47b55c3147408d75639ba44fcda9",
           "22d235e2269b4be284a24bcd14b000a4",
-          "8b77caac7b9440fa849a2ab044aedaa0"
+          "8b77caac7b9440fa849a2ab044aedaa0",
+          "07ca7782b2aa48378f4e96093a00012e",
+          "f8ee4f35a4c64d46a80d42418cdf5aeb",
+          "3c0cdbaae9f34890a2daa4c3894c17ba",
+          "8769df3c072e4abb95f3db35c7faec95"
         ],
         "HasNestedGroups": false,
-        "Left": 5254.0178441402386,
-        "Top": 758.688103823328,
-        "Width": 1021.0747546707244,
-        "Height": 929.37254773272866,
+        "Left": 5257.27553261565,
+        "Top": 398.477444990266,
+        "Width": 1347.9579117917901,
+        "Height": 1749.3133732042238,
         "FontSize": 36.0,
-        "InitialTop": 831.688103823328,
-        "InitialHeight": 782.87068466591063,
+        "InitialTop": 471.477444990266,
+        "InitialHeight": 1679.3133732042238,
         "TextblockHeight": 63.0,
         "Background": "#FFC1D676"
       }
     ],
-    "X": 252.62672492908834,
-    "Y": -47.367389426443481,
-    "Zoom": 0.61670923278142009
+    "X": 891.44021490701994,
+    "Y": 290.88070771202121,
+    "Zoom": 0.23113083878363949
   }
 }

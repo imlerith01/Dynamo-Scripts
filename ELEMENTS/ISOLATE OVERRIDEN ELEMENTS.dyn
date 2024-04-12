@@ -1,0 +1,3015 @@
+{
+  "Uuid": "0a75b107-eb50-4fe8-9a93-06a218edd939",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ISOLATE OVERRIDEN ELEMENTS",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "95caaebf-580f-487f-b1b7-43e2503ed9ce",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "a72c03d4fdde40deb30b0a76d722600d",
+      "Inputs": [
+        {
+          "Id": "8a71d6f1743e4efca1467ec196956159",
+          "Name": "view",
+          "Description": "var\nVýchozí hodnota : Revit.Application.Document.Current.ActiveView",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "abacc8ba0a9c4c88b4acb784843c9d53",
+          "Name": "element",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "42ea900b7aaf42379476a38e43977801",
+          "Name": "ProjectionLinePattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "05f24472106c49d884a7454a0c83aa75",
+          "Name": "ProjectionLineColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5012875024b8494eb99d1fdfefdbc657",
+          "Name": "ProjectionLineWeight",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90c84c9883c54e2c9ccd759db1d58ad9",
+          "Name": "SurfaceForegroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c8342cad8ba9486e8f5d479986b70d7d",
+          "Name": "SurfaceForegroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "efdaef67b34847e7bfa551b30fabea42",
+          "Name": "SurfaceBackgroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a9a07199a4724a59bf66992d8ad8e03e",
+          "Name": "SurfaceBackgroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "15fae63ea068418e8d7c26f8bc04d6f2",
+          "Name": "CutLinePattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d78ee1e2b74640f1a9c153133c9a53bb",
+          "Name": "CutLineColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "230d73f7297945609d3bb36e9c5b896d",
+          "Name": "CutLineWeight",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76d2d7089e6d47c1b5d349ee579d2dcb",
+          "Name": "CutForegroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "593bf3ccc94641fea669a4447e49b8d5",
+          "Name": "CutForegroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a9cd5bfbd1664855a64d522ae2ca52f4",
+          "Name": "CutBackgroundPattern",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "534b9fcdde45419e96dd4d99f0084e3d",
+          "Name": "CutBackgroundPatternColor",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "145dbb957d9947f884a740e2081ed6e1",
+          "Name": "Transparency",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "edf5184b7ba045e0ac034030fb6aae95",
+          "Name": "Halftone",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "65cedfc574664440a66d4a3f994e27f0",
+          "Name": "Visible",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the overrides applied to the elements in the given View.\r\nNote : Prior to Revit 2019, the materials have only one surface pattern and one cut pattern."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsInView, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "fc74c7b247ab44829855db559edf0140",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fa35ab05511946328d3ea5375ba0bec0",
+          "Name": "elements",
+          "Description": "Všechny viditelné prvky v aktivním zobrazení.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Získejte všechny prvky, které jsou viditelné v aktivním zobrazení."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "66e70114c4dc4e7e841c151f0c73bc31",
+      "Inputs": [
+        {
+          "Id": "a9f6195cb80c4c14b70a6cd53296b2b0",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "778c794435214cdca61b0c3f797315e2",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "77566348b80a4f7d96a4f4dd00e97058",
+      "Inputs": [
+        {
+          "Id": "c7bf6da5ed1944b7b5e1bdffd3f1c49a",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cfd89c6393f14e9fa798f0e49a4ec4ba",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5422cf5e848546fe80768f330db1dfff",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "22d8962dfa2a41adb15c6916cd1015c1",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "3207e14d87d7402da547c82449200b67",
+      "Inputs": [
+        {
+          "Id": "4db61ef9ef1949c68d656622d720e07a",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "826e9475a45b45578f77a38411c667b4",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "76087553a4ac46148b3c3a36b9691ef1",
+      "Inputs": [
+        {
+          "Id": "85d99b1a2f8e476d961a6ca385aa5989",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "261577e733e64d79a7a23f50246029f0",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8afe41eba2864f448b6eead22ff4af33",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6fe29f9ceffb428f8d2cbf49143bb152",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "71e7aa1ce497470aad7d12aa7d1a6785",
+      "Inputs": [
+        {
+          "Id": "84a0755fb2064cbbb37f2b3ef49f6838",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9258ea30d2a4825ab07cb7fe97b86ed",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b0985f74ea244418a6e16b9e8174c944",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ce4d288085944eb09c613d13e3d4a24a",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": ">@var[]..[],var[]..[]",
+      "Id": "f67bd938b0a24b869d13cf0aafcc1ae5",
+      "Inputs": [
+        {
+          "Id": "286509a5a4a4449d989d840ad6b90104",
+          "Name": "x",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c2656b208dab454b9fa75825e4d8f4cf",
+          "Name": "y",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f3df6d93353148689b2362ae57e49376",
+          "Name": "bool",
+          "Description": "Hodnota True, pokud X je větší než Y, hodnota False, pokud není",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X větší než hodnota Y\n\n> (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "cb6076461ef94e3293cac47d04fdfd17",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "839bb2804c344a789cf174492f4485eb",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "25d241bb73aa4c099b1b924fd18028f0",
+      "Inputs": [
+        {
+          "Id": "80410f04a5f54d42b0c4d150d9f47616",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eeffaa68ab93465fb705bcbb9cd2da6b",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "48dff409a41f49c3b3bdf0f036b2a2a3",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0b8d5f8a91574e37b6fd0314c12e7345",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "b38b8c3132d644e488e27a16c150be31",
+      "Inputs": [
+        {
+          "Id": "c7cffac271fa41e0a78ea9d41645c43d",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "96c584ec07bf4e85a80ed3febbd5bfa0",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "dee48a8fdb7b48a49b93a5142e333705",
+      "Inputs": [
+        {
+          "Id": "fbd647fb1d124be3b2cee11417262d0a",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "76c70b8154a343bda5849c3c0c004edb",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "23cd342b5c7e47118c0523a6485f5e7e",
+      "Inputs": [
+        {
+          "Id": "43fef19f54bb4b6d99d6198b87b8f8dd",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7d995f74e514d49866b1c2b6ea2de43",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "294bc49437374bf4aaa7c745e095c7de",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cc948967363e433fbd2ec472c7661a3b",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "3fc71c174a96464280f42b9f4b3fe8d5",
+      "Inputs": [
+        {
+          "Id": "5db91a26731b4028a80f06ec4791d0bd",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "90efd26b165e409eb486c766e6207b5d",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "1ed0d052b5bd44b9a1cb0796fa009864",
+      "Inputs": [
+        {
+          "Id": "017d8b55a1fb46efba97e62ce765d042",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76fa33e16374441abaff99445d049fd9",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e7b03b7208b1441abfc7e223e7b526fb",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "abaf451c4f2842a2ad855ea0922f0688",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "64928bdffc9d405d83f8afa4ab2f2134",
+      "Inputs": [
+        {
+          "Id": "5d732688da1f4a6ab8088f94f2b0eef0",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7291b7cdd06b461ca0ef9c1514017f8f",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "f73443ffa2f64662ab4ba6c3b0361433",
+      "Inputs": [
+        {
+          "Id": "808491a56c434e7c87adc8db98c232ce",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2a8c88fb06dc415ea3fd6d59fb0bc019",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e07e5456bf7341c09160169885d509fb",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "06b603f07d7841ba8f0dbf337fc4c76e",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "3e4513c530714719b736c3643eaf5b38",
+      "Inputs": [
+        {
+          "Id": "562a3e6733784b43a9ec8787bbcf9e06",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1d532ac4604b42aa96af37c7f6e4148d",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "2248cd04907547e4a1b62645b2815cb3",
+      "Inputs": [
+        {
+          "Id": "def877613dd5411381a90a31170c96f1",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "474cc94c21f44881b0160881e89cd7d0",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4ef76eb6d90141b6ba07caf71b8452f9",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "984e8e883ad34d0cba63b7f9e77ee818",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "c54e58c29b914383bce56cc3628b752f",
+      "Inputs": [
+        {
+          "Id": "35664e971c1040079813dbadf5063ead",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5a990395926b47809183bca95f398781",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "32ef3f781c04462ab9bd1b4e109b4a01",
+      "Inputs": [
+        {
+          "Id": "6035ca5e2de94643a997e5f169369835",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "caa4348aa5214827b0752e6d24a99d98",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ab22213f64d64b7d99385793fffa112f",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "efb58808399f4673825c0528fd17bfe4",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": ">@var[]..[],var[]..[]",
+      "Id": "541269a4a9404779b6461d1126dd7b5c",
+      "Inputs": [
+        {
+          "Id": "f9a659bda5314e06825d14e3f88e4c27",
+          "Name": "x",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb387b54652d446fac123e69a58d1bf2",
+          "Name": "y",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "85c75c709142437595379a6b2117cc20",
+          "Name": "bool",
+          "Description": "Hodnota True, pokud X je větší než Y, hodnota False, pokud není",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X větší než hodnota Y\n\n> (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "3f6c6c6e85524e6681611f77bd6e4c1b",
+      "Inputs": [
+        {
+          "Id": "1cdffcfda8054e6697567d86f48e0fcc",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2eb3dc0231544ec2a52c051b08394478",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b5b4317abd54407f8df4d38591854309",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74145fdc14f7443fb1cf51381c0a58e9",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "86094c47645a4a6593df21c91b89c73c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "877e780802824e16b59a1305746b1797",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "cb10d2ba87864966bb84e36eeedb2214",
+      "Inputs": [
+        {
+          "Id": "a9fc9aa11b5d4e658c6738d6dcc720e8",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "262097a93dae448985b052d103460318",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "923e6387393e464c90355968f88c9d13",
+      "Inputs": [
+        {
+          "Id": "0b88b6a87fc2422dbf89ff52cafada37",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b94efb592b6a4d7e9170fa12af38cd97",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb9b458bb4484fdba468fd8aab29466a",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e39e30fc952e42b382bf5f5ec652c33d",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "9f80af49aecc46f3b00b8d00dde75169",
+      "Inputs": [
+        {
+          "Id": "4d02af4f95b340fd907c15163ecb1788",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0b4b2c4fbef54b6a90c7f6939e198a98",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "db8b54b8d30e425eacd07edd4de78cbf",
+      "Inputs": [
+        {
+          "Id": "536498ef884445269ad5624dcc066f09",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74c5a1c274464a4f860a2506496b94f9",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fec6882a498f4094980f2f417975fe16",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a715f234148c4465bdcab19aad34d687",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "d009d4ab850b492781d9f0cc8045a239",
+      "Inputs": [
+        {
+          "Id": "3f0846af7be54eaeb6a20b651eaf175b",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2d9d922d98814ec9aec253f7457cfc03",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "cdbe5baf2df1413aaa6640c8386dc584",
+      "Inputs": [
+        {
+          "Id": "4080a6f7defe44d697fe285c367eb0aa",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "88f17217700e46118f15f4d5ff056e3a",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "462ff55fbec045b9a31123edff5da3f2",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1776b0854c674388b8c57b86e41e02a4",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Object.IsNull@var",
+      "Id": "7d33711556a6417ab7a1caf1b1299521",
+      "Inputs": [
+        {
+          "Id": "9fc7ab2b4e6f4715a90a4bdf37fb8943",
+          "Name": "object",
+          "Description": "Objekt k testování.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8757fd9026194f6aabae1e2617335226",
+          "Name": "bool",
+          "Description": "Určuje, zda má objekt hodnotu null.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Určuje, zda má zadaný objekt hodnotu null.\n\nObject.IsNull (object: var): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "f4a65dffd9d2475bb5158eef183ce80b",
+      "Inputs": [
+        {
+          "Id": "5af22d13cde64d21a285c01e78167656",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8abdca674ec44736b0737a7f781e5c23",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5da527ba7df54271920f48d55e2482bc",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4285ebeebb41464ab2ec9b1d1ff35bf2",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": ">@var[]..[],var[]..[]",
+      "Id": "c242e1fb42a947f9a6c7e2acfc4dce00",
+      "Inputs": [
+        {
+          "Id": "7a15a516ed3b4a3c9e7ed5f0bd40ae8d",
+          "Name": "x",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12d1cd2887c64107a351fa5a0e458885",
+          "Name": "y",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c1f3836bc40746108a5bf94f5f018635",
+          "Name": "bool",
+          "Description": "Hodnota True, pokud X je větší než Y, hodnota False, pokud není",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X větší než hodnota Y\n\n> (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "3f2073011a474d5bb1859ba21548ede3",
+      "Inputs": [
+        {
+          "Id": "af51f48d77a5466b8da6005260a71ef1",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b2c0e2817ac048b7801e1ad429b95c1c",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "314d80c9568d4ec7b8795165afb07284",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "18df8cc8262d407dbec08ee616000c08",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "b0f218bcc8ae4690bbc3067e20090f08",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a10073d49e424c1289732a6f7d242860",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "==@var[]..[],var[]..[]",
+      "Id": "7d9bab57adb54b91aa1ac64387995e74",
+      "Inputs": [
+        {
+          "Id": "9695c18fb34644269d3ce68b8a059f25",
+          "Name": "x",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "85148baef2a64bc1890b591a962bd058",
+          "Name": "y",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b9e898e95c944718f150822ab07dc96",
+          "Name": "bool",
+          "Description": "Výsledek kontroly rovnosti",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X rovna hodnotě Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "41093992e929423fb9073ac90a717d7a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "eba330294627472c8e51b09e8fd9bb3a",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "70a56180c17b4470ad6be60af20d1028",
+      "Inputs": [
+        {
+          "Id": "e52e7680c84642e48455e4929c91b4ac",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af35e824548646b7be1d7ebc0b6faa97",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f9c96dd089f34482805257992ca9fe59",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "295ceeb2503a43eaaa7640eff3b19ba7",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "==@var[]..[],var[]..[]",
+      "Id": "5d5fd82f84924b849beac1ade430abe0",
+      "Inputs": [
+        {
+          "Id": "2456125b216e435daad9970d967e2312",
+          "Name": "x",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a12e72a800324bf3977e0a0bdf0961c2",
+          "Name": "y",
+          "Description": "Základní typ objektu k porovnání (např. booleovská, int, double, řetězec atd.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8d4ae0351e9c44cebdd8e85f920722c5",
+          "Name": "bool",
+          "Description": "Výsledek kontroly rovnosti",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Porovná, zda je hodnota X rovna hodnotě Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "098dca6dd5cb45468a6d0f01ad8e5011",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "02e8c7f039bb4dd2a2283eacfc751e2d",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "13c1e03e717748108aec63b6ba2314aa",
+      "Inputs": [
+        {
+          "Id": "60e44fa1e19948fc8a1731e43b6c4100",
+          "Name": "list",
+          "Description": "Seznam k filtrování\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6dbc5868b0a4993847507c382e3b224",
+          "Name": "mask",
+          "Description": "Seznam logických hodnot představujících masku\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fdb9b437d569497eab8c288d7006594c",
+          "Name": "in",
+          "Description": "Položky, jejichž index masky je true (pravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6042735889464e4597d7187974824ff7",
+          "Name": "out",
+          "Description": "Položky, jejichž index masky je false (nepravda)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Filtruje pořadí na základě vyhledávání příslušných indexů v samostatném seznamu logických hodnot.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "15e6d5f22c4647df91cc4412fd260e15",
+      "Inputs": [
+        {
+          "Id": "c2851d76d4be4256a996561fe328adb7",
+          "Name": "item0",
+          "Description": "Index položky č. 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "117c7aa3538f4137aae21c77f3b9049c",
+          "Name": "item1",
+          "Description": "Index položky č. 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7c4bc36428814b8eac6fb16947e7c1b6",
+          "Name": "item2",
+          "Description": "Index položky č. 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2f6febff27f54d8d82d669d2be42caf0",
+          "Name": "item3",
+          "Description": "Index položky č. 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "62fe6868e21243ceb4512f2c7b910613",
+          "Name": "item4",
+          "Description": "Index položky č. 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94e9220f2563433798765e326c367357",
+          "Name": "item5",
+          "Description": "Index položky č. 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "54d9393f13864da1977115acafe1b9a3",
+          "Name": "item6",
+          "Description": "Index položky č. 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9b9ba2e02d00473db9c43f2aa50b8ec4",
+          "Name": "item7",
+          "Description": "Index položky č. 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5e472de0ca034b039f27e566aefc7af0",
+          "Name": "item8",
+          "Description": "Index položky č. 8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e16a4c512f574101be35eafff75c2e55",
+          "Name": "item9",
+          "Description": "Index položky č. 9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "043d51293bf541a7bd7e4d57da4004e1",
+          "Name": "item10",
+          "Description": "Index položky č. 10",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "24c7bc9c204b4fc5b02dfee446548af1",
+          "Name": "item11",
+          "Description": "Index položky č. 11",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7f2ed9488fbd4226adfc3503e496e32f",
+          "Name": "item12",
+          "Description": "Index položky č. 12",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c4cbdb466ed404f8e5a57b3f838988a",
+          "Name": "item13",
+          "Description": "Index položky č. 13",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "de07105a15c046e5886de14ef5544398",
+          "Name": "item14",
+          "Description": "Index položky č. 14",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "69c4d9f64e164e1a8c5336cfe2bd9785",
+          "Name": "item15",
+          "Description": "Index položky č. 15",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c12c631e78e94f8ca47225d280162809",
+          "Name": "item16",
+          "Description": "Index položky č. 16",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "375dffd31aa542d4842f6d59ef7e7a10",
+          "Name": "list",
+          "Description": "Seznam (typ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Vytvoří nový seznam z daných vstupů"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "546f34995bfc4a1285b2e6ea1a3b500f",
+      "Inputs": [
+        {
+          "Id": "f940e0c2f3c84b27a6d92c355ea5b87c",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "53d296c8a8b14a60868047a72a963d27",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "00a6d4860ab0414da096f85d0e053cf3",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.UniqueItems@var[]..[]",
+      "Id": "51b874105d5e42748a9595db7123a2c1",
+      "Inputs": [
+        {
+          "Id": "15964fa00c2c4d2bbc1ed92248cc2a41",
+          "Name": "list",
+          "Description": "Seznam, z něhož se mají filtrovat duplicity\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1925a89e467d4da8b84ec08216c81578",
+          "Name": "list",
+          "Description": "Filtrovaný seznam",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvoří nový seznam obsahující všechny jedinečné položky v daném seznamu.\n\nList.UniqueItems (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "dfc2063c-a98c-4afa-8872-83cf333a7439",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "572b54ad5cb34eaeb14d3dbc1c390aa3",
+      "Inputs": [
+        {
+          "Id": "0e857a9a01764401af06c3e18f69a2ea",
+          "Name": "_element",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ad60398244e1474795387f7ef6af214d",
+          "Name": "_view",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8e869cd283dd4f6098715e4343cb88b0",
+          "Name": "_element",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will take input of elements and a view to isolate selected elements in a view."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "66d838bd-7dd6-48c6-86b9-5d5f88424b70",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "d5131d7b0d2a42cf8752a4893169ed73",
+      "Inputs": [
+        {
+          "Id": "f29f886dfb3b42f7bb31402de2f3b770",
+          "Name": "refresh",
+          "Description": "bool\nVýchozí hodnota : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f51c46f34f4042a9b773d1bc768ce358",
+          "Name": "activeView",
+          "Description": "návratová hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Given the current document, return the active view."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "42ea900b7aaf42379476a38e43977801",
+      "End": "a9f6195cb80c4c14b70a6cd53296b2b0",
+      "Id": "404f4c7edc5e4dde97748cd5dd3d320f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "05f24472106c49d884a7454a0c83aa75",
+      "End": "4db61ef9ef1949c68d656622d720e07a",
+      "Id": "8d2bf87d474e4463b7a34f79acd32f7c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5012875024b8494eb99d1fdfefdbc657",
+      "End": "286509a5a4a4449d989d840ad6b90104",
+      "Id": "c3d48a2210a44ae7bbb23d836468449e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "90c84c9883c54e2c9ccd759db1d58ad9",
+      "End": "c7cffac271fa41e0a78ea9d41645c43d",
+      "Id": "f0d50880f25444f789ea56373e5dcf74",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c8342cad8ba9486e8f5d479986b70d7d",
+      "End": "fbd647fb1d124be3b2cee11417262d0a",
+      "Id": "94cd882118cc4d59aee2d9630a20a091",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "efdaef67b34847e7bfa551b30fabea42",
+      "End": "5db91a26731b4028a80f06ec4791d0bd",
+      "Id": "737621876a764da6b93eade2cd1fb950",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a9a07199a4724a59bf66992d8ad8e03e",
+      "End": "5d732688da1f4a6ab8088f94f2b0eef0",
+      "Id": "3d7fe4c7ce7246a2b8dd700766cb1eaf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "15fae63ea068418e8d7c26f8bc04d6f2",
+      "End": "562a3e6733784b43a9ec8787bbcf9e06",
+      "Id": "a01545e5041b40b5b03d642cde4a79bb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d78ee1e2b74640f1a9c153133c9a53bb",
+      "End": "35664e971c1040079813dbadf5063ead",
+      "Id": "d074d3f6b3d04cba85156b7c55b35d52",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "230d73f7297945609d3bb36e9c5b896d",
+      "End": "f9a659bda5314e06825d14e3f88e4c27",
+      "Id": "fae14f36113b407a84126f50fdefd5a0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "76d2d7089e6d47c1b5d349ee579d2dcb",
+      "End": "a9fc9aa11b5d4e658c6738d6dcc720e8",
+      "Id": "0b4dced1282e46e3a47d5561b036e664",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "593bf3ccc94641fea669a4447e49b8d5",
+      "End": "4d02af4f95b340fd907c15163ecb1788",
+      "Id": "c38150d811a045cda493fcbaf6b3c71b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a9cd5bfbd1664855a64d522ae2ca52f4",
+      "End": "3f0846af7be54eaeb6a20b651eaf175b",
+      "Id": "756af99e27c049fd8a3d4467d43248d1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "534b9fcdde45419e96dd4d99f0084e3d",
+      "End": "9fc7ab2b4e6f4715a90a4bdf37fb8943",
+      "Id": "421d6b1a206b4cc29faa65743cae9f73",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "145dbb957d9947f884a740e2081ed6e1",
+      "End": "7a15a516ed3b4a3c9e7ed5f0bd40ae8d",
+      "Id": "7edf380425334e4b997dc2ec3dc8ba2f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "edf5184b7ba045e0ac034030fb6aae95",
+      "End": "9695c18fb34644269d3ce68b8a059f25",
+      "Id": "cc7f75374baa4371b8a2af4e40a68089",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "65cedfc574664440a66d4a3f994e27f0",
+      "End": "2456125b216e435daad9970d967e2312",
+      "Id": "98c5443287ff4ca18a6e53e212ae8e73",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "abacc8ba0a9c4c88b4acb784843c9d53",
+      "Id": "8da7c6548af042dbb080659041d773a5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "c7bf6da5ed1944b7b5e1bdffd3f1c49a",
+      "Id": "60f9d475d1c3480f9940e12701440d17",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "85d99b1a2f8e476d961a6ca385aa5989",
+      "Id": "146e576565de4444a690527cdba0c17d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "84a0755fb2064cbbb37f2b3ef49f6838",
+      "Id": "e43d6648338b42a0a3e3dc5ead6c8b35",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "80410f04a5f54d42b0c4d150d9f47616",
+      "Id": "8b3d5a4c2b584775a86618e855d5b89a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "43fef19f54bb4b6d99d6198b87b8f8dd",
+      "Id": "1ba2b8c22e70460e8f53462e34c12f2f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "017d8b55a1fb46efba97e62ce765d042",
+      "Id": "61bf4420fcb34716a0c45bc225f3da21",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "808491a56c434e7c87adc8db98c232ce",
+      "Id": "8f476e85aba04d24816f76c43ecb0f45",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "def877613dd5411381a90a31170c96f1",
+      "Id": "3309165b6882484da606eec59d6ca0ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "6035ca5e2de94643a997e5f169369835",
+      "Id": "a92c4efc5f054c14ad41d1f6ce14bbd3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "1cdffcfda8054e6697567d86f48e0fcc",
+      "Id": "3cd2d756a7cb4c71ad40b66a4bafab3e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "0b88b6a87fc2422dbf89ff52cafada37",
+      "Id": "44eb5246ce9640b1ab5edb158f307587",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "536498ef884445269ad5624dcc066f09",
+      "Id": "a7cea84a0995447a9768e31d63760eda",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "4080a6f7defe44d697fe285c367eb0aa",
+      "Id": "2734010f65e64f37bd79145c2e6f2c66",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "5af22d13cde64d21a285c01e78167656",
+      "Id": "27e97a76b26e4c21ba9ec04615131b26",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "af51f48d77a5466b8da6005260a71ef1",
+      "Id": "a811f1fc6d7b4a2282bda7508d3b5872",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "e52e7680c84642e48455e4929c91b4ac",
+      "Id": "a801b20eb23c4bcd9df866aae734e475",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fa35ab05511946328d3ea5375ba0bec0",
+      "End": "60e44fa1e19948fc8a1731e43b6c4100",
+      "Id": "b9dc6fbb6267483582d1fd33ed9cafdc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "778c794435214cdca61b0c3f797315e2",
+      "End": "cfd89c6393f14e9fa798f0e49a4ec4ba",
+      "Id": "2f5fbe59505b4da0830c2a0ed516db8e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "22d8962dfa2a41adb15c6916cd1015c1",
+      "End": "c2851d76d4be4256a996561fe328adb7",
+      "Id": "5c689525247e4f5ea27bcf33c0aa25ce",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "826e9475a45b45578f77a38411c667b4",
+      "End": "261577e733e64d79a7a23f50246029f0",
+      "Id": "49eae22cc5d9486ab8f82236c0c2f5a8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6fe29f9ceffb428f8d2cbf49143bb152",
+      "End": "117c7aa3538f4137aae21c77f3b9049c",
+      "Id": "ce27ccc4a485472fab69a5ffc2463802",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b0985f74ea244418a6e16b9e8174c944",
+      "End": "7c4bc36428814b8eac6fb16947e7c1b6",
+      "Id": "484eca516c7c474a8b743caf86b1092c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f3df6d93353148689b2362ae57e49376",
+      "End": "b9258ea30d2a4825ab07cb7fe97b86ed",
+      "Id": "9c89203cccf94b7da75100e7bf6d179a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "839bb2804c344a789cf174492f4485eb",
+      "End": "c2656b208dab454b9fa75825e4d8f4cf",
+      "Id": "9b183691b2cb43e9a891ee7a33fc0ee8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0b8d5f8a91574e37b6fd0314c12e7345",
+      "End": "2f6febff27f54d8d82d669d2be42caf0",
+      "Id": "ac2a50ee0aaf458896ff964c97b2767a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "96c584ec07bf4e85a80ed3febbd5bfa0",
+      "End": "eeffaa68ab93465fb705bcbb9cd2da6b",
+      "Id": "6390ac4d27e54e7a964e58038cfd6dcc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "76c70b8154a343bda5849c3c0c004edb",
+      "End": "a7d995f74e514d49866b1c2b6ea2de43",
+      "Id": "65d447e3ecf1458aabab1ab9da91eae4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cc948967363e433fbd2ec472c7661a3b",
+      "End": "62fe6868e21243ceb4512f2c7b910613",
+      "Id": "7df34af1a2eb41b7b54fd87dfe462070",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "90efd26b165e409eb486c766e6207b5d",
+      "End": "76fa33e16374441abaff99445d049fd9",
+      "Id": "1d5dac8336d942c2a9d023682f56603d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "abaf451c4f2842a2ad855ea0922f0688",
+      "End": "94e9220f2563433798765e326c367357",
+      "Id": "5a902432ccd0484eb0b1434c279f73f6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7291b7cdd06b461ca0ef9c1514017f8f",
+      "End": "2a8c88fb06dc415ea3fd6d59fb0bc019",
+      "Id": "6adafc68a50b47eca843d4592af92ee7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "06b603f07d7841ba8f0dbf337fc4c76e",
+      "End": "54d9393f13864da1977115acafe1b9a3",
+      "Id": "d8061dba8de24615b92ea070b86823a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1d532ac4604b42aa96af37c7f6e4148d",
+      "End": "474cc94c21f44881b0160881e89cd7d0",
+      "Id": "5f0cd75c67cb42acab21342757036a04",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "984e8e883ad34d0cba63b7f9e77ee818",
+      "End": "9b9ba2e02d00473db9c43f2aa50b8ec4",
+      "Id": "62978dd69983459290757bac694b8e71",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5a990395926b47809183bca95f398781",
+      "End": "caa4348aa5214827b0752e6d24a99d98",
+      "Id": "9975a7dae3a94e709f06ae7431627b94",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "efb58808399f4673825c0528fd17bfe4",
+      "End": "5e472de0ca034b039f27e566aefc7af0",
+      "Id": "598b138b1db246189b6b20e02b7ad7c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "85c75c709142437595379a6b2117cc20",
+      "End": "2eb3dc0231544ec2a52c051b08394478",
+      "Id": "b2752b3e2e9d46e98ab333691412b812",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b5b4317abd54407f8df4d38591854309",
+      "End": "e16a4c512f574101be35eafff75c2e55",
+      "Id": "2d3aa83e2c954ba68812bfcc2210b990",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "877e780802824e16b59a1305746b1797",
+      "End": "bb387b54652d446fac123e69a58d1bf2",
+      "Id": "2a86293e31a24fc8a2b7e151cfcdab33",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "262097a93dae448985b052d103460318",
+      "End": "b94efb592b6a4d7e9170fa12af38cd97",
+      "Id": "657fef96fb9c46c88d4e5c7620358918",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e39e30fc952e42b382bf5f5ec652c33d",
+      "End": "043d51293bf541a7bd7e4d57da4004e1",
+      "Id": "ea9fbeab15a3451db625f583a50c0807",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0b4b2c4fbef54b6a90c7f6939e198a98",
+      "End": "74c5a1c274464a4f860a2506496b94f9",
+      "Id": "3ac108529be74978995ab114adc9e0a0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a715f234148c4465bdcab19aad34d687",
+      "End": "24c7bc9c204b4fc5b02dfee446548af1",
+      "Id": "e8bd717bc6f34ea7874a50280cd8a0fd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2d9d922d98814ec9aec253f7457cfc03",
+      "End": "88f17217700e46118f15f4d5ff056e3a",
+      "Id": "2407e1daaf3a4f2faaa03bbf0f649140",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1776b0854c674388b8c57b86e41e02a4",
+      "End": "7f2ed9488fbd4226adfc3503e496e32f",
+      "Id": "fc8f33e627844f3f9536fca562d86c60",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8757fd9026194f6aabae1e2617335226",
+      "End": "8abdca674ec44736b0737a7f781e5c23",
+      "Id": "2a746e9b3694413f9ba5e8baed711682",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4285ebeebb41464ab2ec9b1d1ff35bf2",
+      "End": "2c4cbdb466ed404f8e5a57b3f838988a",
+      "Id": "fd6b9c6982564b00b9025513ebee2093",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c1f3836bc40746108a5bf94f5f018635",
+      "End": "b2c0e2817ac048b7801e1ad429b95c1c",
+      "Id": "e4f70791d11d41cdbf85666fda9ddb7c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "314d80c9568d4ec7b8795165afb07284",
+      "End": "de07105a15c046e5886de14ef5544398",
+      "Id": "925b00b831244d0ea65ad027bc9da989",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a10073d49e424c1289732a6f7d242860",
+      "End": "12d1cd2887c64107a351fa5a0e458885",
+      "Id": "9eac91d5e808442ebbe15cee713947e8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3b9e898e95c944718f150822ab07dc96",
+      "End": "af35e824548646b7be1d7ebc0b6faa97",
+      "Id": "0d359648d14b45b09f311f002116fe6b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eba330294627472c8e51b09e8fd9bb3a",
+      "End": "85148baef2a64bc1890b591a962bd058",
+      "Id": "ef389881336e484ea8196f027309feb2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f9c96dd089f34482805257992ca9fe59",
+      "End": "69c4d9f64e164e1a8c5336cfe2bd9785",
+      "Id": "c457e395d1ce43d5b8c3ee336ee65bbc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8d4ae0351e9c44cebdd8e85f920722c5",
+      "End": "b6dbc5868b0a4993847507c382e3b224",
+      "Id": "8ed74c31a7654db8bd88c7e8e8a45112",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "02e8c7f039bb4dd2a2283eacfc751e2d",
+      "End": "a12e72a800324bf3977e0a0bdf0961c2",
+      "Id": "abba97bf433141bc836419b101f89344",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6042735889464e4597d7187974824ff7",
+      "End": "c12c631e78e94f8ca47225d280162809",
+      "Id": "f37a4e9c609d4ffe8f0e5a5db486f74a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "375dffd31aa542d4842f6d59ef7e7a10",
+      "End": "f940e0c2f3c84b27a6d92c355ea5b87c",
+      "Id": "59d20d3657fa438e8cf95e1e173a4c21",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "00a6d4860ab0414da096f85d0e053cf3",
+      "End": "15964fa00c2c4d2bbc1ed92248cc2a41",
+      "Id": "e8c7cfdcb0f24be3a0f9ebc2dc8da772",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1925a89e467d4da8b84ec08216c81578",
+      "End": "0e857a9a01764401af06c3e18f69a2ea",
+      "Id": "b5b7365a254449948bf04c6301d7ee82",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f51c46f34f4042a9b773d1bc768ce358",
+      "End": "ad60398244e1474795387f7ef6af214d",
+      "Id": "0d4d84c478b5445ea16f70905d4d910e",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "95caaebf-580f-487f-b1b7-43e2503ed9ce",
+    "dfc2063c-a98c-4afa-8872-83cf333a7439",
+    "66d838bd-7dd6-48c6-86b9-5d5f88424b70"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Genius Loci",
+      "Version": "2023.2.21",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "a72c03d4fdde40deb30b0a76d722600d"
+      ]
+    },
+    {
+      "Name": "archi-lab.net",
+      "Version": "2023.213.1722",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "572b54ad5cb34eaeb14d3dbc1c390aa3"
+      ]
+    },
+    {
+      "Name": "Crumple",
+      "Version": "2022.5.27",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "d5131d7b0d2a42cf8752a4893169ed73"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Get Elements Overrides",
+        "ShowGeometry": true,
+        "Id": "a72c03d4fdde40deb30b0a76d722600d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1156.5408215492598,
+        "Y": 1973.6830253044627
+      },
+      {
+        "Name": "All Elements In Active View",
+        "ShowGeometry": true,
+        "Id": "fc74c7b247ab44829855db559edf0140",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1523.3941125469705,
+        "Y": 2256.0497978101866
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "66e70114c4dc4e7e841c151f0c73bc31",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 905.46945822200678
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "77566348b80a4f7d96a4f4dd00e97058",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 871.46945822200678
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "3207e14d87d7402da547c82449200b67",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 1087.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "76087553a4ac46148b3c3a36b9691ef1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 1053.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "71e7aa1ce497470aad7d12aa7d1a6785",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 1235.4694582220068
+      },
+      {
+        "Name": ">",
+        "ShowGeometry": true,
+        "Id": "f67bd938b0a24b869d13cf0aafcc1ae5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 1269.4694582220068
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "cb6076461ef94e3293cac47d04fdfd17",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -572.11109687729663,
+        "Y": 1314.869824057095
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "25d241bb73aa4c099b1b924fd18028f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 1417.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "b38b8c3132d644e488e27a16c150be31",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 1451.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "dee48a8fdb7b48a49b93a5142e333705",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 1633.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "23cd342b5c7e47118c0523a6485f5e7e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 1599.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "3fc71c174a96464280f42b9f4b3fe8d5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 1815.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "1ed0d052b5bd44b9a1cb0796fa009864",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 1781.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "64928bdffc9d405d83f8afa4ab2f2134",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 1997.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "f73443ffa2f64662ab4ba6c3b0361433",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 1963.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "3e4513c530714719b736c3643eaf5b38",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 2179.4694582220063
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "2248cd04907547e4a1b62645b2815cb3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 2145.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "c54e58c29b914383bce56cc3628b752f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 2361.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "32ef3f781c04462ab9bd1b4e109b4a01",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 2327.4694582220068
+      },
+      {
+        "Name": ">",
+        "ShowGeometry": true,
+        "Id": "541269a4a9404779b6461d1126dd7b5c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 2543.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "3f6c6c6e85524e6681611f77bd6e4c1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 2509.4694582220068
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "86094c47645a4a6593df21c91b89c73c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1156.5408215492598,
+        "Y": 2681.5105253044626
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "cb10d2ba87864966bb84e36eeedb2214",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 2725.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "923e6387393e464c90355968f88c9d13",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 2691.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "9f80af49aecc46f3b00b8d00dde75169",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 2907.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "db8b54b8d30e425eacd07edd4de78cbf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 2873.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "d009d4ab850b492781d9f0cc8045a239",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 3089.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "cdbe5baf2df1413aaa6640c8386dc584",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 3055.4694582220068
+      },
+      {
+        "Name": "Object.IsNull",
+        "ShowGeometry": true,
+        "Id": "7d33711556a6417ab7a1caf1b1299521",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 3271.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "f4a65dffd9d2475bb5158eef183ce80b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 3237.4694582220068
+      },
+      {
+        "Name": ">",
+        "ShowGeometry": true,
+        "Id": "c242e1fb42a947f9a6c7e2acfc4dce00",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 3453.4694582220068
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "3f2073011a474d5bb1859ba21548ede3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 3419.4694582220068
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "b0f218bcc8ae4690bbc3067e20090f08",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -525.96908166195294,
+        "Y": 3478.4701195731272
+      },
+      {
+        "Name": "==",
+        "ShowGeometry": true,
+        "Id": "7d9bab57adb54b91aa1ac64387995e74",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 3635.4694582220068
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "41093992e929423fb9073ac90a717d7a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -525.96908166195294,
+        "Y": 3660.4701195731277
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "70a56180c17b4470ad6be60af20d1028",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 3601.4694582220068
+      },
+      {
+        "Name": "==",
+        "ShowGeometry": true,
+        "Id": "5d5fd82f84924b849beac1ade430abe0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 203.24949712886178,
+        "Y": 3817.4694582220068
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "098dca6dd5cb45468a6d0f01ad8e5011",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -525.96908166195294,
+        "Y": 3842.4701195731277
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "13c1e03e717748108aec63b6ba2314aa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 496.24949712886178,
+        "Y": 3783.4694582220068
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "15e6d5f22c4647df91cc4412fd260e15",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1981.3828999505433,
+        "Y": 2020.6485175929827
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "546f34995bfc4a1285b2e6ea1a3b500f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2301.1423992211166,
+        "Y": 2019.9816592175766
+      },
+      {
+        "Name": "List.UniqueItems",
+        "ShowGeometry": true,
+        "Id": "51b874105d5e42748a9595db7123a2c1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2610.7589356752569,
+        "Y": 2021.8084563231737
+      },
+      {
+        "Name": "Isolate in View",
+        "ShowGeometry": true,
+        "Id": "572b54ad5cb34eaeb14d3dbc1c390aa3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2979.3672545040959,
+        "Y": 2020.6457101299118
+      },
+      {
+        "Name": "© Revit.CurrentView",
+        "ShowGeometry": true,
+        "Id": "d5131d7b0d2a42cf8752a4893169ed73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2592.1397283057181,
+        "Y": 2178.1523974572128
+      }
+    ],
+    "Annotations": [],
+    "X": 836.03747861829788,
+    "Y": -732.786953704292,
+    "Zoom": 0.37805379742743905
+  }
+}

@@ -1509,26 +1509,6 @@
       "Description": "Porovná, zda je hodnota X rovna hodnotě Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "true;",
-      "Id": "41093992e929423fb9073ac90a717d7a",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "eba330294627472c8e51b09e8fd9bb3a",
-          "Name": "",
-          "Description": "Hodnota výrazu na řádku 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Umožňuje přímé vytváření kódu DesignScript."
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
       "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
@@ -2414,12 +2394,6 @@
       "IsHidden": "False"
     },
     {
-      "Start": "eba330294627472c8e51b09e8fd9bb3a",
-      "End": "85148baef2a64bc1890b591a962bd058",
-      "Id": "ef389881336e484ea8196f027309feb2",
-      "IsHidden": "False"
-    },
-    {
       "Start": "f9c96dd089f34482805257992ca9fe59",
       "End": "69c4d9f64e164e1a8c5336cfe2bd9785",
       "Id": "c457e395d1ce43d5b8c3ee336ee65bbc",
@@ -2435,6 +2409,12 @@
       "Start": "02e8c7f039bb4dd2a2283eacfc751e2d",
       "End": "a12e72a800324bf3977e0a0bdf0961c2",
       "Id": "abba97bf433141bc836419b101f89344",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "02e8c7f039bb4dd2a2283eacfc751e2d",
+      "End": "85148baef2a64bc1890b591a962bd058",
+      "Id": "1e795989ffd74aa0ac91a6601ea3d70a",
       "IsHidden": "False"
     },
     {
@@ -2553,8 +2533,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -1156.5408215492598,
-        "Y": 1973.6830253044627
+        "X": -1012.0105917541061,
+        "Y": 2054.3525341292252
       },
       {
         "Name": "All Elements In Active View",
@@ -2563,8 +2543,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -1523.3941125469705,
-        "Y": 2256.0497978101866
+        "X": -1331.2084458100885,
+        "Y": 2318.0220125073765
       },
       {
         "Name": "Object.IsNull",
@@ -2573,8 +2553,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 905.46945822200678
+        "X": 371.91676436015905,
+        "Y": 902.55570822200707
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2583,8 +2563,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 871.46945822200678
+        "X": 664.916764360159,
+        "Y": 868.55570822200707
       },
       {
         "Name": "Object.IsNull",
@@ -2593,8 +2573,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 1087.4694582220068
+        "X": 371.91676436015905,
+        "Y": 1085.5557082220068
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2603,8 +2583,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 1053.4694582220068
+        "X": 664.916764360159,
+        "Y": 1051.5557082220068
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2613,8 +2593,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 1235.4694582220068
+        "X": 664.916764360159,
+        "Y": 1233.5557082220068
       },
       {
         "Name": ">",
@@ -2623,8 +2603,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 1269.4694582220068
+        "X": 371.91676436015905,
+        "Y": 1267.5557082220068
       },
       {
         "Name": "Code Block",
@@ -2633,8 +2613,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -572.11109687729663,
-        "Y": 1314.869824057095
+        "X": -241.77908207779728,
+        "Y": 1305.2222275444169
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2643,8 +2623,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 1417.4694582220068
+        "X": 664.916764360159,
+        "Y": 1415.5557082220068
       },
       {
         "Name": "Object.IsNull",
@@ -2653,8 +2633,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 1451.4694582220068
+        "X": 371.91676436015905,
+        "Y": 1449.5557082220068
       },
       {
         "Name": "Object.IsNull",
@@ -2663,8 +2643,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 1633.4694582220068
+        "X": 371.91676436015905,
+        "Y": 1631.5557082220068
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2673,8 +2653,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 1599.4694582220068
+        "X": 664.916764360159,
+        "Y": 1597.5557082220068
       },
       {
         "Name": "Object.IsNull",
@@ -2683,8 +2663,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 1815.4694582220068
+        "X": 371.91676436015905,
+        "Y": 1813.5557082220068
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2693,8 +2673,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 1781.4694582220068
+        "X": 664.916764360159,
+        "Y": 1779.5557082220068
       },
       {
         "Name": "Object.IsNull",
@@ -2703,8 +2683,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 1997.4694582220068
+        "X": 371.91676436015905,
+        "Y": 1995.5557082220068
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2713,8 +2693,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 1963.4694582220068
+        "X": 664.916764360159,
+        "Y": 1961.5557082220068
       },
       {
         "Name": "Object.IsNull",
@@ -2723,8 +2703,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 2179.4694582220063
+        "X": 371.91676436015905,
+        "Y": 2177.5557082220066
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2733,8 +2713,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 2145.4694582220068
+        "X": 664.916764360159,
+        "Y": 2143.5557082220066
       },
       {
         "Name": "Object.IsNull",
@@ -2743,8 +2723,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 2361.4694582220068
+        "X": 371.91676436015905,
+        "Y": 2359.5557082220066
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2753,8 +2733,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 2327.4694582220068
+        "X": 664.916764360159,
+        "Y": 2325.5557082220066
       },
       {
         "Name": ">",
@@ -2763,8 +2743,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 2543.4694582220068
+        "X": 371.91676436015905,
+        "Y": 2541.5557082220066
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2773,8 +2753,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 2509.4694582220068
+        "X": 664.916764360159,
+        "Y": 2507.5557082220066
       },
       {
         "Name": "Code Block",
@@ -2783,8 +2763,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -1156.5408215492598,
-        "Y": 2681.5105253044626
+        "X": -623.29236897166038,
+        "Y": 2798.1444099272485
       },
       {
         "Name": "Object.IsNull",
@@ -2793,8 +2773,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 2725.4694582220068
+        "X": 371.91676436015905,
+        "Y": 2723.5557082220066
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2803,8 +2783,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 2691.4694582220068
+        "X": 664.916764360159,
+        "Y": 2689.5557082220066
       },
       {
         "Name": "Object.IsNull",
@@ -2813,8 +2793,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 2907.4694582220068
+        "X": 371.91676436015905,
+        "Y": 2905.5557082220066
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2823,8 +2803,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 2873.4694582220068
+        "X": 664.916764360159,
+        "Y": 2871.5557082220066
       },
       {
         "Name": "Object.IsNull",
@@ -2833,8 +2813,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 3089.4694582220068
+        "X": 371.91676436015905,
+        "Y": 3087.5557082220071
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2843,8 +2823,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 3055.4694582220068
+        "X": 664.916764360159,
+        "Y": 3053.5557082220071
       },
       {
         "Name": "Object.IsNull",
@@ -2853,8 +2833,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 3271.4694582220068
+        "X": 371.91676436015905,
+        "Y": 3269.5557082220071
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2863,8 +2843,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 3237.4694582220068
+        "X": 664.916764360159,
+        "Y": 3235.5557082220071
       },
       {
         "Name": ">",
@@ -2873,8 +2853,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 3453.4694582220068
+        "X": 371.91676436015905,
+        "Y": 3451.5557082220071
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2883,8 +2863,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 3419.4694582220068
+        "X": 664.916764360159,
+        "Y": 3417.5557082220071
       },
       {
         "Name": "Code Block",
@@ -2893,8 +2873,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -525.96908166195294,
-        "Y": 3478.4701195731272
+        "X": -232.27143205575544,
+        "Y": 3470.1614684151568
       },
       {
         "Name": "==",
@@ -2903,18 +2883,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 3635.4694582220068
-      },
-      {
-        "Name": "Code Block",
-        "ShowGeometry": true,
-        "Id": "41093992e929423fb9073ac90a717d7a",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": -525.96908166195294,
-        "Y": 3660.4701195731277
+        "X": 371.91676436015905,
+        "Y": 3633.5557082220071
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2923,8 +2893,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 3601.4694582220068
+        "X": 664.916764360159,
+        "Y": 3599.5557082220071
       },
       {
         "Name": "==",
@@ -2933,8 +2903,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 203.24949712886178,
-        "Y": 3817.4694582220068
+        "X": 371.91676436015905,
+        "Y": 3816.5557082220071
       },
       {
         "Name": "Code Block",
@@ -2943,8 +2913,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -525.96908166195294,
-        "Y": 3842.4701195731277
+        "X": -143.16382176975048,
+        "Y": 3843.8824332141535
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -2953,8 +2923,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 496.24949712886178,
-        "Y": 3783.4694582220068
+        "X": 664.916764360159,
+        "Y": 3782.5557082220071
       },
       {
         "Name": "List Create",
@@ -2963,8 +2933,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1981.3828999505433,
-        "Y": 2020.6485175929827
+        "X": 1973.6073431904274,
+        "Y": 2024.7592687207359
       },
       {
         "Name": "List.Flatten",
@@ -2973,8 +2943,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2301.1423992211166,
-        "Y": 2019.9816592175766
+        "X": 2238.6073431904274,
+        "Y": 2024.7592687207359
       },
       {
         "Name": "List.UniqueItems",
@@ -2983,8 +2953,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2610.7589356752569,
-        "Y": 2021.8084563231737
+        "X": 2533.6073431904274,
+        "Y": 2024.7592687207359
       },
       {
         "Name": "Isolate in View",
@@ -2993,8 +2963,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2979.3672545040959,
-        "Y": 2020.6457101299118
+        "X": 2867.6073431904274,
+        "Y": 2081.7592687207361
       },
       {
         "Name": "© Revit.CurrentView",
@@ -3003,13 +2973,13 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2592.1397283057181,
-        "Y": 2178.1523974572128
+        "X": 2533.6073431904274,
+        "Y": 2172.7592687207361
       }
     ],
     "Annotations": [],
-    "X": 836.03747861829788,
-    "Y": -732.786953704292,
-    "Zoom": 0.37805379742743905
+    "X": 668.74231132235013,
+    "Y": 144.95764483615073,
+    "Zoom": 0.16526567218020757
   }
 }

@@ -1,0 +1,1140 @@
+{
+  "Uuid": "8b7ebea5-ab47-4d98-9565-656857118296",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "GROSS AREA",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 196,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "d4abc2b9-d33b-4a56-8035-01957a7e6739-00008729",
+        "d4abc2b9-d33b-4a56-8035-01957a7e6739-0000872b",
+        "d4abc2b9-d33b-4a56-8035-01957a7e6739-0000872d",
+        "d4abc2b9-d33b-4a56-8035-01957a7e6739-0000872f"
+      ],
+      "Id": "58633a34c502409aaa613eddc6409ed4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "29a0dfe465cd4740a746b92ede5991db",
+          "Name": "Elements",
+          "Description": "Vybrané prvky.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "8c6744d814b94ed69ca6fed63bfbf190",
+      "Inputs": [
+        {
+          "Id": "fb850313fb33489fb6ed6447f604d84d",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "34bc748065c14ee485d6d63d32df9235",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získejte všechny geometrie přiřazené k tomuto objektu.\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Plane.ByOriginNormal@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "d0fc59c7a0b24447b7c4f7a422a5206f",
+      "Inputs": [
+        {
+          "Id": "3272be903a274ab2b6a606f8501689ad",
+          "Name": "origin",
+          "Description": "Bod počátku roviny\n\nPoint\nVýchozí hodnota : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4783bb215cde45039f529a55c6269440",
+          "Name": "normal",
+          "Description": "Normálový směrový vektor roviny\n\nVector\nVýchozí hodnota : Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "361612a3c64b41888fbd3f284b234fba",
+          "Name": "Plane",
+          "Description": "Rovina vytvořená pomocí počátku a normály",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvoří rovinu vystředěnou na kořenový bod, s vstupním normálovým vektorem.\n\nPlane.ByOriginNormal (origin: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), normal: Vector = Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1)): Plane"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Centroid",
+      "Id": "76fd2da5d8a04fd9902e54e1feffe3b4",
+      "Inputs": [
+        {
+          "Id": "00d318bf72c3489084d1c9c78d84cdfc",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "279fe0bd83f8406eb121986c5db82dd8",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Těžiště tělesa\n\nSolid.Centroid ( ): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ZAxis",
+      "Id": "75a046477a9a434994a1189708ea7fa7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d07740834f44458a81e0a8f57bb3ab41",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat kanonický vektor osy Z (0,0,1)\n\nVector.ZAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Intersect@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "3a14e83ba02741cf8e749eb1761c19d3",
+      "Inputs": [
+        {
+          "Id": "993849ced97843398e5c0d4017919018",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bc2bf0cdfd7a4e0ab229d430b88d7350",
+          "Name": "other",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9ad58f9056a44584b7be0ae68effeebf",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Získat geometrii průsečíku pro tento objekt a jiný\n\nGeometry.Intersect (other: Geometry): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.PerimeterCurves",
+      "Id": "96ea5a5ba1ae461ca311d433d3777288",
+      "Inputs": [
+        {
+          "Id": "233bfaf4a0f9430f92d8ec39cbdcff74",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5a2278801de34ee0b35c3f31e1acf794",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vraťte všechny hraniční křivky povrchu.\n\nSurface.PerimeterCurves ( ): Curve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.OffsetMany@double,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "195590570d264a7aa59012cfe86fa1b4",
+      "Inputs": [
+        {
+          "Id": "e85ae42e4250418ca056bb71d14fbe95",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8d76cb3bf234433eabcd028d630480df",
+          "Name": "signedDistance",
+          "Description": "Kladná vzdálenost odsazení se použije ve směru vektorového součinu vektoru tečny křivky a normálového vektoru roviny, zatímco záporné odsazení se použije v opačném směru.\n\ndouble\nVýchozí hodnota : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5271b07ed08b4c468dd9b6297f9abc79",
+          "Name": "planeNormal",
+          "Description": "Normála roviny křivky. Výchozí hodnotou je normála roviny vstupní křivky\n\nVector\nVýchozí hodnota : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "30afe12fe16e4dcda51096f26b172a59",
+          "Name": "Curve[]..[]",
+          "Description": "Jedna nebo více odsazených křivek",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte jednu nebo více křivek odsazením rovinné křivky o zadanou vzdálenost v rovině definované normálou roviny. Pokud mezi odsazenými křivkami komponenty existují mezery, budou vyplněny prodloužením křivek odsazení. Vstupní argument „planeNormal“ má jako výchozí hodnotu normálu roviny obsahující křivku, je však možné určit explicitní normálu rovnoběžnou s původní normálou křivky za účelem lepšího řízení směru odsazení. Pokud je například požadován konzistentní směr odsazení u více křivek sdílejících stejnou rovinu, je možné pomocí hodnoty „planeNormal“ přepsat jednotlivé normály křivky a vynutit stejný směr odsazení u všech křivek. Obrácení normály obrází směr odsazení.\n\nCurve.OffsetMany (signedDistance: double = 1, planeNormal: Vector = null): Curve[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[],double,bool,double",
+      "Id": "50e395582c454006856122dc7318674a",
+      "Inputs": [
+        {
+          "Id": "310761a7643e4afaa458683ccb8a73f2",
+          "Name": "curves",
+          "Description": "Křivky ke spojení do objektu PolyCurve\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b4998af65fa64ec594f0a4a9c342a18b",
+          "Name": "joinTolerance",
+          "Description": "Tolerance, která určuje velikost povolené mezery mezi spojovanými křivkami\n\ndouble\nVýchozí hodnota : 0.001",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f4e86a1f711470db0d672db0be0c124",
+          "Name": "trimCurves",
+          "Description": "bool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c06ae35493645e4b7331fa104914636",
+          "Name": "trimLength",
+          "Description": "double\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b9f438c220d94a13927997a7b419cbec",
+          "Name": "PolyCurve",
+          "Description": "Objekt Polycurve vytvořený podle spojených křivek",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte objekt PolyCurve spojením křivek. Obrátí křivku podle potřeby připojení. Vyberte preferovanou toleranci spojení od 1e-6 do 1e-3 jednotek.\n\nPolyCurve.ByJoinedCurves (curves: Curve[], joinTolerance: double = 0.001, trimCurves: bool = false, trimLength: double = 0): PolyCurve"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 500.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 125.0,
+      "Id": "2c8b3f4f2f614dd3938629c0703bbfad",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "59fc8bf6b295409cb9cbfcd5649ed1e6",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Posuvník, který vytváří číselné hodnoty."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve",
+      "Id": "b42fdc5c747f43ef95e9f2f8ba0ffe0d",
+      "Inputs": [
+        {
+          "Id": "feb94fa670664cc0a305fba0411e5599",
+          "Name": "closedCurve",
+          "Description": "Uzavřená křivka použitá jako hranice povrchu\n\nCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2b9d8f018a53447aa7760a769ea646c5",
+          "Name": "Surface",
+          "Description": "Povrch vytvořený záplatou",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte povrch vyplněním vnitřní části uzavřené hranice definované vstupními křivkami.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.PerimeterCurves",
+      "Id": "746087ed2e0745dd81559d3b40bb4107",
+      "Inputs": [
+        {
+          "Id": "d892da63556d4757a46454ad3c734306",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "73a5c297c2cf410698871d0631e424ae",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vraťte všechny hraniční křivky povrchu.\n\nSurface.PerimeterCurves ( ): Curve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[],double,bool,double",
+      "Id": "1537ff5211684fb2bfcb804ec992280f",
+      "Inputs": [
+        {
+          "Id": "41fdf7a19bf446a8bb5add23469efea3",
+          "Name": "curves",
+          "Description": "Křivky ke spojení do objektu PolyCurve\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5aaff0aa1b2d41089559e9e579dfa04c",
+          "Name": "joinTolerance",
+          "Description": "Tolerance, která určuje velikost povolené mezery mezi spojovanými křivkami\n\ndouble\nVýchozí hodnota : 0.001",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "09b94d4344c64215ac81ef2a127b870f",
+          "Name": "trimCurves",
+          "Description": "bool\nVýchozí hodnota : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f748b139e004fa79b7b2a6a07b65572",
+          "Name": "trimLength",
+          "Description": "double\nVýchozí hodnota : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4e50e8a8565d42f48b80fd23de7c491d",
+          "Name": "PolyCurve",
+          "Description": "Objekt Polycurve vytvořený podle spojených křivek",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte objekt PolyCurve spojením křivek. Obrátí křivku podle potřeby připojení. Vyberte preferovanou toleranci spojení od 1e-6 do 1e-3 jednotek.\n\nPolyCurve.ByJoinedCurves (curves: Curve[], joinTolerance: double = 0.001, trimCurves: bool = false, trimLength: double = 0): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.OffsetMany@double,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "900cd6d5aef74e0289d3b7bec42aeb1b",
+      "Inputs": [
+        {
+          "Id": "3e8e3dc35c7044f49cbf5f4bada34a7d",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7fec4b592f14c559575455e06738d9a",
+          "Name": "signedDistance",
+          "Description": "Kladná vzdálenost odsazení se použije ve směru vektorového součinu vektoru tečny křivky a normálového vektoru roviny, zatímco záporné odsazení se použije v opačném směru.\n\ndouble\nVýchozí hodnota : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "25e9b05717384aa482f004e5cf58e5f1",
+          "Name": "planeNormal",
+          "Description": "Normála roviny křivky. Výchozí hodnotou je normála roviny vstupní křivky\n\nVector\nVýchozí hodnota : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4053936ad21b43ce8154e73e3df4541f",
+          "Name": "Curve[]..[]",
+          "Description": "Jedna nebo více odsazených křivek",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte jednu nebo více křivek odsazením rovinné křivky o zadanou vzdálenost v rovině definované normálou roviny. Pokud mezi odsazenými křivkami komponenty existují mezery, budou vyplněny prodloužením křivek odsazení. Vstupní argument „planeNormal“ má jako výchozí hodnotu normálu roviny obsahující křivku, je však možné určit explicitní normálu rovnoběžnou s původní normálou křivky za účelem lepšího řízení směru odsazení. Pokud je například požadován konzistentní směr odsazení u více křivek sdílejících stejnou rovinu, je možné pomocí hodnoty „planeNormal“ přepsat jednotlivé normály křivky a vynutit stejný směr odsazení u všech křivek. Obrácení normály obrází směr odsazení.\n\nCurve.OffsetMany (signedDistance: double = 1, planeNormal: Vector = null): Curve[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "-@var[]..[],var[]..[]",
+      "Id": "2d234ea38a0a41769fbf42418286fc0b",
+      "Inputs": [
+        {
+          "Id": "7f16779ec9bf4e969c83832298816cbe",
+          "Name": "x",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5bb5ab8374cf4f08a68f23e6ac4c8533",
+          "Name": "y",
+          "Description": "Celočíselná nebo hodnota double\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7da57061d5314198b9107421a61ca0d6",
+          "Name": "number",
+          "Description": "Výsledek vstupu Y odečtený od vstupu X",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrátí rozdíl hodnot X a Y\n\n- (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "f02451a3731046a68a11c9b65827a06b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4e943a292ef04acc899743ed80ce1f27",
+          "Name": "",
+          "Description": "Hodnota výrazu na řádku 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Umožňuje přímé vytváření kódu DesignScript."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve",
+      "Id": "a4e8d00d7f1746559e03ab8e0d66bca6",
+      "Inputs": [
+        {
+          "Id": "4285d35639974d6ebb39dbec1f8e6021",
+          "Name": "closedCurve",
+          "Description": "Uzavřená křivka použitá jako hranice povrchu\n\nCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "57da0aa64ca34c658eedfde55770ed80",
+          "Name": "Surface",
+          "Description": "Povrch vytvořený záplatou",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vytvořte povrch vyplněním vnitřní části uzavřené hranice definované vstupními křivkami.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByUnion@Autodesk.DesignScript.Geometry.Surface[]",
+      "Id": "709ebf7c28674806ad1d1494fab3ecc8",
+      "Inputs": [
+        {
+          "Id": "c4cce06df36240de9b37f982adb278de",
+          "Name": "surfaces",
+          "Description": "Kolekce povrchů.\n\nSurface[]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c82b8526b95c47e1a91d5c0f16fc29fe",
+          "Name": "Surface",
+          "Description": "Sjednocení povrchů",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sjednocení kolekce povrchů do jednoho povrchu. Tato metoda může vrátit objekt PolySurface v případě, že výsledné sjednocení je nerozložené nebo se skládá z více ploch.\n\nSurface.ByUnion (surfaces: Surface[]): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "b2ee9c875b764e0b881fefa19db09fdb",
+      "Inputs": [
+        {
+          "Id": "2550655dc62d4dfe8256b5680126c1ba",
+          "Name": "list",
+          "Description": "Seznam k vyrovnání\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "92343dcc9a6f4bb280231df7d9551346",
+          "Name": "amount",
+          "Description": "Hladiny vnoření seznamu k odebrání (-1 odebere všechna vnoření seznamu)\n\nint\nVýchozí hodnota : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "420983e60e6b400e93ec0199be47759a",
+          "Name": "list",
+          "Description": "Vyrovnaný seznam o určité množství",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vyrovná vnořený seznam seznamů o určitou hodnotu.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.Area",
+      "Id": "6d68ca5d3f16410c940c21d67fa20837",
+      "Inputs": [
+        {
+          "Id": "39e603eb65914abf8c5e88230f3fd92a",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e0a18aaa3a14939891af69c76cf1de0",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Vrací celkovou plochu povrchu.\n\nSurface.Area: double"
+    },
+    {
+      "ConcreteType": "UnitsUI.DynamoUnitConvert, UnitsUI",
+      "MeasurementType": "autodesk.unit.quantity:area-1.0.2",
+      "FromConversion": "autodesk.unit.unit:squareMillimeters-1.0.1",
+      "ToConversion": "autodesk.unit.unit:squareMeters-1.0.1",
+      "NodeType": "ExtensionNode",
+      "Id": "6be344894cd9421ba48791e2026f0df7",
+      "Inputs": [
+        {
+          "Id": "54c69974de144b6092098f7cbae450d8",
+          "Name": "",
+          "Description": "Hodnota k převedení",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dfc457adf26f44b4a24943847b56c693",
+          "Name": "",
+          "Description": "Převedená hodnota",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Převede hodnotu mezi vybranými systémy jednotek."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "29a0dfe465cd4740a746b92ede5991db",
+      "End": "fb850313fb33489fb6ed6447f604d84d",
+      "Id": "7bf6d3ab82914ca99101401d89bd0570",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "34bc748065c14ee485d6d63d32df9235",
+      "End": "00d318bf72c3489084d1c9c78d84cdfc",
+      "Id": "e4f1e6fd91b8409484abf507ea5a83ae",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "34bc748065c14ee485d6d63d32df9235",
+      "End": "993849ced97843398e5c0d4017919018",
+      "Id": "33c9a37f1475421faf195ffd943471a7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "361612a3c64b41888fbd3f284b234fba",
+      "End": "bc2bf0cdfd7a4e0ab229d430b88d7350",
+      "Id": "b39c592934d74ef4be8a30f96477d46f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "279fe0bd83f8406eb121986c5db82dd8",
+      "End": "3272be903a274ab2b6a606f8501689ad",
+      "Id": "4f044fde50a64ed59f288454edb84909",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d07740834f44458a81e0a8f57bb3ab41",
+      "End": "4783bb215cde45039f529a55c6269440",
+      "Id": "ddcd89fc0a4c4c14b18fc8fb111eac5b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9ad58f9056a44584b7be0ae68effeebf",
+      "End": "233bfaf4a0f9430f92d8ec39cbdcff74",
+      "Id": "5214268b10454e2bbacbcf19412eace4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5a2278801de34ee0b35c3f31e1acf794",
+      "End": "310761a7643e4afaa458683ccb8a73f2",
+      "Id": "63373372b46e48108db73f7240ecd547",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "30afe12fe16e4dcda51096f26b172a59",
+      "End": "feb94fa670664cc0a305fba0411e5599",
+      "Id": "5eba2fc1fbe64dd292311c504bd0ffe6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b9f438c220d94a13927997a7b419cbec",
+      "End": "e85ae42e4250418ca056bb71d14fbe95",
+      "Id": "ac6b10e7893342a4b792164e01aed615",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59fc8bf6b295409cb9cbfcd5649ed1e6",
+      "End": "8d76cb3bf234433eabcd028d630480df",
+      "Id": "b8af16f8e6fb46f3a8d607ded792eac8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59fc8bf6b295409cb9cbfcd5649ed1e6",
+      "End": "5bb5ab8374cf4f08a68f23e6ac4c8533",
+      "Id": "945c96a7212a4b1581cdcfc021e4f3a9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2b9d8f018a53447aa7760a769ea646c5",
+      "End": "2550655dc62d4dfe8256b5680126c1ba",
+      "Id": "6246429b6c5a471ea0cf1c4fb73d4771",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "73a5c297c2cf410698871d0631e424ae",
+      "End": "41fdf7a19bf446a8bb5add23469efea3",
+      "Id": "a7731bc64bd9418b9b89ff9da0f6f6f0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e50e8a8565d42f48b80fd23de7c491d",
+      "End": "3e8e3dc35c7044f49cbf5f4bada34a7d",
+      "Id": "97daa38cd01a474e97a166797db434e1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4053936ad21b43ce8154e73e3df4541f",
+      "End": "4285d35639974d6ebb39dbec1f8e6021",
+      "Id": "6b33d84f8be24ab5bac99cfb02156295",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7da57061d5314198b9107421a61ca0d6",
+      "End": "f7fec4b592f14c559575455e06738d9a",
+      "Id": "448ce88998434763967cfaa1dee7ef70",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e943a292ef04acc899743ed80ce1f27",
+      "End": "7f16779ec9bf4e969c83832298816cbe",
+      "Id": "14fd9d6d92be4fd9944468b355caffd2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "57da0aa64ca34c658eedfde55770ed80",
+      "End": "39e603eb65914abf8c5e88230f3fd92a",
+      "Id": "1f7528e6cc164c7fbd3d275755c03ad0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c82b8526b95c47e1a91d5c0f16fc29fe",
+      "End": "d892da63556d4757a46454ad3c734306",
+      "Id": "6198e34576054563a81318162a783cee",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "420983e60e6b400e93ec0199be47759a",
+      "End": "c4cce06df36240de9b37f982adb278de",
+      "Id": "e42c1736ff844b2ea08d09bd9180fe63",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9e0a18aaa3a14939891af69c76cf1de0",
+      "End": "54c69974de144b6092098f7cbae450d8",
+      "Id": "f0dd8199268840dfa8e7d37d52957938",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Vlastnosti",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Žádný",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Náhled pozadí",
+      "EyeX": 13061.3955078125,
+      "EyeY": 9243.3134765625,
+      "EyeZ": 11835.61328125,
+      "LookX": 148.5087890625,
+      "LookY": -8024.1142578125,
+      "LookZ": -5035.32421875,
+      "UpX": 0.021027194336056709,
+      "UpY": 0.70090913772583008,
+      "UpZ": -0.71294057369232178
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Select Model Elements By Category",
+        "ShowGeometry": true,
+        "Id": "58633a34c502409aaa613eddc6409ed4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 179.31315718983228,
+        "Y": 682.84428241903925
+      },
+      {
+        "Name": "Element.Geometry",
+        "ShowGeometry": false,
+        "Id": "8c6744d814b94ed69ca6fed63bfbf190",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 632.47560765952107,
+        "Y": 681.056000508158
+      },
+      {
+        "Name": "Plane.ByOriginNormal",
+        "ShowGeometry": true,
+        "Id": "d0fc59c7a0b24447b7c4f7a422a5206f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1242.4566610044963,
+        "Y": 771.6296927636929
+      },
+      {
+        "Name": "Solid.Centroid",
+        "ShowGeometry": true,
+        "Id": "76fd2da5d8a04fd9902e54e1feffe3b4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 953.813445825836,
+        "Y": 772.66385995594965
+      },
+      {
+        "Name": "Vector.ZAxis",
+        "ShowGeometry": true,
+        "Id": "75a046477a9a434994a1189708ea7fa7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 980.92974123570684,
+        "Y": 901.16606439803218
+      },
+      {
+        "Name": "Geometry.Intersect",
+        "ShowGeometry": false,
+        "Id": "3a14e83ba02741cf8e749eb1761c19d3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1643.8969010050432,
+        "Y": 679.50619112252139
+      },
+      {
+        "Name": "Surface.PerimeterCurves",
+        "ShowGeometry": false,
+        "Id": "96ea5a5ba1ae461ca311d433d3777288",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2016.2847520489786,
+        "Y": 669.74000959787986
+      },
+      {
+        "Name": "Curve.OffsetMany",
+        "ShowGeometry": false,
+        "Id": "195590570d264a7aa59012cfe86fa1b4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3061.9352669281607,
+        "Y": 681.02790800955268
+      },
+      {
+        "Name": "PolyCurve.ByJoinedCurves",
+        "ShowGeometry": false,
+        "Id": "50e395582c454006856122dc7318674a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2514.5368872239856,
+        "Y": 659.4856793435149
+      },
+      {
+        "Name": "Number Slider",
+        "ShowGeometry": true,
+        "Id": "2c8b3f4f2f614dd3938629c0703bbfad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2446.0596669226225,
+        "Y": 921.46840383839844
+      },
+      {
+        "Name": "Surface.ByPatch",
+        "ShowGeometry": false,
+        "Id": "b42fdc5c747f43ef95e9f2f8ba0ffe0d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3426.6059600423496,
+        "Y": 669.93705739841243
+      },
+      {
+        "Name": "Surface.PerimeterCurves",
+        "ShowGeometry": true,
+        "Id": "746087ed2e0745dd81559d3b40bb4107",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4230.356239067647,
+        "Y": 628.47303886661325
+      },
+      {
+        "Name": "PolyCurve.ByJoinedCurves",
+        "ShowGeometry": false,
+        "Id": "1537ff5211684fb2bfcb804ec992280f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4533.9994490861427,
+        "Y": 523.89732805191522
+      },
+      {
+        "Name": "Curve.OffsetMany",
+        "ShowGeometry": false,
+        "Id": "900cd6d5aef74e0289d3b7bec42aeb1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5018.4210670454286,
+        "Y": 677.15208197445259
+      },
+      {
+        "Name": "-",
+        "ShowGeometry": true,
+        "Id": "2d234ea38a0a41769fbf42418286fc0b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4088.7458213960208,
+        "Y": 837.64887394285222
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "f02451a3731046a68a11c9b65827a06b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3822.9729361214295,
+        "Y": 792.80051358171215
+      },
+      {
+        "Name": "Surface.ByPatch",
+        "ShowGeometry": true,
+        "Id": "a4e8d00d7f1746559e03ab8e0d66bca6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5422.1329424997148,
+        "Y": 697.51772708944213
+      },
+      {
+        "Name": "Surface.ByUnion",
+        "ShowGeometry": true,
+        "Id": "709ebf7c28674806ad1d1494fab3ecc8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3937.678150138036,
+        "Y": 499.3382100627399
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "b2ee9c875b764e0b881fefa19db09fdb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3710.8086896523246,
+        "Y": 601.1806963735205
+      },
+      {
+        "Name": "Surface.Area",
+        "ShowGeometry": true,
+        "Id": "6d68ca5d3f16410c940c21d67fa20837",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5802.1180896074375,
+        "Y": 744.54608616517783
+      },
+      {
+        "Name": "Convert By Units",
+        "ShowGeometry": true,
+        "Id": "6be344894cd9421ba48791e2026f0df7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6119.1698828929375,
+        "Y": 742.365054049865
+      }
+    ],
+    "Annotations": [],
+    "X": 54.970305678401587,
+    "Y": -388.63908317412569,
+    "Zoom": 0.77815245209121464
+  }
+}

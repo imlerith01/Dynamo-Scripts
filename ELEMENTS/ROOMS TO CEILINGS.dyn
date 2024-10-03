@@ -1,0 +1,484 @@
+{
+  "Uuid": "b5d4849b-0579-4a89-a776-1642340240ac",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ROOMS TO CEILINGS",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "0718ccc1ccb543f5a72fe25d56651c0b",
+      "Name": "Místnosti",
+      "Type": "selection",
+      "Type2": "hostSelection",
+      "Value": "51880b96-a36d-4951-8c72-8b758c945bd9-000547bb",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    },
+    {
+      "Id": "d782ebd66de5473195ed0a9e0e358672",
+      "Name": "Typ podhledu",
+      "Type": "selection",
+      "Type2": "dropdownSelection",
+      "Value": "Pororoštový podhled, chodby + šatny",
+      "Description": "All ceiling types available in the document.",
+      "SelectedIndex": 2
+    },
+    {
+      "Id": "11270f8725904cffbc0b1bd45b1eaa4d",
+      "Name": "Odsazení od podlaží",
+      "Type": "number",
+      "Type2": "number",
+      "Value": "3000",
+      "NumberType": "Double",
+      "Description": "Creates a number"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 198,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "51880b96-a36d-4951-8c72-8b758c945bd9-000547bb"
+      ],
+      "Id": "0718ccc1ccb543f5a72fe25d56651c0b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "16e3778ccb514729853b7ecec0e44f50",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "09a92871e74a46c19248cde8faa79bc6",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8e9fd685e99f4b94b85cd955b9c612ae",
+          "Name": "room",
+          "Description": "The room to get the level from\n\nRoom",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8de99f05ea614ef4adb2a3e8b41410a5",
+          "Name": "Level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Rhythm.Revit.Elements.Rooms.Level@Revit.Elements.Room",
+      "Replication": "Auto",
+      "Description": "Get the level for the given room\n\nRooms.Level (room: Room): Level"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.CeilingTypes, DSRevitNodesUI",
+      "SelectedIndex": 2,
+      "SelectedString": "Pororoštový podhled, chodby + šatny",
+      "Id": "d782ebd66de5473195ed0a9e0e358672",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a602751619544ddf906882c64f9eb02f",
+          "Name": "Ceiling Type",
+          "Description": "The selected Ceiling Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All ceiling types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "768614d56d4948159f693196373488b6",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3d793bfbffa540d792430800c7e779a0",
+          "Name": "outlineCurves",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cb201e0aca424d16884d3ea17d614058",
+          "Name": "ceilingType",
+          "Description": "CeilingType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fffa1f989b144203a976d04b6d8d0517",
+          "Name": "level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "089197570f8940d7ae44e68b68b7dcd8",
+          "Name": "Ceiling",
+          "Description": "The ceiling",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Ceiling.ByOutlineTypeAndLevel@Autodesk.DesignScript.Geometry.Curve[],Revit.Elements.CeilingType,Revit.Elements.Level",
+      "Replication": "Auto",
+      "Description": "Create a Revit Ceiling given its curve outline and Level\n\nCeiling.ByOutlineTypeAndLevel (outlineCurves: Curve[], ceilingType: CeilingType, level: Level): Ceiling"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "0d3db0cfad9845e2a30999a5ac8bfc40",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6b9d77503c4f4a73b2e1f68d6f56217a",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"Výškové odsazení od podlaží\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c6ffd35b1cb04a7d89b69ca5f585caac",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "0146cfc6b19b43e4aa1c4e3e85aeb2eb",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "efe63c95c9654144aef21b2ebd11a480",
+          "Name": "parameterName",
+          "Description": "The name of the parameter to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "22b771b096bf4c8282b8df810afb49ec",
+          "Name": "value",
+          "Description": "The value.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "730a80c0a61b4a30b11530578589b197",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Replication": "Auto",
+      "Description": "Set one of the element's parameters.\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NumberType": "Double",
+      "Id": "11270f8725904cffbc0b1bd45b1eaa4d",
+      "NodeType": "NumberInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e7bd837218fc4b0498331b83199ea23e",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number",
+      "InputValue": 3000.0
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d7a6379f6f3344d6a16ef80f9640c0ee",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6bc3f4df09924243a94a4ade5d71b305",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d1c78edfc2114b7bb527060e2a485997",
+          "Name": "Curve[][]",
+          "Description": "Curve[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Room.FinishBoundary",
+      "Replication": "Auto",
+      "Description": "Finish boundary\n\nRoom.FinishBoundary: Curve[][]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "16e3778ccb514729853b7ecec0e44f50",
+      "End": "8e9fd685e99f4b94b85cd955b9c612ae",
+      "Id": "cb18fafa07484c9b9b9e217f317078a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "16e3778ccb514729853b7ecec0e44f50",
+      "End": "6bc3f4df09924243a94a4ade5d71b305",
+      "Id": "f367d680bb0c41799dedc593ffd81e15",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8de99f05ea614ef4adb2a3e8b41410a5",
+      "End": "fffa1f989b144203a976d04b6d8d0517",
+      "Id": "400caa7d56a248ac85faf9b9938dd95e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a602751619544ddf906882c64f9eb02f",
+      "End": "cb201e0aca424d16884d3ea17d614058",
+      "Id": "cd4d272dfcf940d4b5342d0159f506ab",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "089197570f8940d7ae44e68b68b7dcd8",
+      "End": "0146cfc6b19b43e4aa1c4e3e85aeb2eb",
+      "Id": "d35042512c404b5db6cf393fcdc6ba17",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6b9d77503c4f4a73b2e1f68d6f56217a",
+      "End": "efe63c95c9654144aef21b2ebd11a480",
+      "Id": "a8161d253748412595aa28015ad7e46d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e7bd837218fc4b0498331b83199ea23e",
+      "End": "22b771b096bf4c8282b8df810afb49ec",
+      "Id": "feb04dde04d9418597736c85c1927250",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d1c78edfc2114b7bb527060e2a485997",
+      "End": "3d793bfbffa540d792430800c7e779a0",
+      "Id": "ae148b72cc2d4f91b67883be91e6dd2e",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Rhythm",
+      "Version": "2023.5.5",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "09a92871e74a46c19248cde8faa79bc6"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.2",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [
+    {
+      "NodeId": "768614d5-6d49-4815-9f69-3196373488b6",
+      "Binding": {
+        "ByOutlineTypeAndLevel_InClassDecl-1_InFunctionScope-1_Instance0_768614d5-6d49-4815-9f69-3196373488b6": "H4sIAAAAAAAACq3MIRLDIBBA0busDjNQYNlEx0RXZiOWBDo1iBbHcPd2YmPjvvlvbVDSt6ZjliowrQ2OM6AxPOvnXV7LzDAxkNsxi5CyQlG57KOibKzCOMruk3GBvNLaaD9qYhgYllLP1+hgLFKHPtyh+3DRnQt36YhXHR9/fevbD9RI3K8sAQAA"
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.2.1.5366",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": 21345.845703125,
+      "EyeY": 46385.6640625,
+      "EyeZ": 40072.375,
+      "LookX": -31442.38671875,
+      "LookY": -52072.03125,
+      "LookZ": -26094.064453125,
+      "UpX": -0.6053913235664368,
+      "UpY": 0.6173170804977417,
+      "UpZ": -0.5024152398109436
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "0718ccc1ccb543f5a72fe25d56651c0b",
+        "Name": "Místnosti",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -107.02832636235883,
+        "Y": 232.2912998249837
+      },
+      {
+        "Id": "09a92871e74a46c19248cde8faa79bc6",
+        "Name": "ʳʰʸᵗʰᵐ|Rooms.Level",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 623.5803602779524,
+        "Y": 653.1759947914693
+      },
+      {
+        "Id": "d782ebd66de5473195ed0a9e0e358672",
+        "Name": "Typ podhledu",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 497.8887536532135,
+        "Y": 424.610731872363
+      },
+      {
+        "Id": "768614d56d4948159f693196373488b6",
+        "Name": "Ceiling.ByOutlineTypeAndLevel",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1033.3671951815986,
+        "Y": 378.54807023551234
+      },
+      {
+        "Id": "0d3db0cfad9845e2a30999a5ac8bfc40",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1038.9657453754348,
+        "Y": 668.1595831416898
+      },
+      {
+        "Id": "c6ffd35b1cb04a7d89b69ca5f585caac",
+        "Name": "Element.SetParameterByName",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1460.5731015097153,
+        "Y": 590.8437994143064
+      },
+      {
+        "Id": "11270f8725904cffbc0b1bd45b1eaa4d",
+        "Name": "Odsazení od podlaží",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1162.7257584785093,
+        "Y": 824.7948573463041
+      },
+      {
+        "Id": "d7a6379f6f3344d6a16ef80f9640c0ee",
+        "Name": "Room.FinishBoundary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 577.8422348463539,
+        "Y": 266.57114863470207
+      }
+    ],
+    "Annotations": [],
+    "X": -17.58253031672416,
+    "Y": 77.27985634189656,
+    "Zoom": 0.6561765930302335
+  }
+}

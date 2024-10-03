@@ -1,0 +1,339 @@
+{
+  "Uuid": "261eae18-1b90-4b7c-9ef5-d9b0bd126adf",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ROOMS TO FLOORS",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "6591427bdcab4c5ca31e00b40a934957",
+      "Name": "Vyber místnosti",
+      "Type": "selection",
+      "Type2": "hostSelection",
+      "Value": "51880b96-a36d-4951-8c72-8b758c945bd9-000549ec",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    },
+    {
+      "Id": "60734f4e49a54f88b40fbdb390de5bf5",
+      "Name": "Typ podlahy",
+      "Type": "selection",
+      "Type2": "dropdownSelection",
+      "Value": "",
+      "Description": "All floor types available in the document.",
+      "SelectedIndex": -1
+    }
+  ],
+  "Outputs": [
+    {
+      "Id": "91980d45c6034e4ca8274220a3735288",
+      "Name": "Floor.ByOutlineTypeAndLevel",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Create a Revit Floor given its curve outline and Level\n\nFloor.ByOutlineTypeAndLevel (outlineCurves: Curve[], floorType: FloorType, level: Level): Floor"
+    }
+  ],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 198,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "51880b96-a36d-4951-8c72-8b758c945bd9-000549ec"
+      ],
+      "Id": "6591427bdcab4c5ca31e00b40a934957",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb0cac98564345aeb2fb84491e531456",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FloorTypes, DSRevitNodesUI",
+      "SelectedIndex": -1,
+      "SelectedString": "",
+      "Id": "60734f4e49a54f88b40fbdb390de5bf5",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b5ebb19032ee4b0cb1bcb958d8c56a70",
+          "Name": "Floor Type",
+          "Description": "The selected Floor Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All floor types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "91980d45c6034e4ca8274220a3735288",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9c4f8a36d6e04284ad56da92244cebbb",
+          "Name": "outlineCurves",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5518e1c8205a4553bf63dde617997c68",
+          "Name": "floorType",
+          "Description": "FloorType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4dc81a0e0d984a0c9cec65920747098a",
+          "Name": "level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8dd44fce9c45499a897f7f53493d4372",
+          "Name": "Floor",
+          "Description": "The floor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Floor.ByOutlineTypeAndLevel@Autodesk.DesignScript.Geometry.Curve[],Revit.Elements.FloorType,Revit.Elements.Level",
+      "Replication": "Auto",
+      "Description": "Create a Revit Floor given its curve outline and Level\n\nFloor.ByOutlineTypeAndLevel (outlineCurves: Curve[], floorType: FloorType, level: Level): Floor"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "04e84289e52445358fd66a725c5e696d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3102fe58dc98400e8b2467b262af302b",
+          "Name": "room",
+          "Description": "The room to get the level from\n\nRoom",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f9311f8777ad426baf845366ad669345",
+          "Name": "Level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Rhythm.Revit.Elements.Rooms.Level@Revit.Elements.Room",
+      "Replication": "Auto",
+      "Description": "Get the level for the given room\n\nRooms.Level (room: Room): Level"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f5de714dd7414ec39deebe40b3f666b1",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "11af4be834754e419fc92bb5ca127790",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4a852cfad4cd4915952d597f515438b0",
+          "Name": "Curve[][]",
+          "Description": "Curve[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Room.FinishBoundary",
+      "Replication": "Auto",
+      "Description": "Finish boundary\n\nRoom.FinishBoundary: Curve[][]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "cb0cac98564345aeb2fb84491e531456",
+      "End": "3102fe58dc98400e8b2467b262af302b",
+      "Id": "0b286df3e4614b23b03746578963f29a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb0cac98564345aeb2fb84491e531456",
+      "End": "11af4be834754e419fc92bb5ca127790",
+      "Id": "7ca4fc8a95904d1790c264ec38c6eef9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b5ebb19032ee4b0cb1bcb958d8c56a70",
+      "End": "5518e1c8205a4553bf63dde617997c68",
+      "Id": "0e7a6c4dd82b4f319ffc669b4f406b08",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f9311f8777ad426baf845366ad669345",
+      "End": "4dc81a0e0d984a0c9cec65920747098a",
+      "Id": "5b5bce2205ad4d038dc2b2f47ce73f4d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4a852cfad4cd4915952d597f515438b0",
+      "End": "9c4f8a36d6e04284ad56da92244cebbb",
+      "Id": "b8473a34cd614091851d40d33214d7a8",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Rhythm",
+      "Version": "2023.5.5",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "04e84289e52445358fd66a725c5e696d"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.2",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.2.1.5366",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": 22279.798828125,
+      "EyeY": 49661.92578125,
+      "EyeZ": 11092.3125,
+      "LookX": -28379.173828125,
+      "LookY": -49378.265625,
+      "LookZ": -16510.025390625,
+      "UpX": -0.7197797894477844,
+      "UpY": 0.5536893606185913,
+      "UpZ": -0.4187423288822174
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "6591427bdcab4c5ca31e00b40a934957",
+        "Name": "Vyber místnosti",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 69.08014255569265,
+        "Y": 239.15266874386884
+      },
+      {
+        "Id": "60734f4e49a54f88b40fbdb390de5bf5",
+        "Name": "Typ podlahy",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 625.3943602915922,
+        "Y": 613.4417459326696
+      },
+      {
+        "Id": "91980d45c6034e4ca8274220a3735288",
+        "Name": "Floor.ByOutlineTypeAndLevel",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 981.8084375593218,
+        "Y": 412.1491168154507
+      },
+      {
+        "Id": "04e84289e52445358fd66a725c5e696d",
+        "Name": "ʳʰʸᵗʰᵐ|Rooms.Level",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 675.4008546194091,
+        "Y": 420.559553525375
+      },
+      {
+        "Id": "f5de714dd7414ec39deebe40b3f666b1",
+        "Name": "Room.FinishBoundary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 620.8603725250591,
+        "Y": 228.76912578734337
+      }
+    ],
+    "Annotations": [],
+    "X": 25.54196112224622,
+    "Y": -62.809732771397194,
+    "Zoom": 0.9322439325351513
+  }
+}

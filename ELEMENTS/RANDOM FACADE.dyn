@@ -1,0 +1,3635 @@
+{
+  "Uuid": "3aa2cf0f-b05d-42f6-9e74-09bc1c152357",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "RANDOM FACADE",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 274,
+      "SelectedString": "OST_CurtainWallPanels",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "647ea15d-af1d-44c2-8f75-2f9df85fcbdd-00010526",
+        "647ea15d-af1d-44c2-8f75-2f9df85fcbdd-0001326e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018913",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018919",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001891e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001891f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018926",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018927",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001892f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018935",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001893a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001893b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018942",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018943",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bc0",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bc6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bcb",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bcc",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bd3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bd4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bdb",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018be1",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018be6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018be7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bee",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bef",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c61",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c67",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c6c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c6d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c74",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c75",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c7c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c82",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c87",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c88",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c8f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c90",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d02",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d08",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d0d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d0e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d15",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d16",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d1d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d23",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d28",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d29",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d30",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d31",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018da3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018da9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dae",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018daf",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018db6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018db7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dbe",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dc4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dc9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dca",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dd1",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dd2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e44",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e4a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e4f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e50",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e57",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e58",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e5f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e65",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e6a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e6b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e72",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e73",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f86",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f8c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f91",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f92",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f99",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f9a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fa1",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fa7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fac",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fad",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fb4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fb5",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019027",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001902d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019032",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019033",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001903a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001903b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019042",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019048",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001904d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001904e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019055",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019056",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190c8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190ce",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190d3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190d4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190db",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190dc",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190e3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190e9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190ee",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190ef",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190f6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190f7",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192df",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192e5",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192ea",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192eb",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192f2",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192f3",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192fa",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000192fb",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019303",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019309",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001930e",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001930f",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019316",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019317",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001931e",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001931f",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019573",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019579",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-0001957e",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019583",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019589",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-0001958e",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019593",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019599",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-0001959e",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195a3",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195a9",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195ae",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195c3",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195c9",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195ce",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195d3",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195d9",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195de",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195f3",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195f9",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-000195fe",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019603",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019609",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-0001960e",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019613",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019ca2",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019ca3",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019cef",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019cf0",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019d66",
+        "4ea646f2-ef23-4896-99d1-f289df39c38f-0001b139",
+        "4ea646f2-ef23-4896-99d1-f289df39c38f-0001b2c6",
+        "4ea646f2-ef23-4896-99d1-f289df39c38f-0001b38b",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d466",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d46c",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d471",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d476",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d47c",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d481",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d496",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d49c",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4a1",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4c0",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4c1",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4c2",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4ff",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d505",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d50a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d50f",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d515",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d51a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d52f",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d535",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d53a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d559",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d55a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d55b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d7a9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d7e7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d7e8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d81b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da60",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da66",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da6b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da70",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da76",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da7b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da90",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da96",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da9b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001daba",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dabb",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dabc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001daf7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dafd",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db02",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db07",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db0d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db12",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db27",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db2d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db32",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db51",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db52",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db53",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db8e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db94",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db99",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db9e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dba4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dba9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbbe",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbc4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbc9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbe8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbe9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbea",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc25",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc2b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc30",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc35",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc3b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc40",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc55",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc5b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc60",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc7f",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc80",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc81",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcbc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcc2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcc7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dccc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcd2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcd7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcec",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcf2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcf7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd16",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd17",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd18",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd53",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd59",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd5e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd63",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd69",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd6e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd83",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd89",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd8e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddad",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddae",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddaf",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddea",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddf0",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddf5",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddfa",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de00",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de05",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de1a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de20",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de25",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de44",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de45",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de46",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de81",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de87",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de8c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de91",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de97",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de9c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001deb1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001deb7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001debc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dedb",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dedc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dedd",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dfe8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001e021",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001e022",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001e052",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e171",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e181",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1a1",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1cb",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e212",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e21a",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e21b",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e222",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001e67a",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001e819",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001e915",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001e97c",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001e97d",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001ea32",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001eb6b",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001ed27",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001ed82",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001edf3",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001ef4c",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f0b5",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1b6",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1c1",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1d1",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1d7",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f75b",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f834",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f92b",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f971",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f99e",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f9d1",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001f9d2",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fa3e",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fb6e",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fb6f",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fcc7",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd06",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd48",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd4e",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd54",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd5a",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd5f",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd64",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd65",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd6c",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd6d",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd74",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000200c1",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000201c4",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000201ee",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000201f4",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020341",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020378",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000203bc",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000203e7",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020416",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020417",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002048c",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020659",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000207ee",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000207f4",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000207fa",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002080a",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-000209c8",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020afd",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020bb6",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020c7c",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020cc6",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020cf0",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020cf6",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020cfc",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020d02",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020d2e",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020d65",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020d66",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020dbe",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020ded",
+        "e4b45278-ac80-425b-94cc-8508e4caa119-00020e27",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e78",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e7e",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e84",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e8a",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e8f",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e94",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e95",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e9c",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ea1",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ea7",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021391",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000213cc",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000213cd",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021401",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021588",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000215cb",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000215cc",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002162c",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000217b5",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000217b6",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000217dd",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000217de",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002180b",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000219db",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021a1d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021a1e",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021a4f",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021c21",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021c64",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021c65",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021c95",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021dc4",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021dc5",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021dfa",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021dfb",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021e2c",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021ff7",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021ff8",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022023",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022024",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002206d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002221e",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002221f",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022240",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022241",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022276"
+      ],
+      "Id": "226456b1a00849d9ae8659e48a96752b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8ebb27076cf64850afc4a014e52982f1",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "85efccc28a084bf8b44f943c5372bada",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "e32a95fda1d6486db0819b0b209b302b",
+          "Name": "curtainPanel",
+          "Description": "Revit.Elements.CurtainPanel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d92cd0738544409b6e16ff06bfcf0a3",
+          "Name": "PolyCurve[]",
+          "Description": "PolyCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.CurtainPanel.Boundaries",
+      "Replication": "Auto",
+      "Description": "Gets curtain panel boundaries\n\nCurtainPanel.Boundaries: PolyCurve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3754a2d517c04deaa1f4d274109f9779",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "2d90fe771c684544b73ccc5ded02f58b",
+          "Name": "points",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "50dbb920e9874f78a2083a342411cc7e",
+          "Name": "Polygon",
+          "Description": "Polygon",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Polygon.ByPoints@Autodesk.DesignScript.Geometry.Point[]",
+      "Replication": "Auto",
+      "Description": "Construct a Polygon Curve by connecting Points.\n\nPolygon.ByPoints (points: Point[]): Polygon"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d7e15ccf8d464edaafa715f48cfc4a8d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7e4ebedad91849ee833dc85dab533c3b",
+          "Name": "polygon",
+          "Description": "Autodesk.DesignScript.Geometry.Polygon",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8fc261f648df4795a6186c7f7d045ab5",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Polygon.Center",
+      "Replication": "Auto",
+      "Description": "Returns average point of corners of polygon\n\nPolygon.Center ( ): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "846d92968d8e4e4097b6e1b5b21827cb",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b383438f2b824a4db81ac1601e2b1725",
+          "Name": "polyCurve",
+          "Description": "Autodesk.DesignScript.Geometry.PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5211a5f946204b9898e55523fe4a465a",
+          "Name": "Point[]",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.Points",
+      "Replication": "Auto",
+      "Description": "Returns the start point of the first component and the end points of every component curve. For a closed polycurve, as the start and end points are the same, the end point is excluded.\n\nPolyCurve.Points: Point[]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 112,
+      "SelectedString": "Systémový panel:#Tahokov, 30mm",
+      "Id": "8ab253d889d24dd6bb3cd5ac25bd51e4",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "141b9eca694642028b4db750e199859d",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "aa0b647ad12b4bf9be7832aa53c7fdda",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "707ad5d2390343de9caf4759d4bcd5e7",
+          "Name": "familyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "61d8f294045f4b7bbacc9303554ddea3",
+          "Name": "familyType",
+          "Description": "FamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b3c5638a9eca4e5eaa6c67b4bcf92d1e",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "WombatDynamo.FamilyInstance.SetType@Revit.Elements.FamilyInstance,Revit.Elements.FamilyType",
+      "Replication": "Auto",
+      "Description": "Change the family type of a family instance - can be used for instance\n\nFamilyInstance.SetType (familyInstance: FamilyInstance, familyType: FamilyType): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 111,
+      "SelectedString": "Systémový panel:#Tahokov, 20mm",
+      "Id": "e8f853d77329442dbea8001c91e47741",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "88660c0307464e3181d160c09cf136af",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "Systémový panel:#Tahokov, 10mm",
+      "Id": "33b3f1bec99440ccb4214dbdd8f2f0bb",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b96395e501ed49368aa80a2276ec971b",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "acd590638bea4925b1a3309897cf5e9f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "40621989f9cb48afb610d71be9004b9a",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "97c565cea0fc40239e1961362a3ad643",
+          "Name": "int",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "3c16d01257a84409b9af4d5218d943d9",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "130bebbe89cb4662a8ace96c16f419c1",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ceb6b67cbb00410c99cc7963f0fbf162",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3198710ab6414c7b918c2e560b39a1a6",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "71dac24647f74e2e88a84cdc2f93d5e2",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c381c68cd2e3467fbef461ef1de66df2",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7fbacfa8653d41ecaed137208dc002e2",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5513a200a54d414c812984216863d18a",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0fc41be339684245b3ecc3423893a531",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2960e7a1e2d64bb2afffaccb87ee19d5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "abd8731d0baa47ada766c67c6e819310",
+          "Name": "point",
+          "Description": "Autodesk.DesignScript.Geometry.Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e756199ccf8f41ba883eaa7228237a6d",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.Z",
+      "Replication": "Auto",
+      "Description": "Get the Z component of a Point\n\nPoint.Z: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "3f6828320fa44f9dad254e72dce3f3c4",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fd4e2e7438304b84a45efc9b5a8f4612",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a5d60f8532194d0f827cffbf2cc86463",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "2150;\n19350;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "68f0c8fdaea34f05a95342e7f6257757",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "4efec9b04e00428ea3c2e5e9fa28c602",
+          "Name": "max",
+          "Description": "max",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e309f30d0c2840528852d777992440b2",
+          "Name": "min",
+          "Description": "min",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4781c07ae6494cb2ab80831abe2d64bc",
+          "Name": "",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31dc708e20714ebd9d04b4bb0302e593",
+          "Name": "",
+          "Description": "a3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ae0b24c5d0354f7b9d4f8ce951396436",
+          "Name": "",
+          "Description": "lvl1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "547adf32b5fd41b990d7692c77581d6b",
+          "Name": "",
+          "Description": "lvl2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "a = max - min;\na3 = a/3;\nlvl1 = min + a3;\nlvl2 = lvl1 + a3;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0d57619188d847c49561af9f72cd6b4b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "e96cf5ec25af471daef01eee21be0272",
+          "Name": "x",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a3d12ac7c2844799ab260efca54ba549",
+          "Name": "y",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "77b8a13a2bb641558fe6562d275a7f42",
+          "Name": "bool",
+          "Description": "True if x is equal or greater than y, false if not",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": ">=@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Compares if x is greater or equals to y\n\n>= (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3f51721c5bee4ccf85353e723494d6d2",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "4d9cf027cb1c447d904edb20f2bc5d72",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cdfe6eda7ecb4605995a28203300710c",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12c1c42ff4e7448db9c81636f740732d",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c6fc297cf31b411696aed1cf512f3feb",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "23a891c39ed34c58b84059ada0bcbbc6",
+          "Name": "x",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0bbf2a9690194678864b6af78ca72c13",
+          "Name": "y",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "83678bfde23c4a708a2e1324b28b7940",
+          "Name": "bool",
+          "Description": "True if x is equal or greater than y, false if not",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": ">=@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Compares if x is greater or equals to y\n\n>= (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "19f5aead86004cfb9bb7e3d8f7f2958c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "732564c138f14e06a12a2cabca5c8baa",
+          "Name": "list",
+          "Description": "List to filter.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c44f2bd590de4b789fb15bbc60341e11",
+          "Name": "mask",
+          "Description": "List of booleans representing a mask.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "61fa0792f91c401d87945dbe999fc165",
+          "Name": "in",
+          "Description": "Items whose mask index is true.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77ad8f13d023481b9a4746a89cf5b9c0",
+          "Name": "out",
+          "Description": "Items whose mask index is false.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Filters a sequence by looking up corresponding indices in a separate list of booleans.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ccefb3884f4e43848766b4ec5118373c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7675fa1656b64c31b41caef54c4ee850",
+          "Name": "list",
+          "Description": "List to filter.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ce028411be6c4db8b22ace496ea24f71",
+          "Name": "mask",
+          "Description": "List of booleans representing a mask.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9958d96ff2b9491897b28acb760ff4f5",
+          "Name": "in",
+          "Description": "Items whose mask index is true.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "408ab7b91ca740ac85d94234f8b06496",
+          "Name": "out",
+          "Description": "Items whose mask index is false.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Filters a sequence by looking up corresponding indices in a separate list of booleans.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0f66419cb0b9495f9026d0a387d2f7bf",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7a117b58421e4b53b23e3251c3b834c5",
+          "Name": "x",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7327c2203df41c7a75619a59f97caf6",
+          "Name": "y",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "242f55d5d6a84fd880f38224eb7d4394",
+          "Name": "bool",
+          "Description": "Result of check",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "<=@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Compares if x is lower or equal to y\n\n<= (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e0141d1a4e5a47b9a4302ebc2570f511",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "fcd5dba202f5466aa4318a1e8c858724",
+          "Name": "list",
+          "Description": "List to filter.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1f40a38db58e4facad9e9d35e3898505",
+          "Name": "mask",
+          "Description": "List of booleans representing a mask.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1bf78ff104274d51a9a92954ec349f96",
+          "Name": "in",
+          "Description": "Items whose mask index is true.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c6998d33ac9e418f9a0e44530320fd49",
+          "Name": "out",
+          "Description": "Items whose mask index is false.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Filters a sequence by looking up corresponding indices in a separate list of booleans.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "4aa7d12d51674a3da86c2a4ce5f8268c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "7a0c2502ca78475081e4f824e7a58dd9",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5f23c5a689e0492fa28c30ab80d8bfb9",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "6086656bd7044ff6ac8f525557462a7c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "70ba9a1323f648c5ae477d508a57d46d",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7ed942fcfe334a3fac5b3b482f175f9d",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "aee6a9347f1645d0b58f6481fe40504c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "969c705693d945588d7b08073be94246",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "835aa2cb66b743b1b88e974b89f6fba4",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2df220dfb8f74bbaa13f67183d84dd38",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "78ea339822bc4967a3e1203f631ab8f7",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "cbd86120ae9441739dba8f0fc21a59f7",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d830062def1445688e3fc13d789bacd1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dc67d96014f94ad5829d77bd13a1b387",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0bb8c4e9007846a5b4e9b48c4775cd87",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "951f7815ce744be095ceaaac250e458c",
+          "Name": "list",
+          "Description": "List to filter duplicates out of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "62bb6650cd054deda61080abbf48ce4c",
+          "Name": "list",
+          "Description": "Filtered list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.UniqueItems@var[]..[]",
+      "Replication": "Auto",
+      "Description": "Creates a new list containing all unique items in the given list.\n\nList.UniqueItems (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f9ce6d13250e42e6b31b4ad39c78679a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "f21c6f3710d448a39db517b741139e83",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "555b0737e43945889df4b237dacfe241",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Element.Id",
+      "Replication": "Auto",
+      "Description": "Get the Element Id for this element\n\nElement.Id: int"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import random\r\n\r\n\r\n# Define the probabilities for 0, 1, and 2\r\nprobabilities = [0.7, 0.25, 0.05]\r\n\r\n# Define the possible outcomes\r\noutcomes = [0, 1, 2]\r\n\r\n# Generate the list of 10 random numbers with the specified probabilities\r\nrandom_numbers = random.choices(outcomes, probabilities, k=IN[0])\r\n\r\n\r\n\r\nOUT = random_numbers",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "269fbcb50eff4cc6a56e7fec64d9ac70",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "bba410c12afe486287ef988c238f28dc",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e0f9af8b5e9940bb899e539d8c0cafb0",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 112,
+      "SelectedString": "Systémový panel:#Tahokov, 30mm",
+      "Id": "2e287d98ae814816b47fb71f9b5e78fd",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a9c86f584397403b90613a304637e546",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6eeee12dfc0e4466b38acd688b96f51e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5f877b168e234b919d4508c793ccb06e",
+          "Name": "familyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e7181757d1bf433a9b5ee4e52469d7f2",
+          "Name": "familyType",
+          "Description": "FamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "45e644791188485eb1897586fb32763a",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "WombatDynamo.FamilyInstance.SetType@Revit.Elements.FamilyInstance,Revit.Elements.FamilyType",
+      "Replication": "Auto",
+      "Description": "Change the family type of a family instance - can be used for instance\n\nFamilyInstance.SetType (familyInstance: FamilyInstance, familyType: FamilyType): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 111,
+      "SelectedString": "Systémový panel:#Tahokov, 20mm",
+      "Id": "74d58cec32ce40a29be65d22eea2cc3d",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fd9f03f7d7c249439c7c8e8a13ad0771",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "Systémový panel:#Tahokov, 10mm",
+      "Id": "734de82944fb4b0da219d27ef2d23ba9",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5898499a0a3f4031a691103f9896c11c",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "547a5e63f4714259b9b30fc3557226fe",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "30ac37f2c6e24b7fa34620fb01d67f85",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2f1aa51d1fd9487a8bd1e6377336519b",
+          "Name": "int",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "9e8f1c6bd0bc418284cac8dd3d742ce0",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "a1615411e6924a70bedac0424abce85c",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b0e75408b9c74162bdc01f33d3082167",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9246708354bc48aab8633e4b093c90d0",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e900bccfef9d492cbac2d0178ef3fe4d",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "81d603daca1e416bb6a73aa6851180d9",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "fd0266943716483f8f13d93578179982",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6916e9c8e96a4fe685e5172322d86858",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "424e76a51cd244efaaf690ed53c3a5df",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import random\r\n\r\n\r\n# Define the probabilities for 0, 1, and 2\r\nprobabilities = [0.15, 0.7, 0.15]\r\n\r\n# Define the possible outcomes\r\noutcomes = [0, 1, 2]\r\n\r\n# Generate the list of 10 random numbers with the specified probabilities\r\nrandom_numbers = random.choices(outcomes, probabilities, k=IN[0])\r\n\r\n\r\n\r\nOUT = random_numbers",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "b38a7856d8734f55b45d835b48093069",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "70379b74d0b0459f82a8ddc95a7fbabc",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "848caee6b2a0474e92e3e70a7f59b918",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 274,
+      "SelectedString": "OST_CurtainWallPanels",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018935",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001893b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018943",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001894b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018951",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018956",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018957",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001895e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001895f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018967",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018972",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001897a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018be1",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018be7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bef",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bf6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018bfc",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c01",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c02",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c09",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c0a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c11",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c1c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c24",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c82",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c88",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c90",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c97",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c9d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ca2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ca3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018caa",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cab",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cb2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cbd",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cc5",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d23",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d29",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d31",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d38",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d3e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d43",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d44",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d4b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d4c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d53",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d5e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d66",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dc4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dca",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dd2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dd9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ddf",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018de4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018de5",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dec",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ded",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018df4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dff",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e07",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e65",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e6b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e73",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e7a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e80",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e85",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e86",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e8d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e8e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e95",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ea0",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ea8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fa7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fad",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fb5",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fbc",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fc2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fc7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fc8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fcf",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fd0",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fd7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fe2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fea",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019048",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001904e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019056",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001905d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019063",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019068",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019069",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019070",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019071",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019078",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019083",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001908b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190e9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190ef",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190f7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190fe",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019104",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019109",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001910a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019111",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019112",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019119",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019124",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001912c",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019309",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001930f",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019317",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001931f",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019327",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001932d",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019332",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019333",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001933a",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001933b",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019342",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019343",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001934b",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019356",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001935e",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019366",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019c1a",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019c6f",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019c70",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019ca3",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d476",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d47c",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d481",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4a6",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4ac",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4b1",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4b6",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4b7",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4b8",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4d4",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4d5",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4d6",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d50f",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d515",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d51a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d53f",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d545",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d54a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d54f",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d550",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d551",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d56d",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d56e",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d56f",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d77b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d77c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d7a9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d7aa",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da70",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da76",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da7b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001daa0",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001daa6",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001daab",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dab0",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dab1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dab2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dace",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dacf",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dad0",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db07",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db0d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db12",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db37",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db3d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db42",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db47",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db48",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db49",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db65",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db66",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db67",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db9e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dba4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dba9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbce",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbd4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbd9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbde",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbdf",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbe0",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbfc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbfd",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbfe",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc35",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc3b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc40",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc65",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc6b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc70",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc75",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc76",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc77",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc93",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc94",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc95",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dccc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcd2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcd7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcfc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd02",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd07",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd0c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd0d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd0e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd2a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd2b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd2c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd63",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd69",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd6e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd93",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd99",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd9e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dda3",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dda4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dda5",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddc1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddc2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddc3",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddfa",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de00",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de05",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de2a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de30",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de35",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de3a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de3b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de3c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de58",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de59",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de5a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de91",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de97",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de9c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dec1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dec7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001decc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ded1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ded2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ded3",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001deef",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001def0",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001def1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dfbd",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dfbe",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dfe8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dfe9",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e181",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1b1",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1c1",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1df",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e20a",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e20b",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e212",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e213",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f0f6",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f0fc",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f101",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f102",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f111",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f117",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f11d",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f12a",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1b6",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1bc",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1c1",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1c2",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1d1",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1d7",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1dd",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f1ea",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd5a",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd5f",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd65",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd6d",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd74",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd7a",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd80",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd86",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd8c",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd91",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd96",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd97",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd9e",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fd9f",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fda6",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdac",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdb2",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdb8",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdc8",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdd0",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000207ee",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000207f4",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-000207fa",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020800",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020805",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002080a",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002080b",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020812",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002081a",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020820",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020826",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002082c",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020831",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020836",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020837",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002083e",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e8f",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e94",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e95",
+        "e08a71fa-3285-482b-821f-053d90109858-00020e9c",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ea7",
+        "e08a71fa-3285-482b-821f-053d90109858-00020eae",
+        "e08a71fa-3285-482b-821f-053d90109858-00020eb4",
+        "e08a71fa-3285-482b-821f-053d90109858-00020eba",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ec0",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ec5",
+        "e08a71fa-3285-482b-821f-053d90109858-00020eca",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ecb",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ed2",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ed7",
+        "e08a71fa-3285-482b-821f-053d90109858-00020edd",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ee4",
+        "e08a71fa-3285-482b-821f-053d90109858-00020eea",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ef0",
+        "e08a71fa-3285-482b-821f-053d90109858-00020ef6",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f0d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021358",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021359",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021391",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021392",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021505",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021506",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021588",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021589",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021757",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021791",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021792",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000217b6",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002199c",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002199d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000219db",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000219dc",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021bee",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021bef",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021c21",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021c22",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021d6d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021d98",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021d99",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021dc5",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021f9d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021fcb",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021fcc",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021ff8",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000221c1",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000221f2",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000221f3",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002221f"
+      ],
+      "Id": "bc49fa1f8d074db691a07c0b2b8664f1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8ce74d7e7f82458d9f1f63ff867cd417",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 112,
+      "SelectedString": "Systémový panel:#Tahokov, 30mm",
+      "Id": "fadcf41b60db469c884886e9c52d8600",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e50f5119008c4a499dea7207455bcacb",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6d70865719254d11836a1bcebf8f4acd",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "dfb47d3504ec41ec91bb88145b261980",
+          "Name": "familyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b27ff0b5ee54591a15a19247637c8af",
+          "Name": "familyType",
+          "Description": "FamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1420d1953a0c43e98928c53c2023e860",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "WombatDynamo.FamilyInstance.SetType@Revit.Elements.FamilyInstance,Revit.Elements.FamilyType",
+      "Replication": "Auto",
+      "Description": "Change the family type of a family instance - can be used for instance\n\nFamilyInstance.SetType (familyInstance: FamilyInstance, familyType: FamilyType): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 111,
+      "SelectedString": "Systémový panel:#Tahokov, 20mm",
+      "Id": "747f228a7e164f97874208d87d8ebc39",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "28064ae6f947491587608be43b5a8040",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "Systémový panel:#Tahokov, 10mm",
+      "Id": "6f8856c10c82461eb1cd29cf8d27deee",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c78919d302dd45079ec95a3235611911",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7a1bad86ab3e4ae88e4fd2ef1d2ecf95",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "4810fa92ad8b44dea8dae96ee35ae336",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "de13f4b7750f4d5c870fa0ea13a1faab",
+          "Name": "int",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "bfcfef50fb084f3f82fe3c28606ed385",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "85dba1af7fae4547b528a154c8b03c65",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd98bc9ade1e4292972b812ba3a59820",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "32457a38bc654135b4e94e864d9c69c1",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ff960fc2c0e943f19931e799536255e0",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8941af06d8fa4b0aac3e6c1e1613498a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "771bf18c85e04c8b87f790c31c4bdf01",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a168f36bb6344a52be8b7b644955557d",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fbd520fc53954f8d9cd82031474eaffe",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import random\r\n\r\n\r\n# Define the probabilities for 0, 1, and 2\r\nprobabilities = [0.05, 0.25, 0.7]\r\n\r\n# Define the possible outcomes\r\noutcomes = [0, 1, 2]\r\n\r\n# Generate the list of 10 random numbers with the specified probabilities\r\nrandom_numbers = random.choices(outcomes, probabilities, k=IN[0])\r\n\r\n\r\n\r\nOUT = random_numbers",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "f7cf62e6881f42f3ba46ad18dff37a6c",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "5dbcd269d03a478c8e56a33696723ebd",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "990db2ced9b84c59b4ca6437c717d49a",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 274,
+      "SelectedString": "OST_CurtainWallPanels",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001896d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018973",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001897b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018a8a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018a95",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018a9d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ab3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ab9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018abe",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018abf",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ac6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ac7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c17",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c1d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c25",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c2c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c32",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c37",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c3c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c42",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c47",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c48",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c4f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018c50",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cb8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cbe",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cc6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ccd",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cd3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cd8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cdd",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ce3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ce8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ce9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cf0",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018cf1",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d59",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d5f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d67",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d6e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d74",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d79",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d7e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d84",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d89",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d8a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d91",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018d92",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018dfa",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e00",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e08",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e1f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e25",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e2a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e2b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e32",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e33",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018e9b",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ea1",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ea9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018eb0",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018eb6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ebb",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ec0",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ec6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ecb",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ecc",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ed3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ed4",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f51",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f57",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018f5c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fdd",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018fe3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018feb",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ff2",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ff8",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00018ffd",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019002",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019008",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001900d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001900e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019015",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019016",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001907e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019084",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001908c",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019093",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019099",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001909e",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190a3",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190a9",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190ae",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190af",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190b6",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-000190b7",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001911f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019125",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001912d",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019134",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001913a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001913f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019144",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001914a",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-0001914f",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019150",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019157",
+        "57e184a2-b249-4535-a833-9ec0e2588f95-00019158",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019351",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019357",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001935f",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019367",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001936f",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019375",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001937a",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001937b",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019382",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-00019383",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001938a",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-0001938b",
+        "95dee55f-2c53-4b55-97da-4f4a0312a410-000193f5",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019ba8",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019ba9",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019bf2",
+        "8edd3ebe-9821-44a1-a593-32b24ddc91af-00019c1b",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d486",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d48c",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d491",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4ca",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4cb",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4cc",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4de",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4e4",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d4e9",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d51f",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d525",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d52a",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d563",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d564",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d565",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d577",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d57d",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d582",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d6b7",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d6bd",
+        "678601c2-3b32-40bb-be21-da35be7017d9-0001d6c2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d6fa",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d741",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001d742",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da80",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da86",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001da8b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dac4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dac5",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dac6",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dad8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dade",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dae3",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db17",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db1d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db22",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db5b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db5c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db5d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db6f",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db75",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001db7a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbae",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbb4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbb9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbf2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbf3",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dbf4",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc06",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc0c",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc11",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc45",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc4b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc50",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc89",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc8a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc8b",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dc9d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dca3",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dca8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dcdc",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dce2",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dce7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd20",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd21",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd22",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd34",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd3a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd3f",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd73",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd79",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dd7e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddb7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddb8",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddb9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddcb",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddd1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001ddd6",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de0a",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de10",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de15",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de4e",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de4f",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de50",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de62",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de68",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001de6d",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dea1",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dea7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001deac",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dee5",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dee6",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001dee7",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001def9",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001deff",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001df04",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001df40",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001df88",
+        "665ebdfa-fcc2-4dd0-b928-adbee7ca102c-0001df89",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e191",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1d5",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1e9",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e1fd",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e202",
+        "4f5d97f9-5d12-44cd-9c00-f7ff5b84929e-0001e203",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f132",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f138",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f13d",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f13e",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f14d",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f153",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f159",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f166",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f2a4",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f2af",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f2f9",
+        "ccf007e9-10cf-4bbe-8c59-8accd22f96bf-0001f32e",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdbe",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdc3",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdc9",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdd1",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdd8",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdde",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fde4",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdea",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdf0",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdf5",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdfa",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fdfb",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe02",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe03",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe0a",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe10",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe16",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe1c",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe2c",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe34",
+        "3da39193-a8d3-4a87-a8ae-0fb11b9a1397-0001fe3c",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020846",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002084c",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020852",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020858",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002085d",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020862",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020863",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002086a",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020872",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-00020878",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002087e",
+        "976c71fd-3ad2-4312-aeb0-39f2f431168f-0002088e",
+        "e08a71fa-3285-482b-821f-053d90109858-00020efb",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f00",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f01",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f08",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f13",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f1a",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f20",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f26",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f2c",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f31",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f36",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f37",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f3e",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f43",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f49",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f50",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f56",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f5c",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f62",
+        "e08a71fa-3285-482b-821f-053d90109858-00020f79",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000212bc",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021311",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021312",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000214a1",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000214d1",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000214d2",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000216a8",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021725",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021726",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021758",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000218a7",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002195c",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-0002195d",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021b5b",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021b9f",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021ba0",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021ced",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021d3b",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021d3c",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021d6e",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021ebe",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021f59",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021f5a",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00021f9e",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000220af",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022121",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-00022122",
+        "848c4db2-3f67-4740-a11e-0442e6a14c8d-000221c2"
+      ],
+      "Id": "7c4b0b70de984eb7a53f126ce65e90f0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6699a2361e4a4844afe61a2d33336339",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select multiple elements from the Revit document filtered by Category."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "8ebb27076cf64850afc4a014e52982f1",
+      "End": "e32a95fda1d6486db0819b0b209b302b",
+      "Id": "22e436be621444fd9abaf990a46f3b76",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ebb27076cf64850afc4a014e52982f1",
+      "End": "707ad5d2390343de9caf4759d4bcd5e7",
+      "Id": "94b31fdd8ebb4342b1f89d5da75912a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ebb27076cf64850afc4a014e52982f1",
+      "End": "40621989f9cb48afb610d71be9004b9a",
+      "Id": "b172f343cc47497cba8423a22b08413a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ebb27076cf64850afc4a014e52982f1",
+      "End": "7675fa1656b64c31b41caef54c4ee850",
+      "Id": "bf4e408432fe4d51921e2aa8457c2b09",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ebb27076cf64850afc4a014e52982f1",
+      "End": "fcd5dba202f5466aa4318a1e8c858724",
+      "Id": "57f961db865f428285fe514f300761bc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5d92cd0738544409b6e16ff06bfcf0a3",
+      "End": "b383438f2b824a4db81ac1601e2b1725",
+      "Id": "f104f57167494ffdb9c6ef38e2abdcd7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "50dbb920e9874f78a2083a342411cc7e",
+      "End": "7e4ebedad91849ee833dc85dab533c3b",
+      "Id": "68e6427082a046dbac8835a66bebcd90",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8fc261f648df4795a6186c7f7d045ab5",
+      "End": "abd8731d0baa47ada766c67c6e819310",
+      "Id": "1b33feaaaadc44e1942a037cb189f7f4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5211a5f946204b9898e55523fe4a465a",
+      "End": "2d90fe771c684544b73ccc5ded02f58b",
+      "Id": "3b23d7ab55f54223b81c74fb11341877",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "141b9eca694642028b4db750e199859d",
+      "End": "3198710ab6414c7b918c2e560b39a1a6",
+      "Id": "d6856eef92344f13a13f501eefad2841",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "88660c0307464e3181d160c09cf136af",
+      "End": "ceb6b67cbb00410c99cc7963f0fbf162",
+      "Id": "f9e67c35f3a6482b890fa842a78859c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b96395e501ed49368aa80a2276ec971b",
+      "End": "130bebbe89cb4662a8ace96c16f419c1",
+      "Id": "66759d6fc6624d57823984c446bbea4e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "97c565cea0fc40239e1961362a3ad643",
+      "End": "bba410c12afe486287ef988c238f28dc",
+      "Id": "1be7aaece6d8424ab6b1a878781db972",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "71dac24647f74e2e88a84cdc2f93d5e2",
+      "End": "7fbacfa8653d41ecaed137208dc002e2",
+      "Id": "0c681037e35d45afb1a4f9225927fe28",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0fc41be339684245b3ecc3423893a531",
+      "End": "61d8f294045f4b7bbacc9303554ddea3",
+      "Id": "dc81b7e346e643d89edb7b7e92e078d0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e756199ccf8f41ba883eaa7228237a6d",
+      "End": "4d9cf027cb1c447d904edb20f2bc5d72",
+      "Id": "17048dcd4b9f4a1f98df66f6978443a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd4e2e7438304b84a45efc9b5a8f4612",
+      "End": "e309f30d0c2840528852d777992440b2",
+      "Id": "ef7b78aa28f44990b37cf7bc44ede26f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a5d60f8532194d0f827cffbf2cc86463",
+      "End": "4efec9b04e00428ea3c2e5e9fa28c602",
+      "Id": "ba5605b3b1934c3b8f76a0d6cd21555d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ae0b24c5d0354f7b9d4f8ce951396436",
+      "End": "a3d12ac7c2844799ab260efca54ba549",
+      "Id": "35baac06d7084f60b4430d06268a482d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ae0b24c5d0354f7b9d4f8ce951396436",
+      "End": "a7327c2203df41c7a75619a59f97caf6",
+      "Id": "8935332a3c1946969b7c5129403fa0dd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "547adf32b5fd41b990d7692c77581d6b",
+      "End": "0bbf2a9690194678864b6af78ca72c13",
+      "Id": "5272f0b289884b10a378958269963367",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "77b8a13a2bb641558fe6562d275a7f42",
+      "End": "ce028411be6c4db8b22ace496ea24f71",
+      "Id": "684485ca70494bc2b9fa83919ba484da",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "12c1c42ff4e7448db9c81636f740732d",
+      "End": "e96cf5ec25af471daef01eee21be0272",
+      "Id": "053117b11b2b4361b3b95527a59156a2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "12c1c42ff4e7448db9c81636f740732d",
+      "End": "23a891c39ed34c58b84059ada0bcbbc6",
+      "Id": "4e2e0144794640e88546753646e6179a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "12c1c42ff4e7448db9c81636f740732d",
+      "End": "7a117b58421e4b53b23e3251c3b834c5",
+      "Id": "5cd3c3fe975c4696a4a7b8bc0ea7c303",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "83678bfde23c4a708a2e1324b28b7940",
+      "End": "c44f2bd590de4b789fb15bbc60341e11",
+      "Id": "fb97753e74d444b0a5d81abf0a2f7435",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "61fa0792f91c401d87945dbe999fc165",
+      "End": "70ba9a1323f648c5ae477d508a57d46d",
+      "Id": "c38b8188176d45d6a1852333fe2c9be4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "61fa0792f91c401d87945dbe999fc165",
+      "End": "835aa2cb66b743b1b88e974b89f6fba4",
+      "Id": "478fcacb3180421c83451840532cfadc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9958d96ff2b9491897b28acb760ff4f5",
+      "End": "969c705693d945588d7b08073be94246",
+      "Id": "d77fe9178a2747f4a39b70113dab5dec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "408ab7b91ca740ac85d94234f8b06496",
+      "End": "732564c138f14e06a12a2cabca5c8baa",
+      "Id": "debe63b6c03247188c532bf24c1a139e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "242f55d5d6a84fd880f38224eb7d4394",
+      "End": "1f40a38db58e4facad9e9d35e3898505",
+      "Id": "288c867b7379415a9202255ff374dfe5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1bf78ff104274d51a9a92954ec349f96",
+      "End": "7a0c2502ca78475081e4f824e7a58dd9",
+      "Id": "996c00b31332438bb70a9a76096f1aac",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2df220dfb8f74bbaa13f67183d84dd38",
+      "End": "cbd86120ae9441739dba8f0fc21a59f7",
+      "Id": "75377981f73f4d9497e3c5db55c8539a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dc67d96014f94ad5829d77bd13a1b387",
+      "End": "f21c6f3710d448a39db517b741139e83",
+      "Id": "f1baeca9f9cc4814a7531df8417449c0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "555b0737e43945889df4b237dacfe241",
+      "End": "951f7815ce744be095ceaaac250e458c",
+      "Id": "4831c29f51cc4381b099ad11a7518165",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e0f9af8b5e9940bb899e539d8c0cafb0",
+      "End": "5513a200a54d414c812984216863d18a",
+      "Id": "ddb3233148d449f1b24e65b8179686a4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a9c86f584397403b90613a304637e546",
+      "End": "9246708354bc48aab8633e4b093c90d0",
+      "Id": "9c86a076d8c545e382681e20d1df1c27",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd9f03f7d7c249439c7c8e8a13ad0771",
+      "End": "b0e75408b9c74162bdc01f33d3082167",
+      "Id": "b335d544218b4f40b526303be36235d8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5898499a0a3f4031a691103f9896c11c",
+      "End": "a1615411e6924a70bedac0424abce85c",
+      "Id": "0e883aca822c4b4e923718e9e69bd0d0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2f1aa51d1fd9487a8bd1e6377336519b",
+      "End": "70379b74d0b0459f82a8ddc95a7fbabc",
+      "Id": "45d99cf485d945d7b2f3af7fbf2d3a39",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e900bccfef9d492cbac2d0178ef3fe4d",
+      "End": "fd0266943716483f8f13d93578179982",
+      "Id": "de9ae92d468f471f94fb1f3c3534da36",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "424e76a51cd244efaaf690ed53c3a5df",
+      "End": "e7181757d1bf433a9b5ee4e52469d7f2",
+      "Id": "710e5b8ab74a4bf490c80a2c85abefcc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "848caee6b2a0474e92e3e70a7f59b918",
+      "End": "6916e9c8e96a4fe685e5172322d86858",
+      "Id": "f41d849b33f74d3690b81b8aea3de52d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ce74d7e7f82458d9f1f63ff867cd417",
+      "End": "5f877b168e234b919d4508c793ccb06e",
+      "Id": "957f5a12f07347a2928fa5873f4886f2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8ce74d7e7f82458d9f1f63ff867cd417",
+      "End": "30ac37f2c6e24b7fa34620fb01d67f85",
+      "Id": "0f83ae584e614bd1ad1ca9289dd259aa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e50f5119008c4a499dea7207455bcacb",
+      "End": "32457a38bc654135b4e94e864d9c69c1",
+      "Id": "09ba988c26e142d9b83d887321ad7219",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "28064ae6f947491587608be43b5a8040",
+      "End": "dd98bc9ade1e4292972b812ba3a59820",
+      "Id": "e42cb65239294286a09c7e906893f66f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c78919d302dd45079ec95a3235611911",
+      "End": "85dba1af7fae4547b528a154c8b03c65",
+      "Id": "3fddd08c4e9440c2bc8f0c2564b917d3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "de13f4b7750f4d5c870fa0ea13a1faab",
+      "End": "5dbcd269d03a478c8e56a33696723ebd",
+      "Id": "4a65a8aa617a49c98f48d2c1bbb1bf32",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ff960fc2c0e943f19931e799536255e0",
+      "End": "771bf18c85e04c8b87f790c31c4bdf01",
+      "Id": "284d8c40a5b5421186b03538ab955ebf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fbd520fc53954f8d9cd82031474eaffe",
+      "End": "3b27ff0b5ee54591a15a19247637c8af",
+      "Id": "1c476acf6bd34adaa657fd71fa6dc988",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "990db2ced9b84c59b4ca6437c717d49a",
+      "End": "a168f36bb6344a52be8b7b644955557d",
+      "Id": "01b9521e0178412da4c01f7ef988df73",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6699a2361e4a4844afe61a2d33336339",
+      "End": "dfb47d3504ec41ec91bb88145b261980",
+      "Id": "5fcac74cb8664e7aaf0789e0cd11f251",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6699a2361e4a4844afe61a2d33336339",
+      "End": "4810fa92ad8b44dea8dae96ee35ae336",
+      "Id": "e0c7b04aba894af1915c67b9ca26d261",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "WombatDynamo",
+      "Version": "2.3.5",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "aa0b647ad12b4bf9be7832aa53c7fdda",
+        "6eeee12dfc0e4466b38acd688b96f51e",
+        "6d70865719254d11836a1bcebf8f4acd"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.2",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.2.1.5366",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": 20791.38671875,
+      "EyeY": 51373.08203125,
+      "EyeZ": -80753.75,
+      "LookX": 34692.7890625,
+      "LookY": -45644.53515625,
+      "LookZ": 111312.921875,
+      "UpX": 0.1084708496928215,
+      "UpY": 0.9311859607696533,
+      "UpZ": 0.348032683134079
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "226456b1a00849d9ae8659e48a96752b",
+        "Name": "Select Model Elements By Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 217.71494474604583,
+        "Y": 1156.5092211498854
+      },
+      {
+        "Id": "85efccc28a084bf8b44f943c5372bada",
+        "Name": "CurtainPanel.Boundaries",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "ShowGeometry": true,
+        "X": 732.2326188716756,
+        "Y": 414.73480132874
+      },
+      {
+        "Id": "3754a2d517c04deaa1f4d274109f9779",
+        "Name": "Polygon.ByPoints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1390.385552701131,
+        "Y": 393.27039119910717
+      },
+      {
+        "Id": "d7e15ccf8d464edaafa715f48cfc4a8d",
+        "Name": "Polygon.Center",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1694.8079153495303,
+        "Y": 387.9501818091966
+      },
+      {
+        "Id": "846d92968d8e4e4097b6e1b5b21827cb",
+        "Name": "PolyCurve.Points",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1071.5651523094455,
+        "Y": 407.7609245092767
+      },
+      {
+        "Id": "8ab253d889d24dd6bb3cd5ac25bd51e4",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 222.12765995730615,
+        "Y": 1448.1835109247593
+      },
+      {
+        "Id": "aa0b647ad12b4bf9be7832aa53c7fdda",
+        "Name": "FamilyInstance.SetType",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2378.7007552179048,
+        "Y": 1159.2618351205613
+      },
+      {
+        "Id": "e8f853d77329442dbea8001c91e47741",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 204.456644801498,
+        "Y": 1658.0268158999804
+      },
+      {
+        "Id": "33b3f1bec99440ccb4214dbdd8f2f0bb",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 200.03889101254572,
+        "Y": 1831.4236521163473
+      },
+      {
+        "Id": "acd590638bea4925b1a3309897cf5e9f",
+        "Name": "List.Count",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 769.5269649520236,
+        "Y": 1199.025486166785
+      },
+      {
+        "Id": "3c16d01257a84409b9af4d5218d943d9",
+        "Name": "List Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1241.999112776678,
+        "Y": 1623.8227077162853
+      },
+      {
+        "Id": "c381c68cd2e3467fbef461ef1de66df2",
+        "Name": "List.GetItemAtIndex",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1923.2128808056677,
+        "Y": 1376.3576296298736
+      },
+      {
+        "Id": "2960e7a1e2d64bb2afffaccb87ee19d5",
+        "Name": "Point.Z",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1981.8943484511194,
+        "Y": 391.565615492134
+      },
+      {
+        "Id": "3f6828320fa44f9dad254e72dce3f3c4",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "ShowGeometry": true,
+        "X": 2654.8932434714534,
+        "Y": 265.47030348599526
+      },
+      {
+        "Id": "68f0c8fdaea34f05a95342e7f6257757",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2943.434551602212,
+        "Y": 283.43205252942494
+      },
+      {
+        "Id": "0d57619188d847c49561af9f72cd6b4b",
+        "Name": ">=",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 3336.3739458662044,
+        "Y": 346.2537425296195
+      },
+      {
+        "Id": "3f51721c5bee4ccf85353e723494d6d2",
+        "Name": "List.Flatten",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2228.3918570774026,
+        "Y": 394.23767520624
+      },
+      {
+        "Id": "c6fc297cf31b411696aed1cf512f3feb",
+        "Name": ">=",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 3352.951853322802,
+        "Y": 528.6107245521887
+      },
+      {
+        "Id": "19f5aead86004cfb9bb7e3d8f7f2958c",
+        "Name": "List.FilterByBoolMask",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 3966.489002756006,
+        "Y": 599.9407621885252
+      },
+      {
+        "Id": "ccefb3884f4e43848766b4ec5118373c",
+        "Name": "List.FilterByBoolMask",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 3661.691462318451,
+        "Y": 445.0600712513287
+      },
+      {
+        "Id": "0f66419cb0b9495f9026d0a387d2f7bf",
+        "Name": "<=",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 3500.216417824135,
+        "Y": 155.35254352825427
+      },
+      {
+        "Id": "e0141d1a4e5a47b9a4302ebc2570f511",
+        "Name": "List.FilterByBoolMask",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 3891.4362124130216,
+        "Y": 219.4924984312052
+      },
+      {
+        "Id": "4aa7d12d51674a3da86c2a4ce5f8268c",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 4423.885140492991,
+        "Y": 194.79449664651733
+      },
+      {
+        "Id": "6086656bd7044ff6ac8f525557462a7c",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 4362.385087537809,
+        "Y": 831.785322013509
+      },
+      {
+        "Id": "aee6a9347f1645d0b58f6481fe40504c",
+        "Name": "List Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 4283.071960544409,
+        "Y": 505.1068093799919
+      },
+      {
+        "Id": "78ea339822bc4967a3e1203f631ab8f7",
+        "Name": "List.Flatten",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 4484.607214604113,
+        "Y": 530.5653580462974
+      },
+      {
+        "Id": "0bb8c4e9007846a5b4e9b48c4775cd87",
+        "Name": "List.UniqueItems",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 5016.6679959722915,
+        "Y": 565.7079193018325
+      },
+      {
+        "Id": "f9ce6d13250e42e6b31b4ad39c78679a",
+        "Name": "Element.Id",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 4739.154551273727,
+        "Y": 604.760039776959
+      },
+      {
+        "Id": "269fbcb50eff4cc6a56e7fec64d9ac70",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1353.1073319981824,
+        "Y": 1232.945114415542
+      },
+      {
+        "Id": "2e287d98ae814816b47fb71f9b5e78fd",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 178.72600802793795,
+        "Y": 2513.935186079246
+      },
+      {
+        "Id": "6eeee12dfc0e4466b38acd688b96f51e",
+        "Name": "FamilyInstance.SetType",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2335.2991032885366,
+        "Y": 2225.0135102750482
+      },
+      {
+        "Id": "74d58cec32ce40a29be65d22eea2cc3d",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 161.0549928721298,
+        "Y": 2723.778491054467
+      },
+      {
+        "Id": "734de82944fb4b0da219d27ef2d23ba9",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 156.63723908317752,
+        "Y": 2897.175327270834
+      },
+      {
+        "Id": "547a5e63f4714259b9b30fc3557226fe",
+        "Name": "List.Count",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 726.1253130226555,
+        "Y": 2264.7771613212717
+      },
+      {
+        "Id": "9e8f1c6bd0bc418284cac8dd3d742ce0",
+        "Name": "List Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1198.5974608473098,
+        "Y": 2689.574382870772
+      },
+      {
+        "Id": "81d603daca1e416bb6a73aa6851180d9",
+        "Name": "List.GetItemAtIndex",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1879.8112288762995,
+        "Y": 2442.1093047843606
+      },
+      {
+        "Id": "b38a7856d8734f55b45d835b48093069",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1309.7056800688142,
+        "Y": 2298.696789570029
+      },
+      {
+        "Id": "bc49fa1f8d074db691a07c0b2b8664f1",
+        "Name": "Select Model Elements By Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 174.31329281667763,
+        "Y": 2222.260896304372
+      },
+      {
+        "Id": "fadcf41b60db469c884886e9c52d8600",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 183.54841379786785,
+        "Y": 3531.462803534434
+      },
+      {
+        "Id": "6d70865719254d11836a1bcebf8f4acd",
+        "Name": "FamilyInstance.SetType",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2340.1215090584665,
+        "Y": 3242.5411277302364
+      },
+      {
+        "Id": "747f228a7e164f97874208d87d8ebc39",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 165.8773986420597,
+        "Y": 3741.306108509655
+      },
+      {
+        "Id": "6f8856c10c82461eb1cd29cf8d27deee",
+        "Name": "Family Types",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 161.45964485310742,
+        "Y": 3914.702944726022
+      },
+      {
+        "Id": "7a1bad86ab3e4ae88e4fd2ef1d2ecf95",
+        "Name": "List.Count",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 730.9477187925854,
+        "Y": 3282.30477877646
+      },
+      {
+        "Id": "bfcfef50fb084f3f82fe3c28606ed385",
+        "Name": "List Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1203.4198666172397,
+        "Y": 3707.10200032596
+      },
+      {
+        "Id": "8941af06d8fa4b0aac3e6c1e1613498a",
+        "Name": "List.GetItemAtIndex",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1884.6336346462294,
+        "Y": 3459.6369222395488
+      },
+      {
+        "Id": "f7cf62e6881f42f3ba46ad18dff37a6c",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1314.5280858387441,
+        "Y": 3316.2244070252173
+      },
+      {
+        "Id": "7c4b0b70de984eb7a53f126ce65e90f0",
+        "Name": "Select Model Elements By Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 179.13569858660753,
+        "Y": 3239.7885137595604
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "ef7131517ae84bb1993cd0b17e05d824",
+        "Title": "Title <Double click here to edit group title>",
+        "DescriptionText": "Description <Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8ab253d889d24dd6bb3cd5ac25bd51e4",
+          "aa0b647ad12b4bf9be7832aa53c7fdda",
+          "e8f853d77329442dbea8001c91e47741",
+          "33b3f1bec99440ccb4214dbdd8f2f0bb",
+          "acd590638bea4925b1a3309897cf5e9f",
+          "3c16d01257a84409b9af4d5218d943d9",
+          "c381c68cd2e3467fbef461ef1de66df2",
+          "269fbcb50eff4cc6a56e7fec64d9ac70",
+          "226456b1a00849d9ae8659e48a96752b"
+        ],
+        "HasNestedGroups": false,
+        "Left": 190.03889101254572,
+        "Top": 1083.5092211498854,
+        "Width": 2462.661864205359,
+        "Height": 879.9144309664619,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1156.5092211498854,
+        "InitialHeight": 819.9144309664619,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "dd8227f427d445cea338b3a6e7abcf2d",
+        "Title": "Title <Double click here to edit group title>",
+        "DescriptionText": "Description <Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "2e287d98ae814816b47fb71f9b5e78fd",
+          "6eeee12dfc0e4466b38acd688b96f51e",
+          "74d58cec32ce40a29be65d22eea2cc3d",
+          "734de82944fb4b0da219d27ef2d23ba9",
+          "547a5e63f4714259b9b30fc3557226fe",
+          "9e8f1c6bd0bc418284cac8dd3d742ce0",
+          "81d603daca1e416bb6a73aa6851180d9",
+          "b38a7856d8734f55b45d835b48093069",
+          "bc49fa1f8d074db691a07c0b2b8664f1"
+        ],
+        "HasNestedGroups": false,
+        "Left": 146.63723908317752,
+        "Top": 2149.260896304372,
+        "Width": 2462.661864205359,
+        "Height": 879.9144309664616,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2222.260896304372,
+        "InitialHeight": 819.9144309664616,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "997f4006bf65446eaa1c6e302cf8c6d1",
+        "Title": "Title <Double click here to edit group title>",
+        "DescriptionText": "Description <Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "fadcf41b60db469c884886e9c52d8600",
+          "6d70865719254d11836a1bcebf8f4acd",
+          "747f228a7e164f97874208d87d8ebc39",
+          "6f8856c10c82461eb1cd29cf8d27deee",
+          "7a1bad86ab3e4ae88e4fd2ef1d2ecf95",
+          "bfcfef50fb084f3f82fe3c28606ed385",
+          "8941af06d8fa4b0aac3e6c1e1613498a",
+          "f7cf62e6881f42f3ba46ad18dff37a6c",
+          "7c4b0b70de984eb7a53f126ce65e90f0"
+        ],
+        "HasNestedGroups": false,
+        "Left": 151.45964485310742,
+        "Top": 3166.7885137595604,
+        "Width": 2462.661864205359,
+        "Height": 879.9144309664616,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3239.7885137595604,
+        "InitialHeight": 819.9144309664616,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 228.79265240780364,
+    "Y": -29.59485352723533,
+    "Zoom": 0.2932786739601453
+  }
+}

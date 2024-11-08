@@ -277,104 +277,6 @@
       "FunctionSignature": "Revit.Elements.Room.FinishBoundary",
       "Replication": "Auto",
       "Description": "Finish boundary\n\nRoom.FinishBoundary: Curve[][]"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
-      "FunctionSignature": "cc28d375-c716-463a-8a9a-bb37b73c83bd",
-      "FunctionType": "Graph",
-      "Id": "c2ee4ab0865d41999fad85d271d57a49",
-      "NodeType": "FunctionNode",
-      "Inputs": [
-        {
-          "Id": "45a3f26923114e3d88d4acbe96b140ca",
-          "Name": "curvelists",
-          "Description": "List of list of curves. The curves\nmust be in a continuous/closed order.\n\nvar[]..[]",
-          "UsingDefaultValue": false,
-          "Level": 1,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "50ca164b992044d99960c4900716589c",
-          "Name": "ceilingtypes",
-          "Description": "List of types to be applied\neach set of curves as a ceilings.\n\nNote that if you provide a\nshorter list of types than the\ncurve lists it will behave as\nlongest lacing.\n\nvar[]..[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "06df03acd08f44db89c3295867317328",
-          "Name": "levels",
-          "Description": "Levels for the elements to\nbe created at.\n\nvar[]..[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "cc126f85c2964c61b8289a4b666abec3",
-          "Name": "offset",
-          "Description": "Height offset.\n\nvar[]..[]\nDefault value : [2700]",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "053afdcd2d554fdf927c4e19792e2594",
-          "Name": "ceilings",
-          "Description": "return value",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "cb8f9e783b614205b1e68bf0f10a409a",
-          "Name": "versionCheck",
-          "Description": "return value",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "A new method unique to Revit 2022 that enables ceilings via the sketch API to support internal loops. Will not work in previous versions, and works best when the curves are in the form of list of lists of curves in continuous order."
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
-      "WatchHeight": 200.0,
-      "Id": "b6a5db89744544679cd15d054997b24e",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "87806541c26a470198a9483287352cbe",
-          "Name": "",
-          "Description": "Node to show output from",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "708aafa023cc441fbdd3712df874ad28",
-          "Name": "",
-          "Description": "Node output",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Visualizes a node's output"
     }
   ],
   "Connectors": [
@@ -397,21 +299,9 @@
       "IsHidden": "False"
     },
     {
-      "Start": "8de99f05ea614ef4adb2a3e8b41410a5",
-      "End": "06df03acd08f44db89c3295867317328",
-      "Id": "c12143f29f054184b83a552385ef650f",
-      "IsHidden": "False"
-    },
-    {
       "Start": "a602751619544ddf906882c64f9eb02f",
       "End": "cb201e0aca424d16884d3ea17d614058",
       "Id": "cd4d272dfcf940d4b5342d0159f506ab",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "a602751619544ddf906882c64f9eb02f",
-      "End": "50ca164b992044d99960c4900716589c",
-      "Id": "fb503f1d84994df690e25cf3dc0a8aed",
       "IsHidden": "False"
     },
     {
@@ -437,23 +327,9 @@
       "End": "3d793bfbffa540d792430800c7e779a0",
       "Id": "ae148b72cc2d4f91b67883be91e6dd2e",
       "IsHidden": "False"
-    },
-    {
-      "Start": "d1c78edfc2114b7bb527060e2a485997",
-      "End": "45a3f26923114e3d88d4acbe96b140ca",
-      "Id": "269b0042dc9348398820d169345ce5f8",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "053afdcd2d554fdf927c4e19792e2594",
-      "End": "87806541c26a470198a9483287352cbe",
-      "Id": "4af852fdb6f14ec5b7b28a21a18ae40e",
-      "IsHidden": "False"
     }
   ],
-  "Dependencies": [
-    "cc28d375-c716-463a-8a9a-bb37b73c83bd"
-  ],
+  "Dependencies": [],
   "NodeLibraryDependencies": [
     {
       "Name": "Rhythm",
@@ -461,14 +337,6 @@
       "ReferenceType": "Package",
       "Nodes": [
         "09a92871e74a46c19248cde8faa79bc6"
-      ]
-    },
-    {
-      "Name": "Crumple",
-      "Version": "2024.4.3",
-      "ReferenceType": "Package",
-      "Nodes": [
-        "c2ee4ab0865d41999fad85d271d57a49"
       ]
     }
   ],
@@ -496,20 +364,13 @@
     "warningCount": 0,
     "errorCount": 0
   },
-  "Bindings": [
-    {
-      "NodeId": "768614d5-6d49-4815-9f69-3196373488b6",
-      "Binding": {
-        "ByOutlineTypeAndLevel_InClassDecl-1_InFunctionScope-1_Instance0_768614d5-6d49-4815-9f69-3196373488b6": "H4sIAAAAAAAACq3MIRODMAyG4f8STe7SNh0dGoOeJAggYTdTsdX1+t/HIaf3qdd8z1wh26eYjmtZYZgr6BVQBR7l/crPaRQYBBLx3ZMSBoo7shphYr+hbea8Hv2RAiOdSzHuAp3AlMv1DeyYGrTuH/at/7WjO+2lLV9AWa09ygAAAA=="
-      }
-    }
-  ],
+  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "3.2.1.5366",
+      "Version": "3.2.2.5494",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -562,7 +423,7 @@
         "Name": "Ceiling.ByOutlineTypeAndLevel",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Excluded": true,
+        "Excluded": false,
         "ShowGeometry": true,
         "X": 1033.3671951815986,
         "Y": 378.54807023551234
@@ -606,31 +467,11 @@
         "ShowGeometry": true,
         "X": 577.8422348463539,
         "Y": 266.57114863470207
-      },
-      {
-        "Id": "c2ee4ab0865d41999fad85d271d57a49",
-        "Name": "© Ceilings.Create",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1072.371310237017,
-        "Y": 76.9711101476716
-      },
-      {
-        "Id": "b6a5db89744544679cd15d054997b24e",
-        "Name": "Watch",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1467.0418949811242,
-        "Y": 123.45453457308867
       }
     ],
     "Annotations": [],
-    "X": 109.7222754538584,
-    "Y": 222.65405911314696,
-    "Zoom": 0.8250090798601253
+    "X": 363.74903805267076,
+    "Y": 161.8813221337495,
+    "Zoom": 0.6447160455565887
   }
 }

@@ -327,37 +327,6 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
-      "FunctionSignature": "4d81b7b4-8bc1-4ff8-8fe5-da74bc37fef0",
-      "FunctionType": "Graph",
-      "NodeType": "FunctionNode",
-      "Id": "f16e74151dd6478ea4475dcc7ef15a1d",
-      "Inputs": [
-        {
-          "Id": "8cf97206733944e299bcbd66a87419d0",
-          "Name": "solids",
-          "Description": "Solid[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "d8dab732b79449c6bfc0e8781dfe5925",
-          "Name": "solids",
-          "Description": "návratová hodnota",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "The OOTB node Solid.ByUnion occasionally fails when trying to merge solids with almost adjacent faces. This node will return the minimum amount of joined solids possible in such cases instead of returning null."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
       "FunctionSignature": "9fbd05c0-ec1f-4bd3-bf37-969a1552eab8",
       "FunctionType": "Graph",
       "NodeType": "FunctionNode",
@@ -1712,6 +1681,66 @@
       ],
       "Replication": "Auto",
       "Description": "Vrací celkový objem tělesa\n\nSolid.Volume: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[]",
+      "Id": "1e7efaddd46d49849493438ca6197308",
+      "Inputs": [
+        {
+          "Id": "7135f93067c448ab8e62b10a920bb399",
+          "Name": "solids",
+          "Description": "Kolekce těles\n\nSolid[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "adba79caf37e4085afbb5ab36971e6b1",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sjednocení kolekce těles do jednoho tělesa\n\nSolid.ByUnion (solids: Solid[]): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "archilab.Lists.Lists.Clean@var[]",
+      "Id": "48d04026c5a24730bceea4c6e9adbd01",
+      "Inputs": [
+        {
+          "Id": "4a5114b183be404dbbdd35eebdf3c9f5",
+          "Name": "list",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6d59e8c6d6874f27bab969a08d0676cf",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Lists.Clean (list: var[]): var[]"
     }
   ],
   "Connectors": [
@@ -1791,12 +1820,6 @@
       "Start": "d93286bae5e441ebba82739495b0a609",
       "End": "65186c5327c24903b950e6fd742d2f23",
       "Id": "5f0ff254a91a439385061c4cf66e5c1e",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "d8dab732b79449c6bfc0e8781dfe5925",
-      "End": "6116e56d93384c808e39a57ac5122e3c",
-      "Id": "c034da76d44e410d9394116d9d34848e",
       "IsHidden": "False"
     },
     {
@@ -2041,14 +2064,25 @@
     },
     {
       "Start": "cbfed72f74d343ae92b07a2287ee4f59",
-      "End": "8cf97206733944e299bcbd66a87419d0",
-      "Id": "8e9f5b5fd6814eafa92bf52c0029b172",
+      "End": "4a5114b183be404dbbdd35eebdf3c9f5",
+      "Id": "0ef0ace9fcd94df1b8b5a2595d7a5c75",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "adba79caf37e4085afbb5ab36971e6b1",
+      "End": "6116e56d93384c808e39a57ac5122e3c",
+      "Id": "40b90c72040145dbbc37da641009f090",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6d59e8c6d6874f27bab969a08d0676cf",
+      "End": "7135f93067c448ab8e62b10a920bb399",
+      "Id": "45f2e171a820450495d0d86e58860dc9",
       "IsHidden": "False"
     }
   ],
   "Dependencies": [
     "d7d8c98e-51dc-401d-ba0f-750f016d064b",
-    "4d81b7b4-8bc1-4ff8-8fe5-da74bc37fef0",
     "9fbd05c0-ec1f-4bd3-bf37-969a1552eab8",
     "c3a36eb7-8fe8-4417-b31e-ccc9fded769b",
     "928e40a7-91ac-45c3-8d59-4d899fc49b83",
@@ -2062,14 +2096,6 @@
       "ReferenceType": "Package",
       "Nodes": [
         "db0789d0d79f4da69b258c60b8fc4324"
-      ]
-    },
-    {
-      "Name": "Clockwork for Dynamo 2.x",
-      "Version": "2.4.0",
-      "ReferenceType": "Package",
-      "Nodes": [
-        "f16e74151dd6478ea4475dcc7ef15a1d"
       ]
     },
     {
@@ -2096,7 +2122,8 @@
       "ReferenceType": "Package",
       "Nodes": [
         "44647b98b90848dd8872cb66517588a0",
-        "970770f0a47e412391183cd801ff7bb4"
+        "970770f0a47e412391183cd801ff7bb4",
+        "48d04026c5a24730bceea4c6e9adbd01"
       ]
     },
     {
@@ -2136,7 +2163,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.16.1.2727",
+      "Version": "2.16.2.5624",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -2253,16 +2280,6 @@
         "Excluded": false,
         "X": 2409.4790720295427,
         "Y": 205.0541758369489
-      },
-      {
-        "Name": "Solid.ByUnion+",
-        "ShowGeometry": false,
-        "Id": "f16e74151dd6478ea4475dcc7ef15a1d",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 5398.6086626692686,
-        "Y": -118.31790196317115
       },
       {
         "Name": "MultipleInputForm ++",
@@ -2592,7 +2609,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "X": 5022.228713278193,
-        "Y": -142.42521441112837
+        "Y": -143.35897627333151
       },
       {
         "Name": "Solid.Volume",
@@ -2603,11 +2620,31 @@
         "Excluded": false,
         "X": 4821.33423568134,
         "Y": -375.6584558763779
+      },
+      {
+        "Name": "Solid.ByUnion",
+        "ShowGeometry": true,
+        "Id": "1e7efaddd46d49849493438ca6197308",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5601.4899348830495,
+        "Y": -139.89333416787565
+      },
+      {
+        "Name": "Lists.Clean",
+        "ShowGeometry": true,
+        "Id": "48d04026c5a24730bceea4c6e9adbd01",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5286.1404435125432,
+        "Y": -116.34999892426066
       }
     ],
     "Annotations": [],
-    "X": -28.72840260624298,
-    "Y": 310.28855206805065,
-    "Zoom": 0.26935490056986222
+    "X": -2175.8354727952337,
+    "Y": 329.853164288342,
+    "Zoom": 0.56779161801380462
   }
 }

@@ -1,0 +1,680 @@
+{
+  "Uuid": "9bdb0299-5904-4bdd-a6d6-c33fef29895c",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "BATCH DUPLCIATE SCHEDULES",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.ScheduleFilterType, DSRevitNodesUI",
+      "SelectedIndex": 4,
+      "SelectedString": "GreaterThan",
+      "Id": "d3a3b277670a48e2808fab18465fb2d4",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "61fdef36dd8844a8923d16e3dc04ea72",
+          "Name": "FilterType",
+          "Description": "The selected FilterType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A View Schedule Filter Type."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "60d6b5a7aa384b97a4c42e2a2d2f475a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5343875fcda64492950d4241c07cc83c",
+          "Name": "scheduleView",
+          "Description": "Revit.Elements.Views.ScheduleView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "82b46f744c69426fbc037179cf119331",
+          "Name": "scheduleFilters",
+          "Description": "List of Schedule Filters.\n\nScheduleFilter[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "29929242cb1542898875f7f039384f0a",
+          "Name": "scheduleView",
+          "Description": "Schedule View.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Views.ScheduleView.AddFilters@Revit.Schedules.ScheduleFilter[]",
+      "Replication": "Auto",
+      "Description": "Add Schedule Filters to Schedule View.\n\nScheduleView.AddFilters (scheduleFilters: ScheduleFilter[]): ScheduleView"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "26f7571b905548aeb77a28662c382d13",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5eab99990df4403480a4c3430cd2fc79",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"Výkaz místností\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "4ca81f03-d333-46ac-ac82-f863416c768d",
+      "FunctionType": "Graph",
+      "Id": "31855a6e760547b7abe16ba611b93160",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "bdad4f44faa841bfac2c5d18d62ee19b",
+          "Name": "ViewName",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e080392f84a84b2a86b5a5adcc66ce31",
+          "Name": "DoesContain",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "883fa589a56d447cac0faa29fdb0787a",
+          "Name": "docOrRevitLinkInstance",
+          "Description": " Use only if you want to query a linked model\n\nvar\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9f8f725d629b43cdb52290122e83ad04",
+          "Name": "Views",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Collect views by given name in the active or given document.\r\nBased on a Christian Gartland's script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1ba9137d3c40420b88f57d6778e40c3b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7686aecfd4144c8ea400d78ce1dd499e",
+          "Name": "field",
+          "Description": "Schedule Field used for creating filter.\n\nScheduleField",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "326fd2caf21d4cd69d3313ada60a162f",
+          "Name": "filterType",
+          "Description": "Filter type. Ex: Equal.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "377ca0cf9fc34a0b914f0b1609fdfbc3",
+          "Name": "value",
+          "Description": "Value used by filter for comparison.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "290ec5aadb5940ddaf0a75eb2ee6ecdb",
+          "Name": "ScheduleFilter",
+          "Description": "Schedule Filter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Schedules.ScheduleFilter.ByFieldTypeAndValue@Revit.Schedules.ScheduleField,string,var",
+      "Replication": "Auto",
+      "Description": "Creates Schedule Filter by Schedule Field, Filter Type and value.\n\nScheduleFilter.ByFieldTypeAndValue (field: ScheduleField, filterType: string, value: var): ScheduleFilter"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "9414128630c7488fa4c4c1c13db7f57b",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b284687bb00344efb3d6e0f692b4d733",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"3\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "25e2ddce0f8d47fb97f1755684e2d958",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "201d6c095eb94eb5ae38d03d2ab1236b",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "69a41d9529e34bf19992fb2100b30240",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e572b8b59cd04a7eaff5d0a4d8653b61",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "ffa6022678ed4ec387c7e11d57dee51a",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "842fc4296b7f4b7e8bc05074ceac9c3d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "0;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "aa51354c12df4600a77f70e0c8b21f4a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d4cfcb387748460e8cd7635a0670f908",
+          "Name": "scheduleView",
+          "Description": "Revit.Elements.Views.ScheduleView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ae8c2da2b9d3499fb2211d5493f6f84a",
+          "Name": "ScheduleField[]",
+          "Description": "ScheduleField[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Views.ScheduleView.Fields",
+      "Replication": "Auto",
+      "Description": "Schedule Fields.\n\nScheduleView.Fields: ScheduleField[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e8edc4fe00c84c9c99d328fe0bd90a54",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d9936c4d84e84d82839b8947bb8437b7",
+          "Name": "view",
+          "Description": "View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9a3a59ef00c4121a6e6c77e2e0bfc35",
+          "Name": "options",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e07e8458c1bf4b4aa2577556a85db014",
+          "Name": "View",
+          "Description": "View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "archilab.Revit.Views.Views.Duplicate@Revit.Elements.Views.View,string",
+      "Replication": "Auto",
+      "Description": "Views.Duplicate (view: View, options: string): View"
+    },
+    {
+      "ConcreteType": "archilabUI.DuplicateOptionsUi, archilabUI2025",
+      "SelectedIndex": 1,
+      "SelectedString": "Duplicate",
+      "Id": "879526503c784a66b1377c852d59ecd2",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "05fd037e0c5b470fb5e4985a665c45d4",
+          "Name": "options",
+          "Description": "The selected options",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Retrieve all available View Duplication Options."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "24054868e76741109cac5f7a530f0196",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6ead87b7d51d4db79ebe621f22c57d47",
+          "Name": "view",
+          "Description": "The View to be Duplicated\n\nView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d60280abd1304fdbb3e228d23225d85d",
+          "Name": "viewDuplicateOption",
+          "Description": "Enter View Duplicate Option: Duplicate, AsDependent or WithDetailing.\n\nstring\nDefault value : \"Duplicate\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d8197bca233846e3a925fd209a3d31fd",
+          "Name": "prefix",
+          "Description": "string\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "20795749dc9143cab9652fcada073e8a",
+          "Name": "suffix",
+          "Description": "string\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a06ccea142f243caa3cb2342803a66d2",
+          "Name": "View",
+          "Description": "View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Views.View.DuplicateView@Revit.Elements.Views.View,string,string,string",
+      "Replication": "Auto",
+      "Description": "Duplicates A view.\n\nView.DuplicateView (view: View, viewDuplicateOption: string = \"Duplicate\", prefix: string = \"\", suffix: string = \"\"): View"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "61fdef36dd8844a8923d16e3dc04ea72",
+      "End": "326fd2caf21d4cd69d3313ada60a162f",
+      "Id": "0c704799422d420a9890c5a6ca08ae94",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5eab99990df4403480a4c3430cd2fc79",
+      "End": "bdad4f44faa841bfac2c5d18d62ee19b",
+      "Id": "b57fa5678e584b70a5dc54e7a7b46f9b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f8f725d629b43cdb52290122e83ad04",
+      "End": "d4cfcb387748460e8cd7635a0670f908",
+      "Id": "2c6aeff092a24be3ad5eceeba7a0438c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f8f725d629b43cdb52290122e83ad04",
+      "End": "5343875fcda64492950d4241c07cc83c",
+      "Id": "0664ee14d97d4651b85d3aa444ab05c8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f8f725d629b43cdb52290122e83ad04",
+      "End": "6ead87b7d51d4db79ebe621f22c57d47",
+      "Id": "edb71baf34c8470a9b9cc319c0f83bc6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "290ec5aadb5940ddaf0a75eb2ee6ecdb",
+      "End": "82b46f744c69426fbc037179cf119331",
+      "Id": "eb41e8ea23d845ec85e5dd8a59842c72",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b284687bb00344efb3d6e0f692b4d733",
+      "End": "377ca0cf9fc34a0b914f0b1609fdfbc3",
+      "Id": "0375bedfccd54a25b2416beb6a0c7335",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e572b8b59cd04a7eaff5d0a4d8653b61",
+      "End": "7686aecfd4144c8ea400d78ce1dd499e",
+      "Id": "b574f71a7da84dc5bfb64f46de40b981",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "842fc4296b7f4b7e8bc05074ceac9c3d",
+      "End": "69a41d9529e34bf19992fb2100b30240",
+      "Id": "bcdc855513574b16afa35e8da65ada15",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ae8c2da2b9d3499fb2211d5493f6f84a",
+      "End": "201d6c095eb94eb5ae38d03d2ab1236b",
+      "Id": "66d55a430d6e4f518ca004f5b9f5b1d8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "05fd037e0c5b470fb5e4985a665c45d4",
+      "End": "c9a3a59ef00c4121a6e6c77e2e0bfc35",
+      "Id": "9800f2b07b7044a193e8b86b23760a9e",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "4ca81f03-d333-46ac-ac82-f863416c768d"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Genius Loci",
+      "Version": "2024.5.29",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "31855a6e760547b7abe16ba611b93160"
+      ]
+    },
+    {
+      "Name": "archi-lab.net",
+      "Version": "2025.300.1225",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "e8edc4fe00c84c9c99d328fe0bd90a54",
+        "879526503c784a66b1377c852d59ecd2"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": null,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.3",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.2",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "d3a3b277670a48e2808fab18465fb2d4",
+        "Name": "Schedule Filter Type",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1326.8326373638338,
+        "Y": 1129.9754614612002
+      },
+      {
+        "Id": "60d6b5a7aa384b97a4c42e2a2d2f475a",
+        "Name": "ScheduleView.AddFilters",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2115.2156407136017,
+        "Y": 978.9501649563064
+      },
+      {
+        "Id": "26f7571b905548aeb77a28662c382d13",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 127.32308365934887,
+        "Y": 980.8365792529235
+      },
+      {
+        "Id": "31855a6e760547b7abe16ba611b93160",
+        "Name": "View ByName",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 444.6061834954753,
+        "Y": 980.2542240909067
+      },
+      {
+        "Id": "1ba9137d3c40420b88f57d6778e40c3b",
+        "Name": "ScheduleFilter.ByFieldTypeAndValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1697.7827191545496,
+        "Y": 1094.788468839101
+      },
+      {
+        "Id": "9414128630c7488fa4c4c1c13db7f57b",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1414.914544555606,
+        "Y": 1264.500618643296
+      },
+      {
+        "Id": "25e2ddce0f8d47fb97f1755684e2d958",
+        "Name": "List.GetItemAtIndex",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1329.3076845550554,
+        "Y": 679.9121782096096
+      },
+      {
+        "Id": "ffa6022678ed4ec387c7e11d57dee51a",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1073.4913491664388,
+        "Y": 811.7746467721939
+      },
+      {
+        "Id": "aa51354c12df4600a77f70e0c8b21f4a",
+        "Name": "ScheduleView.Fields",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 927.0276942490727,
+        "Y": 680.2333959702701
+      },
+      {
+        "Id": "e8edc4fe00c84c9c99d328fe0bd90a54",
+        "Name": "Views.Duplicate",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2590.1203785837893,
+        "Y": 703.8310825947498
+      },
+      {
+        "Id": "879526503c784a66b1377c852d59ecd2",
+        "Name": "Duplicate Options",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2180.483993820148,
+        "Y": 849.1679972294727
+      },
+      {
+        "Id": "24054868e76741109cac5f7a530f0196",
+        "Name": "View.DuplicateView",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2589.273583516585,
+        "Y": 902.8080978534912
+      }
+    ],
+    "Annotations": [],
+    "X": -655.0623741240324,
+    "Y": -249.75172700654537,
+    "Zoom": 0.753342979570019
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "Uuid": "90297d51-9804-469f-bc47-8e21eca5c9bd",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "TOPO FROM LINKED TOPOGRAPHY",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "89671a14-078c-421b-a53c-7fb9a004daf1-001e39c0"
+      ],
+      "Id": "490d5a798aaf429ba1adaf7f863dd63c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "519c5fddbb7841779f9e6c09e76300b8",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a model element from the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "513308e215f24da8acbd0d481a461f67",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "e935c2792a734848977e380ad38f404d",
+          "Name": "toposolid",
+          "Description": "Revit.Elements.Toposolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e44781d968a6471ea26fcf0c15de48dd",
+          "Name": "Point[]",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Toposolid.Points",
+      "Replication": "Auto",
+      "Description": "Get Slab Shape Points\n\nToposolid.Points: Point[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "9bc6161d197d4d09bf7bacdeaac56faa",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "fadd11abc1c64dc9b4b43c920f8a036f",
+          "Name": "name",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "110b88509ec24a00833190a345b147db",
+          "Name": "ToposolidType",
+          "Description": "ToposolidType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.ToposolidType.ByName@string",
+      "Replication": "Auto",
+      "Description": "Select a toposolid type from the current document by name\n\nToposolidType.ByName (name: string): ToposolidType"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6e33fcb296d94f1d98a66c808ffb4c4c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "e8647ecce0da4103b018e8987b7532c0",
+          "Name": "points",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f679c11f86bf4cf09d1651b041b915c6",
+          "Name": "toposolidType",
+          "Description": "ToposolidType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bba5e1c99fe941d1a50010cb11057f00",
+          "Name": "level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "478fb0cc0d8749ca8bf1ab3ce802914a",
+          "Name": "Toposolid",
+          "Description": "Toposolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Toposolid.ByPointsTypeAndLevel@Autodesk.DesignScript.Geometry.Point[],Revit.Elements.ToposolidType,Revit.Elements.Level",
+      "Replication": "Auto",
+      "Description": "Create a Revit Toposolid given its points, type and Level\n\nToposolid.ByPointsTypeAndLevel (points: Point[], toposolidType: ToposolidType, level: Level): Toposolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "c32c9144ae9f4836953311320f3b1fc4",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3bd7a23a339b408e808c0e74f9b6b285",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"Terénní útvar 1\";"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 0,
+      "SelectedString": "1.NP",
+      "Id": "f6f257ec655d4d1a8ce9350923d83ca5",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "86306af0ece448fe8543cea2309c4758",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "519c5fddbb7841779f9e6c09e76300b8",
+      "End": "e935c2792a734848977e380ad38f404d",
+      "Id": "a9500558c9c849c380453815f5f83d71",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e44781d968a6471ea26fcf0c15de48dd",
+      "End": "e8647ecce0da4103b018e8987b7532c0",
+      "Id": "1a48f3a63d8440888f4b3f0104557500",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "110b88509ec24a00833190a345b147db",
+      "End": "f679c11f86bf4cf09d1651b041b915c6",
+      "Id": "ae11ceb5884b430fa1eaf0ba46993525",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3bd7a23a339b408e808c0e74f9b6b285",
+      "End": "fadd11abc1c64dc9b4b43c920f8a036f",
+      "Id": "6e2045d8614a43eaab4a30cc0d485156",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "86306af0ece448fe8543cea2309c4758",
+      "End": "bba5e1c99fe941d1a50010cb11057f00",
+      "Id": "a4e617a5afeb47de93edd4d282a8e6df",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": null,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.3",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "8.2",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [
+    {
+      "NodeId": "6e33fcb2-96d9-4f1d-98a6-6c808ffb4c4c",
+      "Binding": {
+        "ByPointsTypeAndLevel_InClassDecl-1_InFunctionScope-1_Instance0_6e33fcb2-96d9-4f1d-98a6-6c808ffb4c4c": "H4sIAAAAAAAACh3LKw6AQAwFwLs8TZMWFnaLxqCRFFG+wSDIOsLdSRg/44PVs6PFYxjyfV5H3xlaQ9ImiksgjmmhUMpMXlcLxX1WZw6r70LMslXOYigM/ZX/K5pYS33xTh9/aPVyXwAAAA=="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "490d5a798aaf429ba1adaf7f863dd63c",
+        "Name": "Select Model Element",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 326.5,
+        "Y": 246.5
+      },
+      {
+        "Id": "513308e215f24da8acbd0d481a461f67",
+        "Name": "Toposolid.Points",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 672.5,
+        "Y": 330.5
+      },
+      {
+        "Id": "9bc6161d197d4d09bf7bacdeaac56faa",
+        "Name": "ToposolidType.ByName",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 691.5,
+        "Y": 597.5
+      },
+      {
+        "Id": "6e33fcb296d94f1d98a66c808ffb4c4c",
+        "Name": "Toposolid.ByPointsTypeAndLevel",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1060.5,
+        "Y": 263.5
+      },
+      {
+        "Id": "c32c9144ae9f4836953311320f3b1fc4",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 371.0,
+        "Y": 582.0
+      },
+      {
+        "Id": "f6f257ec655d4d1a8ce9350923d83ca5",
+        "Name": "Levels",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 489.5,
+        "Y": 451.5
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}

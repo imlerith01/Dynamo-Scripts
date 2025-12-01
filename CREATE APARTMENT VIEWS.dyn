@@ -118,36 +118,6 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "Id": "2b5cc4aa2a61441a9f27a7baf74add6a",
-      "NodeType": "FunctionNode",
-      "Inputs": [
-        {
-          "Id": "47fb456d1a864065b878b129cf253b2d",
-          "Name": "closedCurve",
-          "Description": "Closed curve used as surface boundary\n\nCurve",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "45b5e8b71201448bba8bce7c356d4b85",
-          "Name": "Surface",
-          "Description": "Surface created by patch",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve",
-      "Replication": "Auto",
-      "Description": "Create a Surface by filling in the interior of a closed boundary defined by input Curves.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "Id": "aee50e7b41774325862d7ff1c392b4a8",
       "NodeType": "FunctionNode",
       "Inputs": [
@@ -1407,7 +1377,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "5c731946a7014aa2a6b3ff9fc11f8e13",
+          "Id": "fc3fb3f4e8ec469ba1a2f2750e11e256",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -1883,6 +1853,36 @@
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly",
       "Code": "x+\" - \" +y;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "63287bc36ca6499ebce519c906ef1afd",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b63893f9a41c4ef8bf88ee2b6bb8c1ca",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1adf7b1b660f42a0a5d433fd8790acd7",
+          "Name": "Surface",
+          "Description": "A Surface on the interior of the curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Patch",
+      "Replication": "Auto",
+      "Description": "Patch a closed Curve\n\nCurve.Patch ( ): Surface"
     }
   ],
   "Connectors": [
@@ -1926,12 +1926,6 @@
       "Start": "85fcc2880c7b400594905ab008b7fe42",
       "End": "f303105af89f46fdb3c7761a3869c286",
       "Id": "2a63c0c6e86b4f67a435912bbaa9b8ef",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "45b5e8b71201448bba8bce7c356d4b85",
-      "End": "7458b8c8f02b48d3bcf6b5f939f17f59",
-      "Id": "e09f79fc01f54dd69ca872e39daa59b9",
       "IsHidden": "False"
     },
     {
@@ -2176,14 +2170,14 @@
     },
     {
       "Start": "3f72b004a5504220b361afcab2ce99f5",
-      "End": "47fb456d1a864065b878b129cf253b2d",
-      "Id": "64ba270b1b024bd6b9dbf93cfaa37992",
+      "End": "b63893f9a41c4ef8bf88ee2b6bb8c1ca",
+      "Id": "7b64996983d64a5bbbc78cc037952b14",
       "IsHidden": "False"
     },
     {
-      "Start": "5c731946a7014aa2a6b3ff9fc11f8e13",
+      "Start": "fc3fb3f4e8ec469ba1a2f2750e11e256",
       "End": "bacec2fe3a1d4aeb95c4dbf6dacedd57",
-      "Id": "0663f917084b473eb404cebf79f7523e",
+      "Id": "5e21f80cd57848d388a2ba12ca30b520",
       "IsHidden": "False"
     },
     {
@@ -2257,6 +2251,12 @@
       "End": "a6304cc3e1984c00bbd0a263518394d3",
       "Id": "0d69873475284623b58a6fd693fea800",
       "IsHidden": "False"
+    },
+    {
+      "Start": "1adf7b1b660f42a0a5d433fd8790acd7",
+      "End": "7458b8c8f02b48d3bcf6b5f939f17f59",
+      "Id": "eb3c1ed647c64085897e1b160305462e",
+      "IsHidden": "False"
     }
   ],
   "Dependencies": [
@@ -2329,7 +2329,7 @@
     {
       "NodeId": "6f6b4524-0bf7-4f03-93de-6bb3c892bd90",
       "Binding": {
-        "DuplicateView_InClassDecl-1_InFunctionScope-1_Instance0_6f6b4524-0bf7-4f03-93de-6bb3c892bd90": "H4sIAAAAAAAACq3MMQ+DIBCG4f9ysyTH9TzU2cW5ozhggaYLQ8tG+O81rqxsX97ke/YCKfxy8KvLDpa9gL8HFAvP/P2k97ZaWCxQHGV+uKCQ0Sk2SOokrxWT1pGikRC8QpRRTkILg4Ut5fsrwlfFCnXooQs3utDUS3dTq8/SSw+vRjfCl37U4w9zrsEFigEAAA=="
+        "DuplicateView_InClassDecl-1_InFunctionScope-1_Instance0_6f6b4524-0bf7-4f03-93de-6bb3c892bd90": "H4sIAAAAAAAACq3MqxLDIBBA0X9ZHWZ4LQvRMdGVIYIU6NQgWhzDv7cTi8Vdc8/RoKRvTXELNcB6NIh3QPPwqJ93ee2bh9VDFlqqmJDFQMQ0l8iurImFiMk8c0J7Wca5QUJNHhYPe6n3a4x2Al2HvszQMYw62Vm6iaPuaJZu+aBLYWbpTo26wr9+9vMHFjKcmOgBAAA="
       }
     }
   ],
@@ -2344,12 +2344,12 @@
     },
     "Camera": {
       "Name": "_Background Preview",
-      "EyeX": -25042.548828125,
-      "EyeY": 46538.59765625,
-      "EyeZ": 9464.60546875,
-      "LookX": -450.833984375,
-      "LookY": -41094.1953125,
-      "LookZ": -19701.94140625,
+      "EyeX": -7209.0615234375,
+      "EyeY": 41478.6328125,
+      "EyeZ": 8633.205078125,
+      "LookX": -403.888671875,
+      "LookY": -36815.2578125,
+      "LookZ": -17650.4765625,
       "UpX": -0.02062416262924671,
       "UpY": 0.4324079751968384,
       "UpZ": -0.9014422297477722
@@ -2385,16 +2385,6 @@
         "ShowGeometry": true,
         "X": 4712.641770605335,
         "Y": -1938.9725502179272
-      },
-      {
-        "Id": "2b5cc4aa2a61441a9f27a7baf74add6a",
-        "Name": "Surface.ByPatch",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": false,
-        "X": 7250.980150185954,
-        "Y": -1241.8156328164084
       },
       {
         "Id": "aee50e7b41774325862d7ff1c392b4a8",
@@ -2753,8 +2743,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 6562.652749252845,
-        "Y": -976.1849100417737
+        "X": 6558.655365304323,
+        "Y": -956.1979902991634
       },
       {
         "Id": "9851db8f35284c44a2ff9b3f1305d590",
@@ -2905,6 +2895,16 @@
         "ShowGeometry": true,
         "X": 9427.837675168073,
         "Y": -1737.9808846600502
+      },
+      {
+        "Id": "63287bc36ca6499ebce519c906ef1afd",
+        "Name": "Curve.Patch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 7388.410170756636,
+        "Y": -1335.8663174850858
       }
     ],
     "Annotations": [
@@ -3001,7 +3001,6 @@
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "2b5cc4aa2a61441a9f27a7baf74add6a",
           "aee50e7b41774325862d7ff1c392b4a8",
           "cb0805804a80433db6f4d230ce2c1a4c",
           "cce32e1ca63f4052915fcdab22e1b3fc",
@@ -3012,23 +3011,24 @@
           "04286a9d0abb49b6a6b9d4b10b50bb06",
           "ed3f7f672b8649349489eac3cd91de10",
           "f961ee3ab59c4fadb7ed011de30c16ac",
-          "117293e616db41ce84388faf9bfa83f1"
+          "117293e616db41ce84388faf9bfa83f1",
+          "63287bc36ca6499ebce519c906ef1afd"
         ],
         "HasNestedGroups": false,
         "Left": 5741.619761909921,
-        "Top": -1382.6544132875024,
+        "Top": -1408.8663174850858,
         "Width": 3984.962074353921,
-        "Height": 671.3306158305503,
+        "Height": 697.5425200281337,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": -1309.6544132875024,
+        "InitialTop": -1335.8663174850858,
         "InitialHeight": 611.3306158305503,
         "TextblockHeight": 63.0,
         "Background": "#FFE8F7AD"
       }
     ],
-    "X": -426.7426041227452,
-    "Y": 771.7910759479444,
-    "Zoom": 0.2020020973557202
+    "X": -1543.3487342932704,
+    "Y": 654.1910588217779,
+    "Zoom": 0.2794381629349499
   }
 }

@@ -1809,7 +1809,7 @@
         "Name": "Element.SetParameterByName",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Excluded": false,
+        "Excluded": true,
         "ShowGeometry": true,
         "X": 5127.175734414865,
         "Y": 488.2760012488645
@@ -1846,12 +1846,12 @@
       },
       {
         "Id": "668b71ca9f37499bb284ffe54a2829ba",
-        "Name": "Element.GetParameterValueByName",
+        "Name": "Čísla místností",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 4772.7334196231695,
+        "X": 4771.945098676314,
         "Y": -79.93069286339025
       },
       {
@@ -1861,12 +1861,12 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 4472.79197360565,
-        "Y": 13.201413602101098
+        "X": 4530.365627272869,
+        "Y": 87.33735120098461
       },
       {
         "Id": "d85b1cea41f846f2ba33c1d77b28dee4",
-        "Name": "Element.GetParameterValueByName",
+        "Name": "Čísla ploch",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
@@ -1886,13 +1886,13 @@
       },
       {
         "Id": "465f2824096d43a9a9ca56c72f170309",
-        "Name": "==",
+        "Name": "Porovnání",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 5608.309183005767,
-        "Y": 22.02875965121825
+        "X": 5575.038430000891,
+        "Y": -72.56004321341987
       },
       {
         "Id": "464d3841397d472c898258c2e4640877",
@@ -1906,8 +1906,8 @@
       }
     ],
     "Annotations": [],
-    "X": -2813.7197686943728,
-    "Y": -134.54998925250982,
-    "Zoom": 0.7407181465363164
+    "X": -3125.4300166523267,
+    "Y": 260.41796817937103,
+    "Zoom": 0.7523152406028011
   }
 }
